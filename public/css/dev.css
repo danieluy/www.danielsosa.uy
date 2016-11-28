@@ -32,6 +32,11 @@ header nav ul li{
   height: 100%;
   float: left;
 }
+header nav ul li.selected{
+  height: 100%;
+  float: left;
+  font-weight: 700;
+}
 header nav ul li a{
   display: inline-block;
   height: 100%;

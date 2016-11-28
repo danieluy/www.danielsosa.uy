@@ -10,7 +10,9 @@
   "dev":{
     "nav":{
       "academic": "Académico",
-      "github": "Github"
+      "github": "Github",
+      "contact": "Contacto",
+      "work": "Trabajo"
     },
     "footer":{
       "login": "Iniciar sesión",

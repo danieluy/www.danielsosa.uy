@@ -33,27 +33,35 @@
 <body>
   <header>
     <nav>
-      <span>
-        <i class="material-icons">&#xE86F;</i> DS.dev
-      </span>
-      <ul id="dev-nav-links"></ul>
+      <span><i class="material-icons">&#xE86F;</i> DS.dev</span>
+      <ul id="dev-nav-links"><!-- Filled from template --></ul>
     </nav>
   </header>
 
   <!-- Footer -->
-  <div id="start-footer"></div>
+  <div id="start-footer"><!-- Filled from template --></div>
 
   <!-- Templates -->
 
   <!-- Nav links template -->
   <script type="text/template" id="dev-nav-links-template">
-      <li>
-        <a href="/dev/academic"><i class="material-icons">&#xE88F;</i> {{academic}}</a>
+      <li class="nav-link selected">
+        <a href="/dev/work"><i class="material-icons">&#xE2C8;</i> {{work}}</a>
       </li>
-      <li>
+      <li class="nav-link">
         <a href="https://github.com/danieluy" target="_blank"><i class="material-icons">&#xE2C2;</i> {{github}}</a>
       </li>
+      <li class="nav-link">
+        <a href="/dev/academic"><i class="material-icons">&#xE88F;</i> {{academic}}</a>
+      </li>
+      <li class="nav-link">
+        <a href="/dev/contact"><i class="material-icons">&#xE0E1;</i> {{contact}}</a>
+      </li>
   </script>
+
+  <div class="">
+
+  </div>
 
   <!-- Footer template -->
   <script type="text/template" id="start-footer-template">
