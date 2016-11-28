@@ -1,0 +1,22 @@
+{
+  "home":{
+    "footer":{
+      "login": "Login",
+      "call": "Call",
+      "mail_to": "Send email",
+      "back_to": "Back to www.danielsosa.uy"
+    }
+  },
+  "dev":{
+    "nav":{
+      "academic": "Academic",
+      "github": "Github"
+    },
+    "footer":{
+      "login": "Login",
+      "call": "Call",
+      "mail_to": "Send email",
+      "back_to": "Back to www.danielsosa.uy"
+    }
+  }
+}

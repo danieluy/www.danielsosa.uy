@@ -1,0 +1,16 @@
+{
+  "name": "danielsosauy",
+  "version": "0.1.0",
+  "description": "www.danielsosa.uy",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "danielsosa.dev@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "client-sessions": "^0.7.0",
+    "express": "^4.13.4"
+  }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!--Favicon-->
+  <link href="img/favicon.png" rel="icon" type="image/png"/>
+
+  <!-- Codification -->
+  <meta charset="UTF-8">
+
+  <!-- Viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+  <!-- Title -->
+  <title>DS.dev</title>
+
+  <!-- CDNs -->
+  <!--Roboto Font-->
+  <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic'>
+
+  <!--Material Icons-->
+  <link rel="stylesheet" type='text/css' href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/dev.css">
+
+  <script type="text/javascript" src="/js/ds-ajax.js"></script>
+  <script type="text/javascript" src="/js/mustache.min.js"></script>
+  <script type="text/javascript" src="/js/dev.js"></script>
+
+
+</head>
+<body>
+  <header>
+    <nav>
+      <span>
+        <i class="material-icons">&#xE86F;</i> DS.dev
+      </span>
+      <ul id="dev-nav-links"></ul>
+    </nav>
+  </header>
+
+  <!-- Footer -->
+  <div id="start-footer"></div>
+
+  <!-- Templates -->
+
+  <!-- Nav links template -->
+  <script type="text/template" id="dev-nav-links-template">
+      <li>
+        <a href="/dev/academic"><i class="material-icons">&#xE88F;</i> {{academic}}</a>
+      </li>
+      <li>
+        <a href="https://github.com/danieluy" target="_blank"><i class="material-icons">&#xE2C2;</i> {{github}}</a>
+      </li>
+  </script>
+
+  <!-- Footer template -->
+  <script type="text/template" id="start-footer-template">
+    <a href="/" title="{{back_to}}"><i class="material-icons">&#xE3BD;</i><i class="material-icons">&#xE86F;</i><i class="material-icons">&#xE86B;</i>www.danielsosa.uy</a>
+    <a href="mailto:danielsosa.dev@gmail.com?Subject=Contact%20from%20www.danielsosa.uy" target="blank" title="{{mail_to}}"><i class="material-icons">&#xE158;</i> danielsosa.dev@gmail.com</a>
+    <a href="tel:0059899636065" target="blank" title="{{call}}"><i class="material-icons">&#xE551;</i> (+598) 99 636 065</a>
+    <a class="btn-login" href="/login" title="{{login}}"><i class="material-icons">&#xE853;</i></a>
+  </script>
+
+</body>
+</html>
