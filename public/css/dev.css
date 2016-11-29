@@ -31,10 +31,11 @@ header nav ul{
 header nav ul li{
   height: 100%;
   float: left;
+  transform: scale(1);
+  transition: transform 100ms ease-out;
 }
 header nav ul li.selected{
-  height: 100%;
-  float: left;
+  transform: scale(1.2);
   font-weight: 700;
 }
 header nav ul li a{
@@ -47,6 +48,7 @@ header nav ul li a{
 header nav ul li a i{
   vertical-align: middle;
   padding: 0 5px;
+  pointer-events: none;
 }
 
 /*--  Footer  ----------------------------------------------------------------*/

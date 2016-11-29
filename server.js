@@ -39,8 +39,20 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/home.html'));
 });
 
+
 app.get('/dev', (req, res) => {
+  console.log('/dev');
   res.sendFile(path.join(__dirname, 'public/dev.html'));
+});
+
+app.get('/dev/*', (req, res) => {
+  console.log('/dev');
+  res.sendFile(path.join(__dirname, 'public/dev.html'));
+});
+
+app.post('/dev/work', (req, res) => {
+  console.log('/dev/work');
+  res.json({ok: true});
 });
 
 app.get('/img', (req, res) => {

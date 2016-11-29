@@ -26,6 +26,7 @@ var dsAjax = (function (){
   }
 
   function get (data){
+    console.log(data);
     checkData(data);
     init(data.successCb, data.errorCb, data.onEndCb, data.delayMs);
     req.open('GET', (data.params ? (data.url + '?' + formatParams(data.params)) : data.url), true);
