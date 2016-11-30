@@ -51,6 +51,16 @@ header nav ul li a i{
   pointer-events: none;
 }
 
+/*--  Page Content  ----------------------------------------------------------*/
+div#page-content{
+  position: fixed;
+  height: calc(100vh - 60px);
+  width: 100%;
+  top: 60px;
+  left: 0;
+  overflow-y: auto;
+}
+
 /*--  Footer  ----------------------------------------------------------------*/
 div#start-footer{
    position: fixed;

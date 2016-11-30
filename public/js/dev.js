@@ -14,8 +14,8 @@ var $dev = {
   domCache: function(){
     this.nav_links_template = document.getElementById('dev-nav-links-template').innerHTML;
     this.nav_links = document.getElementById('dev-nav-links');
-    this.footer_template = document.getElementById('start-footer-template').innerHTML;
-    this.footer = document.getElementById('start-footer');
+    // this.footer_template = document.getElementById('start-footer-template').innerHTML;
+    // this.footer = document.getElementById('start-footer');
   },
   getData: function(lang){
     dsAjax.post.call(this, {
@@ -35,7 +35,7 @@ var $dev = {
   },
   render: function(){
     this.nav_links.innerHTML = Mustache.to_html(this.nav_links_template, this.data.nav);
-    this.footer.innerHTML = Mustache.to_html(this.footer_template, this.data.footer);
+    // this.footer.innerHTML = Mustache.to_html(this.footer_template, this.data.footer);
     $nav.domCache();
   }
 }
@@ -71,7 +71,8 @@ var $nav = {
       pathname = sessionStorage.getItem('pathname');
       if(pathname !== '/dev'){
         history.pushState({}, "", this.protocol + this.host + pathname);
-        this.getPathData(pathname, function(data){console.log(data)});
+        // this.getPathData(pathname, function(data){console.log(data)});
+        this.render();
         sessionStorage.setItem('pathname', '/dev');
       }
     }
@@ -80,7 +81,8 @@ var $nav = {
     e.preventDefault()
     var href = e.target.getAttribute('href');
     this.highlightNavLink(href);
-    this.getPathData(href, function(data){console.log(data)});
+    // this.getPathData(href, function(data){console.log(data)});
+    this.render();
     history.pushState({}, "", this.protocol + this.host + href);
   },
   highlightNavLink: function(href){
@@ -104,6 +106,8 @@ var $nav = {
     })
   },
   render: function(){
-    this.page_content.innerHTML = Mustache.to_html(this.page_content_template, this.data);
+    if($dev.data)
+      this.page_content.innerHTML = Mustache.to_html(this.page_content_template, $dev.data.work);
+      // make this load after the data has been loaded
   }
 }
