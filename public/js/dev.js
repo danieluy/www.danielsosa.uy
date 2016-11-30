@@ -3,7 +3,7 @@
 document.addEventListener("DOMContentLoaded", function() {
   $dev.init();
   $nav.init();
-  window.onload = $nav.windowLoad.bind($nav);
+  window.onload = $nav.onWindowLoad.bind($nav);
 });
 
 var $dev = {
@@ -47,11 +47,9 @@ var $nav = {
     this.host = window.location.host;
     this.pathname = window.location.pathname;
   },
-  windowLoad: function(){
-    if(window.location.pathname !== '/dev')
-      this.navigateTo(null, window.location.pathname);
-  },
   domCache: function(){
+    this.page_content = document.getElementById('page-content');
+    this.page_content_template = document.getElementById('page-content-template').innerHTML;
     var nav_links_aux = document.getElementsByClassName('nav-link');
     for (var i = 0; i < nav_links_aux.length; i++) {
       this.nav_links.push(nav_links_aux[i])
@@ -60,31 +58,52 @@ var $nav = {
   },
   eventListeners: function(){
     for (var i = 0; i < this.nav_links.length; i++) {
-      this.nav_links[i].addEventListener('click', this.navigateTo.bind(this))
+      this.nav_links[i].addEventListener('click', this.onNavLinkClick.bind(this))
     }
   },
-  navigateTo: function(e, pathname){
-    if(e && e.preventDefault)
-      e.preventDefault()
-    if(pathname)
-      window.location.assign(this.protocol + this.host + '/dev')
-    var href = pathname || e.target.getAttribute('href');
-    // it fails because when it reloads the whole state changes
+  onWindowLoad: function(){
+    var pathname = window.location.pathname;
+    if(pathname !== '/dev'){
+      sessionStorage.setItem('pathname', pathname);
+      window.location.href = this.protocol + this.host + '/dev';
+    }
+    else{
+      pathname = sessionStorage.getItem('pathname');
+      if(pathname !== '/dev'){
+        history.pushState({}, "", this.protocol + this.host + pathname);
+        this.getPathData(pathname, function(data){console.log(data)});
+        sessionStorage.setItem('pathname', '/dev');
+      }
+    }
+  },
+  onNavLinkClick: function(e){
+    e.preventDefault()
+    var href = e.target.getAttribute('href');
+    this.highlightNavLink(href);
+    this.getPathData(href, function(data){console.log(data)});
+    history.pushState({}, "", this.protocol + this.host + href);
+  },
+  highlightNavLink: function(href){
     for (var i = 0; i < this.nav_links.length; i++) {
       if(this.nav_links[i].childNodes[1].getAttribute('href') === href)
         this.nav_links[i].classList.add('selected')
       else
         this.nav_links[i].classList.remove('selected')
     }
+  },
+  getPathData: function(pathname, successCb){
     dsAjax.post.call(this, {
-      url: this.protocol + this.host + href,
+      url: this.protocol + this.host + pathname,
       successCb: (function(data){
-        console.log(data);
+        this.data = JSON.parse(data);// this is not necesary, the data has already been sent
+        this.render();
       }).bind(this),
       errorCb: function(err){
         console.error(err);
       }
     })
-    history.pushState({}, "", this.protocol + this.host + href);
+  },
+  render: function(){
+    this.page_content.innerHTML = Mustache.to_html(this.page_content_template, this.data);
   }
 }

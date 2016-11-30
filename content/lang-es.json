@@ -19,6 +19,9 @@
       "call": "Llamar",
       "mail_to": "Enviar correo electrónico",
       "back_to": "Volver a www.danielsosa.uy"
+    },
+    "work": {
+      "title": "Portfolio de trabajos"
     }
   }
 }
