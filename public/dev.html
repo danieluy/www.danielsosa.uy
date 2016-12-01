@@ -26,11 +26,15 @@
 
   <script type="text/javascript" src="/js/ds-ajax.js"></script>
   <script type="text/javascript" src="/js/mustache.min.js"></script>
+  <script type="text/javascript" src="/js/nav.js"></script>
   <script type="text/javascript" src="/js/dev.js"></script>
 
 
 </head>
 <body>
+
+  <!-- Header -->
+
   <header>
     <nav>
       <span><i class="material-icons">&#xE86F;</i> DS.dev</span>
@@ -38,40 +42,32 @@
     </nav>
   </header>
 
-  <div id="page-content"><!-- Filled from template --></div>
+  <!-- Content -->
 
-  <!-- Footer -->
-  <!-- <div id="start-footer"><!-- Filled from template --></div> -->
+  <div id="page-content"><!-- Filled from template --></div>
 
   <!-- Templates -->
 
   <!-- Nav links template -->
   <script type="text/template" id="dev-nav-links-template">
       <li class="nav-link selected">
-        <a href="/dev/work"><i class="material-icons">&#xE2C8;</i> {{work}}</a>
+        <a href="/dev#work"><i class="material-icons">&#xE2C8;</i> {{work}}</a>
       </li>
       <li class="nav-link-external">
         <a href="https://github.com/danieluy" target="_blank"><i class="material-icons">&#xE2C2;</i> {{github}}</a>
       </li>
       <li class="nav-link">
-        <a href="/dev/academic"><i class="material-icons">&#xE88F;</i> {{academic}}</a>
+        <a href="/dev#academic"><i class="material-icons">&#xE88F;</i> {{academic}}</a>
       </li>
       <li class="nav-link">
-        <a href="/dev/contact"><i class="material-icons">&#xE0E1;</i> {{contact}}</a>
+        <a href="/dev#contact"><i class="material-icons">&#xE0E1;</i> {{contact}}</a>
       </li>
   </script>
 
-  <script type="text/template" id="page-content-template">
+  <!-- Content template -->
+  <script type="text/template" id="#work">
     <h1>{{title}}</h1>
   </script>
-
-  <!-- Footer template -->
-  <!-- <script type="text/template" id="start-footer-template">
-    <a href="/" title="{{back_to}}"><i class="material-icons">&#xE3BD;</i><i class="material-icons">&#xE86F;</i><i class="material-icons">&#xE86B;</i>www.danielsosa.uy</a>
-    <a href="mailto:danielsosa.dev@gmail.com?Subject=Contact%20from%20www.danielsosa.uy" target="blank" title="{{mail_to}}"><i class="material-icons">&#xE158;</i> danielsosa.dev@gmail.com</a>
-    <a href="tel:0059899636065" target="blank" title="{{call}}"><i class="material-icons">&#xE551;</i> (+598) 99 636 065</a>
-    <a class="btn-login" href="/login" title="{{login}}"><i class="material-icons">&#xE853;</i></a>
-  </script> -->
 
 </body>
 </html>
