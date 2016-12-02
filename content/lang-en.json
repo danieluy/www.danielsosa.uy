@@ -14,14 +14,14 @@
       "contact": "Contacto",
       "work": "Work"
     },
-    "footer":{
-      "login": "Login",
-      "call": "Call",
-      "mail_to": "Send email",
-      "back_to": "Back to www.danielsosa.uy"
-    },
     "work": {
       "title": "Work Portfolio"
+    },
+    "academic": {
+      "title": "Academic stuff"
+    },
+    "contact": {
+      "title": "Contact mediums"
     }
   }
 }
