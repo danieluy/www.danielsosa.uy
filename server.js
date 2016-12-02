@@ -48,21 +48,7 @@ app.get('/dev/*', (req, res) => {
   res.status(200).sendFile(path.join(__dirname, 'public/dev.html'));
 });
 
-
-app.get('/img', (req, res) => {
-  res.status(200).sendFile(path.join(__dirname, 'public/img.html'));
-});
-
-app.get('/arq', (req, res) => {
-  res.status(200).sendFile(path.join(__dirname, 'public/arq.html'));
-});
-
 // HttpPOST  ///////////////////////////////////////////////////////////////////
-
-app.post('/dev/work', (req, res) => {
-  console.log('/dev/work');
-  res.status(200).json({title: "Lalala"})
-});
 
 app.post('/lang', (req, res) => {
   if(req.body.page !== 'home' && req.body.page !== 'dev' && req.body.page !== 'arq' && req.body.page !== 'img')
