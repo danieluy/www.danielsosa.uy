@@ -39,42 +39,51 @@
     <nav>
       <span><i class="material-icons">&#xE86F;</i> DS.dev</span>
       <ul id="dev-nav-links"><!-- Filled from template --></ul>
+      <button type="button" id="btn-toggle-lang">Toogle Language</button>
     </nav>
   </header>
 
   <!-- Content -->
 
-  <div id="page-content"><!-- Filled from template --></div>
+  <div id="page-content"></div>
+
 
   <!-- Templates -->
 
   <!-- Nav links template -->
   <script type="text/template" id="dev-nav-links-template">
-      <li class="nav-link selected">
-        <a href="/dev#work"><i class="material-icons">&#xE2C8;</i> {{work}}</a>
+      <li class="nav-link">
+        <a href="/dev"><i class="material-icons">&#xE88A;</i> {{home}}</a>
+      </li>
+      <li class="nav-link">
+        <a href="/dev#work"><i class="material-icons">&#xE8F9;</i> {{work}}</a>
       </li>
       <li class="nav-link-external">
-        <a href="https://github.com/danieluy" target="_blank"><i class="material-icons">&#xE2C2;</i> {{github}}</a>
+        <a href="https://github.com/danieluy" target="_blank"><i class="material-icons">&#xE2BD;</i> {{github}}</a>
       </li>
       <li class="nav-link">
-        <a href="/dev#academic"><i class="material-icons">&#xE88F;</i> {{academic}}</a>
+        <a href="/dev#academic"><i class="material-icons">&#xE80C;</i> {{academic}}</a>
       </li>
       <li class="nav-link">
-        <a href="/dev#contact"><i class="material-icons">&#xE0E1;</i> {{contact}}</a>
+        <a href="/dev#contact"><i class="material-icons">&#xE0BE;</i> {{contact}}</a>
       </li>
   </script>
 
   <!-- Content templates -->
+  <!-- Home -->
+  <script type="text/template" class="page-content-template" id="#home">
+    <h1>{{title}}</h1>
+  </script>
   <!-- Work -->
-  <script type="text/template" id="#work">
+  <script type="text/template" class="page-content-template" id="#work">
     <h1>{{title}}</h1>
   </script>
   <!-- Academic -->
-  <script type="text/template" id="#academic">
+  <script type="text/template" class="page-content-template" id="#academic">
     <h1>{{title}}</h1>
   </script>
   <!-- Contact -->
-  <script type="text/template" id="#contact">
+  <script type="text/template" class="page-content-template" id="#contact">
     <h1>{{title}}</h1>
   </script>
 

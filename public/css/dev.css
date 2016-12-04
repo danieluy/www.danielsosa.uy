@@ -50,6 +50,11 @@ header nav ul li a i{
   padding: 0 5px;
   pointer-events: none;
 }
+header nav button#btn-toggle-lang{
+  position: fixed;
+  top: 0;
+  right: 0;
+}
 
 /*--  Page Content  ----------------------------------------------------------*/
 div#page-content{

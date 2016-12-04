@@ -1,4 +1,5 @@
 {
+  "lang": "es",
   "home":{
     "footer":{
       "login": "Iniciar sesión",
@@ -9,10 +10,14 @@
   },
   "dev":{
     "nav":{
+      "home": "Inicio",
       "academic": "Académico",
       "github": "Github",
       "contact": "Contacto",
       "work": "Trabajo"
+    },
+    "home": {
+      "title": "Bienvenido a www.danielsosa.uy/dev"
     },
     "work": {
       "title": "Portfolio de trabajo"

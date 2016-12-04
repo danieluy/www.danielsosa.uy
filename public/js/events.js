@@ -14,10 +14,11 @@ var $events = {
     }
   },
   emit: function (event_name, data) {
+    if(event_name === 'domCacheReady' || event_name === 'dataReady' || event_name === 'dataUpdated')console.log('emit', event_name);
     if (this.events[event_name]) {
       this.events[event_name].forEach(function(callback) {
         callback(data);
       });
     }
   }
-};
+}
