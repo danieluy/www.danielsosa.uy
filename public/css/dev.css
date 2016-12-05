@@ -1,4 +1,10 @@
 /*--  Header  ----------------------------------------------------------------*/
+
+body{
+   /*background-color: #eee;*/
+}
+
+/*--  Header  ----------------------------------------------------------------*/
 header{
   position: fixed;
   height: 60px;
@@ -60,10 +66,63 @@ header nav button#btn-toggle-lang{
 div#page-content{
   position: fixed;
   height: calc(100vh - 60px);
+  padding: 20px;
   width: 100%;
   top: 60px;
   left: 0;
   overflow-y: auto;
+}
+div#page-content h1{
+  font-size: 2rem;
+  font-weight: 100;
+  line-height: 60px;
+  margin-bottom: 20px;
+}
+div#page-content h2{
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+div#page-content label{
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+div#page-content div.career-wrapper{
+  /*background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 3px;*/
+  width: 50%;
+  margin: 0 auto;
+}
+div#page-content div.career-header{
+  width: 100%;
+  overflow: auto;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+div#page-content span.logo-header{
+  float: left;
+  display: inline-block;
+  width: 75px;
+  height: 75px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+div#page-content span.logo-header img{
+  max-width: 100%;
+  max-height: 100%;
+}
+div#page-content span.header-title{
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #333;
+  margin-top: 15px;
+}
+div#page-content span.header-subtitle{
+  display: block;
+  font-size: 1.0rem;
+  font-weight: 300;
 }
 
 /*--  Footer  ----------------------------------------------------------------*/
@@ -107,4 +166,9 @@ div#start-footer > a.btn-login > i{
    font-size: 30px;
    line-height: 60px;
    width: 60px;
+}
+
+/*--  General  ---------------------------------------------------------------*/
+.center{
+  text-align: center;
 }

@@ -68,7 +68,6 @@
         <a href="/dev#contact"><i class="material-icons">&#xE0BE;</i> {{contact}}</a>
       </li>
   </script>
-
   <!-- Content templates -->
   <!-- Home -->
   <script type="text/template" class="page-content-template" id="#home">
@@ -80,7 +79,20 @@
   </script>
   <!-- Academic -->
   <script type="text/template" class="page-content-template" id="#academic">
-    <h1>{{title}}</h1>
+    <h1 class="center">{{title}}</h1>
+    {{#careers}}
+      <div class="career-wrapper">
+        <div class="career-header">
+          <span class="logo-header"><img src="{{institution.logo.src}}" alt="{{institution.logo.alt}}"></span>
+          <span class="header-title">{{name}}</span>
+          <span class="header-subtitle">{{institution.name}}</span>
+        </div>
+        <div class="career-course">
+          <span class="course-header">95</span>
+          <span class="course-title">Programación 1</span>
+        </div>
+      </div>
+    {{/careers}}
   </script>
   <!-- Contact -->
   <script type="text/template" class="page-content-template" id="#contact">

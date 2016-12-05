@@ -23,7 +23,20 @@
       "title": "Portfolio de trabajo"
     },
     "academic": {
-      "title": "Cosas académicas"
+      "title": "Formación Académica",
+      "careers": [
+        {
+          "name": "Analista Programador",
+          "institution": {
+            "name": "Universidad ORT Uruguay",
+            "logo": {
+              "src": "img/ORT_128.jpg",
+              "alt": "Logo Uiversidad ORT"
+            }
+          },
+          "courses":[]
+        }
+      ]
     },
     "contact": {
       "title": "Medios de contacto"
