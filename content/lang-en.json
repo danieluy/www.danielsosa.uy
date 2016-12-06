@@ -14,7 +14,8 @@
       "academic": "Academic",
       "github": "Github",
       "contact": "Contact",
-      "work": "Work"
+      "work": "Work",
+      "toggle_lang":{ "lang": "English", "title": "Cambiar idioma" }
     },
     "home": {
       "title": "Welcome to www.danielsosa.uy/dev"
@@ -23,7 +24,51 @@
       "title": "Work Portfolio"
     },
     "academic": {
-      "title": "Academic stuff"
+      "title": "Academic Studies",
+      "careers": [
+        {
+          "name": "Software Analist",
+          "page": "http://fi.ort.edu.uy/analista-programador/plan-de-estudios",
+          "institution": {
+            "name": "Universidad ORT Uruguay",
+            "logo": {
+              "src": "img/ORT_128.jpg",
+              "alt": "Logo ORT University"
+            }
+          },
+          "label":{
+            "grade": "Grade",
+            "course_name": "Course"
+          },
+          "courses": [
+            {"score": "??", "name": "Algorithms & data structures 2", "techs": "OOP | Java | Trees | Graphs | Multi-structures"},
+            {"score": "??", "name": "Software engineering", "techs": "Software project management"}
+          ]
+        },
+        {
+          "name": "Web Developer",
+          "page": "http://fi.ort.edu.uy/analista-programador/plan-de-estudios",
+          "institution": {
+            "name": "Universidad ORT Uruguay",
+            "logo": {
+              "src": "img/ORT_128.jpg",
+              "alt": "Logo Uiversidad ORT"
+            }
+          },
+          "courses": [
+            {"score": 99, "name": "Programming 1", "techs": "Javascript | jQuery | HTML | CSS"},
+            {"score": 98, "name": "Programming 2", "techs": "OOP | C# | ASP.NET"},
+            {"score": 96, "name": "Programming 3", "techs": "OOP | C# | ASP.NET | ADO.NET | Entity Framework | MVC"},
+            {"score": 96, "name": "Algorithms & data structures 1", "techs": "OOP | Java | Lists | Stacks | Queues"},
+            {"score": 93, "name": "Databases 1", "techs": "Relational databases design | SQL Server"},
+            {"score": 91, "name": "Databases 2", "techs": "SQL Programming | SQL Server"},
+            {"score": 100, "name": "Technologies workshop", "techs": "Mobile | HTML | CSS | Javascript | jQuery | jQuery Mobile | PhoneGap"},
+            {"score": 95, "name": "Usability & accessibility workshop", "techs": "HTML | CSS | Bootstrap | Javascript | jQuery"},
+            {"score": 95, "name": "Computing introduction", "techs": "Hardware | Windows | Linux | Networking"},
+            {"score": 89, "name": "Objects workshop", "techs": "Documentation and Diagrams | C# | ASP.NET"}
+          ]
+        }
+      ]
     },
     "contact": {
       "title": "Contact mediums"

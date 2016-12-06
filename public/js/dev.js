@@ -34,12 +34,6 @@ var $dev = {
     for (var i = 0; i < page_content_templates_aux.length; i++) {
       this.page_templates[ page_content_templates_aux[i].id.slice(1) ] = page_content_templates_aux[i].innerHTML;
     }
-    // Automate this cache /////////////////////////////////////////////////////
-    // this.page_templates.home = document.getElementById('#home').innerHTML;
-    // this.page_templates.work = document.getElementById('#work').innerHTML;
-    // this.page_templates.academic = document.getElementById('#academic').innerHTML;
-    // this.page_templates.contact = document.getElementById('#contact').innerHTML;
-    ////////////////////////////////////////////////////////////////////////////
     this.page_content = document.getElementById('page-content');
   },
   render: {
@@ -112,14 +106,14 @@ var $nav = {
 var $data = {
   init: function(){
     this.lang = $session.getItem('selected_lang') || 'es';
-    this.domCache();
+    $events.on('liNavLinksRenderReady', this.dinamicDomCache.bind(this));
     this.initData();
   },
-  domCache: function(){
+  dinamicDomCache: function(){
     this.langToggler = document.getElementById('btn-toggle-lang');
-    this.domListeners();
+    this.dinamicDomListeners();
   },
-  domListeners: function(){
+  dinamicDomListeners: function(){
     this.langToggler.addEventListener('click', this.toggleLang.bind(this));
   },
   toggleLang: function(){
@@ -136,6 +130,7 @@ var $data = {
       url: 'http://' + window.location.host + '/lang',
       successCb: (function(data){
         this.data = JSON.parse(data);
+        console.log(this.data);
         $events.emit('dataReady');
       }).bind(this),
       errorCb: function(err){
@@ -153,6 +148,7 @@ var $data = {
       url: 'http://' + window.location.host + '/lang',
       successCb: (function(data){
         this.data = JSON.parse(data);
+        console.log(this.data);
         $events.emit('dataUpdated');
       }).bind(this),
       errorCb: function(err){

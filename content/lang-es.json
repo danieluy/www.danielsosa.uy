@@ -14,7 +14,8 @@
       "academic": "Académico",
       "github": "Github",
       "contact": "Contacto",
-      "work": "Trabajo"
+      "work": "Trabajo",
+      "toggle_lang":{ "lang": "Español", "title": "Toggle language" }
     },
     "home": {
       "title": "Bienvenido a www.danielsosa.uy/dev"
@@ -27,6 +28,7 @@
       "careers": [
         {
           "name": "Analista Programador",
+          "page": "http://fi.ort.edu.uy/analista-programador/plan-de-estudios",
           "institution": {
             "name": "Universidad ORT Uruguay",
             "logo": {
@@ -34,7 +36,37 @@
               "alt": "Logo Uiversidad ORT"
             }
           },
-          "courses":[]
+          "label":{
+            "grade": "Nota",
+            "course_name": "Materia"
+          },
+          "courses": [
+            {"score": "??", "name": "Algoritmos y Estructuras de Datos 2", "techs": "POO | Java | Arboles | Grafos | Multiestructuras"},
+            {"score": "??", "name": "Ingeniría de software", "techs": "Gestión de proyectos de software"}
+          ]
+        },
+        {
+          "name": "Programador Web",
+          "page": "http://fi.ort.edu.uy/analista-programador/plan-de-estudios",
+          "institution": {
+            "name": "Universidad ORT Uruguay",
+            "logo": {
+              "src": "img/ORT_128.jpg",
+              "alt": "Logo Uiversidad ORT"
+            }
+          },
+          "courses": [
+            {"score": 99, "name": "Programación 1", "techs": "Javascript | jQuery | HTML | CSS"},
+            {"score": 98, "name": "Programación 2", "techs": "POO | C# | ASP.NET"},
+            {"score": 96, "name": "Programación 3", "techs": "POO | C# | ASP.NET | ADO.NET | Entity Framework | MVC"},
+            {"score": 96, "name": "Algoritmos y Estructuras de Datos 1", "techs": "POO | Java | Listas | Colas | Pilas"},
+            {"score": 93, "name": "Bases de Datos 1", "techs": "Diseño de bases de datos relacionales | SQL Server"},
+            {"score": 91, "name": "Bases de Datos 2", "techs": "Programación SQL | SQL Server"},
+            {"score": 100, "name": "Taller de Tecnologías", "techs": "Mobile | HTML | CSS | Javascript | jQuery | jQuery Mobile | PhoneGap"},
+            {"score": 95, "name": "Taller de Usabilidad y Accesibilidad", "techs": "HTML | CSS | Bootstrap | Javascript | jQuery"},
+            {"score": 95, "name": "Introducción a la Computación", "techs": "Hardware | Windows | Linux | Redes"},
+            {"score": 89, "name": "Taller de Objetos", "techs": "Documentación y Diagramas | C# | ASP.NET"}
+          ]
         }
       ]
     },

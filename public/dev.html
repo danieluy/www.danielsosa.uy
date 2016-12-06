@@ -39,7 +39,6 @@
     <nav>
       <span><i class="material-icons">&#xE86F;</i> DS.dev</span>
       <ul id="dev-nav-links"><!-- Filled from template --></ul>
-      <button type="button" id="btn-toggle-lang">Toogle Language</button>
     </nav>
   </header>
 
@@ -67,6 +66,7 @@
       <li class="nav-link">
         <a href="/dev#contact"><i class="material-icons">&#xE0BE;</i> {{contact}}</a>
       </li>
+      <button type="button" id="btn-toggle-lang" title="{{toggle_lang.title}}">{{toggle_lang.lang}} <i class="material-icons">&#xE894;</i></button>
   </script>
   <!-- Content templates -->
   <!-- Home -->
@@ -81,17 +81,27 @@
   <script type="text/template" class="page-content-template" id="#academic">
     <h1 class="center">{{title}}</h1>
     {{#careers}}
-      <div class="career-wrapper">
-        <div class="career-header">
-          <span class="logo-header"><img src="{{institution.logo.src}}" alt="{{institution.logo.alt}}"></span>
-          <span class="header-title">{{name}}</span>
-          <span class="header-subtitle">{{institution.name}}</span>
-        </div>
-        <div class="career-course">
-          <span class="course-header">95</span>
-          <span class="course-title">Programación 1</span>
-        </div>
+    <div class="career-wrapper">
+      <div class="career-header">
+        <span class="logo-header"><img src="{{institution.logo.src}}" alt="{{institution.logo.alt}}"></span>
+        <span class="header-title">{{name}}</span>
+        <span class="header-subtitle">{{institution.name}}</span>
+        <a href="{{page}}" target="_blank"><i class="material-icons">&#xE89E;</i></a>
       </div>
+      <div class="courses-header">
+        <label class="column-label center">{{label.grade}}</label>
+        <label class="column-label">{{label.course_name}}</label>
+      </div>
+      {{#courses}}
+      <div class="career-course">
+        <span class="course-score">{{score}}</span>
+          <div class="course-info">
+            <span class="course-title">{{name}}</span>
+            <span class="course-techs">{{techs}}</span>
+          </div>
+      </div>
+      {{/courses}}
+    </div>
     {{/careers}}
   </script>
   <!-- Contact -->
