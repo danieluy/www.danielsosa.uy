@@ -4,11 +4,11 @@
    padding: 0px;
    box-sizing: border-box;
    font-family: Roboto, sans-serif;
-   color: var(--neutral-color);
+   color: #555;
    font-size: 16px;
 }
 body{
    font-family: Roboto, sans-serif;
-   color: var(--neutral-color);
+   color: #555;
    font-size: 16px;
 }

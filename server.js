@@ -5,6 +5,7 @@ const app = express();
 const path = require('path');
 const bodyParser = require("body-parser");
 const sessions = require('client-sessions');
+const nodemailer = require('nodemailer');
 
 const ENGLISH = require('./content/lang-en.json');
 const SPANISH = require('./content/lang-es.json');
@@ -29,6 +30,19 @@ app.use(sessions({
     secure: false
   }
 }));
+
+// Nodemailrer Config  /////////////////////////////////////////////////////////
+const nodemailer_auth_user = CONFIG.nodemailer.auth.user;
+const nodemailer_auth_pass = CONFIG.nodemailer.auth.pass;
+const transporter = nodemailer.createTransport({
+  host: 'smtp.gmail.com',
+  port: 465,
+  secure: true,
+  auth: {
+    user: nodemailer_auth_user,
+    pass: nodemailer_auth_pass
+  }
+});
 
 // Middleware //////////////////////////////////////////////////////////////////
 app.use(bodyParser.urlencoded({extended: false}));
@@ -59,6 +73,22 @@ app.post('/lang', (req, res) => {
     req.session.lang = 'es'
   res.status(200).json(req.session.lang === 'es' ? SPANISH[req.body.page] : ENGLISH[req.body.page])
 });
+
+app.post('/dev/contact', (req, res) => {
+  let sender = req.body.sender;
+  let message = req.body.message;
+  const mailOptions = {
+      from: '"Daniel Sosa" <danielsosa.foo@gmail.com>',
+      to: 'danielsosa.dev@gmail.com',
+      subject: 'Message from www.danielsosa.uy',
+      text: 'From: '+sender+' - Message: '+message,
+      html: '<p>From: '+sender+'</p><p>Message: '+message+'</p>'
+  };
+  transporter.sendMail(mailOptions, (error, info) => {
+      if(error) res.status(500).json(error);
+      else res.status(200).json(info);
+  });
+})
 
 // Access-Control-Allow-Origin: *  /////////////////////////////////////////////
 // From here on cross-origin resource sharing is allowed for any origin to any route
