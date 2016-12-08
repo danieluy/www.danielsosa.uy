@@ -273,6 +273,14 @@ div#start-footer > a.btn-login > i{
   text-align: center;
 }
 
+
+@media (max-width: 960px) {
+  div#page-content div.content-wrapper{
+    width: 75%;
+    margin: 0 auto;
+  }
+}
+
 /*--  Animations  ------------------------------------------------------------*/
 @keyframes slideUp {
   0%{

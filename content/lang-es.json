@@ -55,6 +55,10 @@
               "alt": "Logo Uiversidad ORT"
             }
           },
+          "label":{
+            "grade": "Nota",
+            "course_name": "Materia"
+          },
           "courses": [
             {"score": 99, "name": "Programación 1", "techs": "Javascript | jQuery | HTML | CSS"},
             {"score": 98, "name": "Programación 2", "techs": "POO | C# | ASP.NET"},
