@@ -86,6 +86,11 @@ div#page-content{
   left: 0;
   overflow-y: auto;
 }
+div#page-content div.content-wrapper{
+  width: 50%;
+  margin: 0 auto;
+  animation: slideUp 500ms ease-out;
+}
 div#page-content h1{
   font-size: 2rem;
   font-weight: 100;
@@ -101,16 +106,53 @@ div#page-content label{
   font-size: 0.75rem;
   font-weight: 500;
 }
-div#page-content div.career-wrapper{
-  width: 50%;
-  margin: 0 auto;
-  animation: slideUp 500ms ease-out;
-}
-div#page-content div.career-header{
+div#page-content div.list-header{
   width: 100%;
   overflow: auto;
   padding: 15px;
   border-bottom: 1px solid #ccc;
+}
+div#page-content div.list-body{
+  width: 100%;
+  overflow: auto;
+  padding: 15px;
+}
+div#page-content div.list-body label{
+  display: block;
+  padding: 5px 0;
+  text-transform: uppercase;
+}
+div#page-content div.list-body input,
+div#page-content div.list-body textarea{
+  display: block;
+  width: 100%;
+  padding: 15px 5px;
+  border-style: none;
+}
+div#page-content div.list-body textarea{
+  height: 100px;
+}
+div#page-content div.list-body button{
+  float: right;
+  width: 50px;
+  height: 50px;
+  background-color: #54bfa1;
+  padding: 10px 5px;
+  border-style: none;
+  border-radius: 50%;
+  margin-top: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 200ms ease-out;
+  cursor: pointer;
+}
+div#page-content div.list-body button:hover{
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+}
+div#page-content div.list-body button i{
+  vertical-align: middle;
+  color: #fff;
+  font-size: 25px;
+  margin-left: 2px;
 }
 div#page-content div.courses-header{
   padding: 15px 15px 0 15px;

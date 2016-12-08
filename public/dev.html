@@ -68,52 +68,77 @@
       </li>
       <button type="button" id="btn-toggle-lang" title="{{toggle_lang.title}}">{{toggle_lang.lang}} <i class="material-icons">&#xE894;</i></button>
   </script>
+
   <!-- Content templates -->
+
   <!-- Home -->
   <script type="text/template" class="page-content-template" id="#home">
     <h1>{{title}}</h1>
   </script>
+
   <!-- Work -->
   <script type="text/template" class="page-content-template" id="#work">
     <h1>{{title}}</h1>
   </script>
+
   <!-- Academic -->
   <script type="text/template" class="page-content-template" id="#academic">
     <h1 class="center">{{title}}</h1>
-    {{#careers}}
-    <div class="career-wrapper">
-      <div class="career-header">
-        <span class="logo-header"><img src="{{institution.logo.src}}" alt="{{institution.logo.alt}}"></span>
-        <span class="header-title">{{name}}</span>
-        <span class="header-subtitle">{{institution.name}}</span>
-        <a href="{{page}}" target="_blank"><i class="material-icons">&#xE89E;</i></a>
-      </div>
-      <div class="courses-header">
-        <label class="column-label center">{{label.grade}}</label>
-        <label class="column-label">{{label.course_name}}</label>
-      </div>
-      {{#courses}}
-      <div class="career-course">
-        <span class="course-score">{{score}}</span>
+    <div class="content-wrapper">
+      {{#careers}}
+      <div class="career-wrapper">
+        <div class="list-header">
+          <span class="logo-header"><img src="{{institution.logo.src}}" alt="{{institution.logo.alt}}"></span>
+          <span class="header-title">{{name}}</span>
+          <span class="header-subtitle">{{institution.name}}</span>
+          <a href="{{page}}" target="_blank"><i class="material-icons">&#xE89E;</i></a>
+        </div>
+        <div class="courses-header">
+          <label class="column-label center">{{label.grade}}</label>
+          <label class="column-label">{{label.course_name}}</label>
+        </div>
+        {{#courses}}
+        <div class="career-course">
+          <span class="course-score">{{score}}</span>
           <div class="course-info">
             <span class="course-title">{{name}}</span>
             <span class="course-techs">{{techs}}</span>
           </div>
+        </div>
+        {{/courses}}
       </div>
-      {{/courses}}
+      {{/careers}}
     </div>
-    {{/careers}}
   </script>
+
   <!-- Contact -->
   <script type="text/template" class="page-content-template" id="#contact">
-    <h1>{{title}}</h1>
-    <img src="img/phone_logo_128.jpg" alt="Phone logo">
-    <img src="img/email_logo_128.jpg" alt="Phone logo">
-    <form class="" action="/dev/contact" method="post">
-      <input type="email" name="sender" value="" placeholder="email@domain.com">
-      <textarea name="message" value="" placeholder="Please tell me what can I do for you"></textarea>
-      <button type="submit" name="button">Enviar</button>
-    </form>
+    <h1 class="center">{{title}}</h1>
+    <div class="content-wrapper">
+      <div class="contact-wrapper">
+        <div class="list-header">
+          <span class="logo-header"><img src="img/phone_logo_128.jpg" alt="Phone logo"></span>
+          <span class="header-title">{{phone.header_title}}</span>
+          <span class="header-subtitle">(+598) 99 636 065</span>
+        </div>
+        <div class="list-header">
+          <span class="logo-header"><img src="img/email_logo_128.jpg" alt="Mail logo"></span>
+          <span class="header-title">Correo electrónico</span>
+          <span class="header-subtitle">danielsosa.dev@gmail.com</span>
+        </div>
+        <div class="list-body">
+          <form class="" action="/dev/contact" method="post">
+            <label for="txt_email">Email</label>
+            <input id="txt_email" type="email" name="sender" value="" placeholder="email@domain.com" required>
+            <label for="txt_message">Mensaje</label>
+            <textarea id="txt_message" name="message" value="" placeholder="Please tell me what can I do for you" required></textarea>
+            <button type="submit" name="button"><i class="material-icons">&#xE163;</i></button>
+          </form>
+        </div>
+      </div>
+
+
+    </div>
   </script>
 </body>
 </html>

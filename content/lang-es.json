@@ -71,7 +71,10 @@
       ]
     },
     "contact": {
-      "title": "Medios de contacto"
+      "title": "Medios de contacto",
+      "phone": {
+        "header_title": "Llamada telefónica"
+      }
     }
   }
 }
