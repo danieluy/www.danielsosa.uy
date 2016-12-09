@@ -81,31 +81,41 @@
   <script type="text/template" class="page-content-template" id="#work">
     <h1 class="center">{{title}}</h1>
     <div class="content-wrapper">
-      <div class="contact-wrapper">
-        <div class="list-header">
-          <span class="logo-header"><img src="img/employed_128.ico" alt="{{employed.logo_alt}}"></span>
-          <span class="header-title">{{employed.header_title}}</span>
-          <span class="header-subtitle">{{employed.header_subtitle}}</span>
+      <div class="list-header">
+        <span class="logo-header"><img src="img/employed_128.jpg" alt="{{employed.logo_alt}}"></span>
+        <span class="header-title">{{employed.header_title}}</span>
+        <span class="header-subtitle">{{employed.header_subtitle}}</span>
+      </div>
+      <div class="list-header">
+        <span class="logo-header"><img src="img/freelance_128.jpg" alt="{{freelance.logo_alt}}"></span>
+        <span class="header-title">{{freelance.header_title}}</span>
+        <span class="header-subtitle">{{freelance.header_subtitle}}</span>
+      </div>
+      <div class="list-body">
+        {{#freelance.works}}
+        <div class="work-wrapper">
+          <img src="{{cover.src}}" alt="{{cover.alt}}">
+          <!-- <label>{{label.title}}</label> -->
+          <span class="work-title">{{title}} {{year}}</span>
+          <!-- <label>{{label.description}}</label> -->
+          <span class="work-description">{{description}}</span>
+          <label>{{label.client_name}}:</label>
+          <span class="client-name">
+            {{{client_name}}}
+          </span>
+
+          <!-- <div class="gallery">
+          {{#images}}
+          <div class="gallery-item">
+          <img src="{{src}}" alt="{{alt}}">
+          </div>
+          {{/images}}
+          </div> -->
         </div>
-        <div class="list-header">
-          <span class="logo-header"><img src="img/freelance_128.png" alt="{{freelance.logo_alt}}"></span>
-          <span class="header-title">{{freelance.header_title}}</span>
-          <span class="header-subtitle">{{freelance.header_subtitle}}</span>
-        </div>
-        <div class="list-body">
-          {{#freelance.works}}
-          <label>{{label.title}}</label>
-          <span class="work-title">{{title}}</span>
-          <label>{{label.description}}</label>
-          <span class="work-title">{{description}}</span>
-          <label>{{label.client_name}}</label>
-          <span class="client-name">{{client_name}}</span>
-          {{/freelance.works}}
-        </div>
+        {{/freelance.works}}
       </div>
     </div>
   </script>
-
   <!-- Academic -->
   <script type="text/template" class="page-content-template" id="#academic">
     <h1 class="center">{{title}}</h1>
@@ -161,7 +171,7 @@
               <input id="txt_phone" type="text" name="phone" value="" placeholder="{{placeholder.phone}}" >
             <label for="txt_message">{{label.mensaje}} *</label>
             <textarea id="txt_message" name="message" value="" placeholder="{{placeholder.mensaje}}" required></textarea>
-            <button type="submit" name="button"><i class="material-icons">&#xE163;</i></button>
+            <button type="submit" name="button" class="send-button"><i class="material-icons">&#xE163;</i></button>
           </form>
         </div>
       </div>
