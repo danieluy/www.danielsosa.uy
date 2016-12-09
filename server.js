@@ -75,18 +75,35 @@ app.post('/lang', (req, res) => {
 });
 
 app.post('/dev/contact', (req, res) => {
-  let sender = req.body.sender;
+  let name = req.body.name;
+  let email = req.body.email;
+  let phone = req.body.phone;
   let message = req.body.message;
   const mailOptions = {
       from: '"Daniel Sosa" <danielsosa.foo@gmail.com>',
       to: 'danielsosa.dev@gmail.com',
       subject: 'Message from www.danielsosa.uy',
-      text: 'From: '+sender+' - Message: '+message,
-      html: '<p>From: '+sender+'</p><p>Message: '+message+'</p>'
+      text: 'From: '+name+' <'+email+'> - Phone: '+phone+' - Message: '+message,
+      html: `
+        <p>From: ${name}</p>
+        <p>Email: ${email}</p>
+        <p>Phone: ${phone || ''}</p>
+        <label>Message:</label>
+        <p>${message}</p>
+      `
   };
   transporter.sendMail(mailOptions, (error, info) => {
-      if(error) res.status(500).json(error);
-      else res.status(200).json(info);
+    if(error){
+      console.log(error);
+      res.status(500).send(`
+        <h1>Sorry, there was a server error</h1>
+        <p>Something went wrong when triyng to send your message</p>
+        <p>Please try again or contact danielsosa.dev@gmail.com directly</p>
+      `);
+    }
+    else{
+      res.status(200).redirect('/dev#contact')
+    };
   });
 })
 

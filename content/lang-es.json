@@ -21,7 +21,30 @@
       "title": "Bienvenido a www.danielsosa.uy/dev"
     },
     "work": {
-      "title": "Portfolio de trabajo"
+      "title": "Mi trabajo",
+      "freelance": {
+        "logo_alt": "Icono de trabajo independiente",
+        "header_title": "Trabajo Independiente",
+        "header_subtitle": "Ejemplos de trabajos independientes aún en desarrollo",
+        "works": [
+          {
+            "title": "Premios Radiocero",
+            "description": "Sistema de gestión de premios a la audiencia",
+            "client_name": "Radiocero 104.3 FM",
+            "label": {
+              "title": "Título",
+              "description": "Descripción",
+              "client_name": "Cliente"
+            }
+          }
+        ]
+      },
+      "employed": {
+        "logo_alt": "Icono de trabajo dependiente",
+        "header_title": "Trabajo Dependiente",
+        "header_subtitle": "Aún estoy en busca de un trabajo para listar aquí ;-)",
+        "works": []
+      }
     },
     "academic": {
       "title": "Formación Académica",
@@ -75,9 +98,26 @@
       ]
     },
     "contact": {
-      "title": "Medios de contacto",
+      "title": "Contáctame",
       "phone": {
-        "header_title": "Llamada telefónica"
+        "header_title": "Llamada telefónica",
+        "logo_alt": "Icono de teléfono"
+      },
+      "mail": {
+        "header_title": "Correo electrónico",
+        "logo_alt": "Icono de correo electrónico"
+      },
+      "label": {
+        "name": "Nombre",
+        "email": "Correo electrónico",
+        "phone": "Teléfono",
+        "mensaje": "Mensaje"
+      },
+      "placeholder": {
+        "name": "Tyler Durden",
+        "email": "tyler@tfc.com",
+        "phone": "(+598) 99 000 111 | 099000111",
+        "mensaje": "Dime qué puedo hacer por ti :)"
       }
     }
   }

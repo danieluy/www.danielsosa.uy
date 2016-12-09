@@ -281,6 +281,13 @@ div#start-footer > a.btn-login > i{
   }
 }
 
+@media (max-width: 480px) {
+  div#page-content div.content-wrapper{
+    width: 100%;
+    margin: 0;
+  }
+}
+
 /*--  Animations  ------------------------------------------------------------*/
 @keyframes slideUp {
   0%{

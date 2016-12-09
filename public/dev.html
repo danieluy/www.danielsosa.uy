@@ -73,12 +73,37 @@
 
   <!-- Home -->
   <script type="text/template" class="page-content-template" id="#home">
-    <h1>{{title}}</h1>
+    <h1 class="center">{{title}}</h1>
+
   </script>
 
   <!-- Work -->
   <script type="text/template" class="page-content-template" id="#work">
-    <h1>{{title}}</h1>
+    <h1 class="center">{{title}}</h1>
+    <div class="content-wrapper">
+      <div class="contact-wrapper">
+        <div class="list-header">
+          <span class="logo-header"><img src="img/employed_128.ico" alt="{{employed.logo_alt}}"></span>
+          <span class="header-title">{{employed.header_title}}</span>
+          <span class="header-subtitle">{{employed.header_subtitle}}</span>
+        </div>
+        <div class="list-header">
+          <span class="logo-header"><img src="img/freelance_128.png" alt="{{freelance.logo_alt}}"></span>
+          <span class="header-title">{{freelance.header_title}}</span>
+          <span class="header-subtitle">{{freelance.header_subtitle}}</span>
+        </div>
+        <div class="list-body">
+          {{#freelance.works}}
+          <label>{{label.title}}</label>
+          <span class="work-title">{{title}}</span>
+          <label>{{label.description}}</label>
+          <span class="work-title">{{description}}</span>
+          <label>{{label.client_name}}</label>
+          <span class="client-name">{{client_name}}</span>
+          {{/freelance.works}}
+        </div>
+      </div>
+    </div>
   </script>
 
   <!-- Academic -->
@@ -117,27 +142,29 @@
     <div class="content-wrapper">
       <div class="contact-wrapper">
         <div class="list-header">
-          <span class="logo-header"><img src="img/phone_logo_128.jpg" alt="Phone logo"></span>
+          <span class="logo-header"><img src="img/phone_logo_128.jpg" alt="{{phone.logo_alt}}"></span>
           <span class="header-title">{{phone.header_title}}</span>
           <span class="header-subtitle">(+598) 99 636 065</span>
         </div>
         <div class="list-header">
-          <span class="logo-header"><img src="img/email_logo_128.jpg" alt="Mail logo"></span>
-          <span class="header-title">Correo electrónico</span>
+          <span class="logo-header"><img src="img/email_logo_128.jpg" alt="{{mail.logo_alt}}"></span>
+          <span class="header-title">{{mail.header_title}}</span>
           <span class="header-subtitle">danielsosa.dev@gmail.com</span>
         </div>
         <div class="list-body">
           <form class="" action="/dev/contact" method="post">
-            <label for="txt_email">Email</label>
-            <input id="txt_email" type="email" name="sender" value="" placeholder="email@domain.com" required>
-            <label for="txt_message">Mensaje</label>
-            <textarea id="txt_message" name="message" value="" placeholder="Please tell me what can I do for you" required></textarea>
+            <label for="txt_name">{{label.name}} *</label>
+            <input id="txt_name" type="text" name="name" value="" placeholder="{{placeholder.name}}" required>
+              <label for="txt_email">{{label.email}} *</label>
+              <input id="txt_email" type="email" name="email" value="" placeholder="{{placeholder.email}}" required>
+              <label for="txt_phone">{{label.phone}}</label>
+              <input id="txt_phone" type="text" name="phone" value="" placeholder="{{placeholder.phone}}" >
+            <label for="txt_message">{{label.mensaje}} *</label>
+            <textarea id="txt_message" name="message" value="" placeholder="{{placeholder.mensaje}}" required></textarea>
             <button type="submit" name="button"><i class="material-icons">&#xE163;</i></button>
           </form>
         </div>
       </div>
-
-
     </div>
   </script>
 </body>
