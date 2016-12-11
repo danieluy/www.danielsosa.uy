@@ -14,6 +14,11 @@ header{
 header nav{
   height: 100%;
   width: 100%;
+  box-shadow: none;
+  transition: box-shadow 300ms ease-out;
+}
+header nav.elevate{
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
 header nav span{
   display: inline-block;
@@ -22,6 +27,12 @@ header nav span{
   line-height: 60px;
   font-size: 1.5rem;
   padding-right: 15px;
+}
+header nav span i.material-icons.pc{
+  display: inline-block;
+}
+header nav span i.material-icons.mobile{
+  display: none;
 }
 header nav span i.material-icons{
   vertical-align: middle;
@@ -33,6 +44,9 @@ header nav ul{
   height: 100%;
   width: 100%;
   list-style-type: none;
+}
+header nav div#dev-nav-links-back{
+  display: none;
 }
 header nav ul li{
   height: 100%;
@@ -112,6 +126,35 @@ header nav button#btn-toggle-lang i{
   padding: 15px;
   border-bottom: 1px solid #ccc;
 }
+#page-content span.logo-header{
+  float: left;
+  display: inline-block;
+  width: 75px;
+  height: 75px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+#page-content span.logo-header img{
+  max-width: 100%;
+  max-height: 100%;
+}
+#page-content span.header-title{
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #333;
+  margin-top: 15px;
+}
+#page-content span.header-subtitle{
+  display: inline-block;
+  font-size: 1.0rem;
+  font-weight: 300;
+}
+#page-content a i{
+  font-size: 1rem;
+  vertical-align: middle;
+}
 #page-content div.list-body{
   width: 100%;
   /*overflow: auto;*/
@@ -156,35 +199,6 @@ header nav button#btn-toggle-lang i{
   color: #fff;
   font-size: 25px;
   margin-left: 2px;
-}
-#page-content span.logo-header{
-  float: left;
-  display: inline-block;
-  width: 75px;
-  height: 75px;
-  overflow: hidden;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-#page-content span.logo-header img{
-  max-width: 100%;
-  max-height: 100%;
-}
-#page-content span.header-title{
-  display: block;
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: #333;
-  margin-top: 15px;
-}
-#page-content span.header-subtitle{
-  display: inline-block;
-  font-size: 1.0rem;
-  font-weight: 300;
-}
-#page-content a i{
-  font-size: 1rem;
-  vertical-align: middle;
 }
 #page-content div.gallery{
   width: 100%;
@@ -319,10 +333,147 @@ div#start-footer > a.btn-login > i{
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 960px) {
+  header{
+    height: 60px;
+    width: 100%;
+    z-index: 10;
+  }
+  header nav{
+    height: 100%;
+    width: 100%;
+    /*box-shadow: none;*/
+  }
+  header nav.elevate{
+    /*box-shadow: none;*/
+  }
+  header nav span{
+  }
+  header nav span i.material-icons.pc{
+    display: none;
+  }
+  header nav span i.material-icons.mobile{
+    display: inline-block;
+  }
+  header nav span i.material-icons{
+    font-size: 1.8rem;
+  }
+  header nav ul{
+    position: absolute;
+    top: 0;
+    left: -305px;
+    background-color: #fff;
+    height: 100vh;
+    width: 300px;
+    list-style-type: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    transition: left 300ms ease-in-out;
+    z-index: 10;
+  }
+  header nav ul.slideLeft{
+    left: 0px;
+  }
+  header nav div#dev-nav-links-back{
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 9;
+    transition: opacity 300ms ease-in-out;
+  }
+  header nav div#dev-nav-links-back.slideLeft{
+    opacity: .25;
+    pointer-events: auto;
+  }
+  header nav ul li{
+    height: 60px;
+    float: none;
+    transform: translateX(0);
+    transition: transform 200ms ease-out;
+  }
+  header nav ul li.selected{
+    transform: translateX(5%);
+  }
+  header nav ul li a{
+    width: 100%;
+  }
+  header nav ul li a i{
+  }
+  header nav button#btn-toggle-lang{
+    position: relative;
+    cursor: auto;
+    transition: none;
+  }
+  header nav button#btn-toggle-lang:hover{
+    /*opacity: 1;*/
+  }
+  header nav button#btn-toggle-lang i{
+    /*vertical-align: middle;*/
+  }
+}
+
+@media (max-width: 768px) {
+
+  /*--  Page Content  --------------------------------------------------------*/
+  #page-content{
+    padding: 20px 0;
+  }
   #page-content div.content-wrapper{
     width: 100%;
     margin: 0;
+  }
+  #page-content span.logo-header{
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+  #page-content span.logo-header img{
+  }
+  #page-content span.header-title{
+    font-weight: 300;
+    text-align: center;
+  }
+  #page-content span.header-subtitle{
+    display: block;
+    font-size: 1.0rem;
+    font-weight: 300;
+    text-align: center;
+  }
+  #page-content a i{
+    font-size: 1.5rem;
+    color: #888;
+    vertical-align: middle;
+    width: 100%;
+    text-align: right;
+  }
+  #page-content div.list-body{
+    padding: 10px;
+  }
+  /*--  Work  ----------------------------------------------------------------*/
+  #page-content div.work-wrapper{
+    margin-bottom: 30px;
+    padding: 0;
+  }
+  #page-content span.work-title{
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding-bottom: 5px;
+  }
+  #page-content span.work-description{
+    display: block;
+    font-size: .9rem;
+    font-weight: 500;
+    padding-bottom: 5px;
+  }
+  #page-content span.client-name{
+    display: block;
+    padding-bottom: 5px;
   }
 }
 
