@@ -38,3 +38,6 @@ jspm_packages
 
 # Private configuration file
 config.json
+
+# Firebase credentials
+firebase-credentials.json

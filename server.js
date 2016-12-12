@@ -6,6 +6,14 @@ const path = require('path');
 const bodyParser = require("body-parser");
 const sessions = require('client-sessions');
 const nodemailer = require('nodemailer');
+const firebase = require("firebase");
+
+firebase.initializeApp({
+  serviceAccount: __dirname + '/firebase-credentials.json',
+  databaseURL: "https://mywebpage-2f92f.firebaseio.com/"
+});
+
+console.log(firebase);
 
 const ENGLISH = require('./content/lang-en.json');
 const SPANISH = require('./content/lang-es.json');
@@ -60,6 +68,14 @@ app.get('/dev', (req, res) => {
 
 app.get('/dev/*', (req, res) => {
   res.status(200).sendFile(path.join(__dirname, 'public/dev.html'));
+});
+
+app.get('/arq', (req, res) => {
+  res.status(200).sendFile(path.join(__dirname, 'public/arq.html'));
+});
+
+app.get('/img', (req, res) => {
+  res.status(200).sendFile(path.join(__dirname, 'public/img.html'));
 });
 
 // HttpPOST  ///////////////////////////////////////////////////////////////////
