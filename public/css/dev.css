@@ -354,6 +354,9 @@ div#start-footer > a.btn-login > i{
   }
   header nav span i.material-icons.mobile{
     display: inline-block;
+    width: 60px;
+    line-height: 60px;
+    cursor: pointer;
   }
   header nav span i.material-icons{
     font-size: 1.8rem;

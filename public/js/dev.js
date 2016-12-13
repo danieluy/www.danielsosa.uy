@@ -95,24 +95,19 @@ var $nav = {
       this.navbar.classList.remove('elevate');
   },
   displayMenu: function(e){
-    if(window.screen.width < 960){
-      this.ul_nav_links.classList.add('slideLeft');
-      this.ul_nav_links_back.classList.add('slideLeft');
-    }
+    this.ul_nav_links.classList.add('slideLeft');
+    this.ul_nav_links_back.classList.add('slideLeft');
   },
   hideMenu: function(){
-    if(window.screen.width < 960){
-      this.ul_nav_links.classList.remove('slideLeft');
-      this.ul_nav_links_back.classList.remove('slideLeft');
-    }
+    this.ul_nav_links.classList.remove('slideLeft');
+    this.ul_nav_links_back.classList.remove('slideLeft');
   },
   onNavLinkClick: function(e){
     e.preventDefault()
     var href = e.target.getAttribute('href');
     history.pushState({}, "", this.protocol + this.host + href);
     $events.emit('navigateToSubpage', href.slice(4));
-    if(window.screen.width < 960)
-      this.hideMenu();
+    this.hideMenu();
   },
   onHashChange: function(){
     this.hash = window.location.hash;

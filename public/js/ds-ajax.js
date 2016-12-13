@@ -79,7 +79,8 @@ var dsAjax = (function (){
   return {
     post: post,
     get: get,
-    put: put
+    put: put,
+    simulateDelay: simulateDelay
   }
 
 })();
