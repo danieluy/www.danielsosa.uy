@@ -37,7 +37,9 @@
 
   <header>
     <nav id="navbar">
-      <span id="menu-button"><i class="material-icons pc">&#xE86F;</i><i class="material-icons mobile">&#xE5D2;</i> DS.dev</span>
+
+        <span id="menu-button"><a href="/"><i class="material-icons pc">&#xE86F;</i></a><i class="material-icons mobile">&#xE5D2;</i> DS.dev</span>
+
       <ul id="dev-nav-links"><!-- Filled from template --></ul>
       <div id="dev-nav-links-back"></div>
     </nav>
@@ -93,30 +95,36 @@
         <span class="header-subtitle">{{freelance.header_subtitle}}</span>
       </div>
       <div class="list-body">
-        {{#freelance.works}}
-        <div class="work-wrapper">
-          <img src="{{cover.src}}" alt="{{cover.alt}}">
-          <!-- <label>{{label.title}}</label> -->
-          <span class="work-title">{{title}} {{year}}</span>
-          <!-- <label>{{label.description}}</label> -->
-          <span class="work-description">{{description}}</span>
-          <label>{{label.client_name}}:</label>
-          <span class="client-name">
-            {{{client_name}}}
-          </span>
 
-          <!-- <div class="gallery">
-          {{#images}}
-          <div class="gallery-item">
-          <img src="{{src}}" alt="{{alt}}">
-          </div>
-          {{/images}}
-          </div> -->
+        <div class="work-wrapper">
+          <img src="{{freelance.works.prizes_management.cover.src}}" alt="{{freelance.works.prizes_management.cover.alt}}">
+          <!-- <label>{{label.title}}</label> -->
+          <span class="work-title">{{freelance.works.prizes_management.title}} {{freelance.works.prizes_management.year}}</span>
+          <!-- <label>{{label.description}}</label> -->
+          <span class="work-description">{{freelance.works.prizes_management.description}}</span>
+          <label>{{freelance.works.labels.client_name}}:</label>
+          <span class="client-name">
+            {{{freelance.works.prizes_management.client_name}}}
+          </span>
         </div>
-        {{/freelance.works}}
+
+        <div class="work-wrapper">
+          <img src="{{freelance.works.m_tec.cover.src}}" alt="{{freelance.works.m_tec.cover.alt}}">
+          <!-- <label>{{label.title}}</label> -->
+          <span class="work-title">{{freelance.works.m_tec.title}} {{freelance.works.m_tec.year}}</span>
+          <!-- <label>{{label.description}}</label> -->
+          <span class="work-description">{{freelance.works.m_tec.description}}</span>
+          <label>{{freelance.works.labels.client_name}}:</label>
+          <span class="client-name">
+            {{{freelance.works.m_tec.client_name}}}
+          </span>
+        </div>
+
       </div>
     </div>
   </script>
+
+
   <!-- Academic -->
   <script type="text/template" class="page-content-template" id="#academic">
     <h1 class="center">{{title}}</h1>
@@ -130,8 +138,8 @@
           <a href="{{page}}" target="_blank"><i class="material-icons">&#xE89E;</i></a>
         </div>
         <div class="courses-header">
-          <label class="column-label center">{{label.grade}}</label>
-          <label class="column-label">{{label.course_name}}</label>
+          <label class="column-label center">{{labels.grade}}</label>
+          <label class="column-label">{{labels.course_name}}</label>
         </div>
         {{#courses}}
         <div class="career-course">

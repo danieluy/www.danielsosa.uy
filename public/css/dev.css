@@ -27,12 +27,15 @@ header nav span{
   line-height: 60px;
   font-size: 1.5rem;
   padding-right: 15px;
+  color: #0088CC;
 }
 header nav span i.material-icons.pc{
   display: inline-block;
+  color: #0088CC;
 }
 header nav span i.material-icons.mobile{
   display: none;
+  color: #0088CC;
 }
 header nav span i.material-icons{
   vertical-align: middle;
