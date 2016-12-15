@@ -25,23 +25,26 @@ header nav span{
   height: 100%;
   float: left;
   line-height: 60px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   padding-right: 15px;
-  color: #0088CC;
-}
-header nav span i.material-icons.pc{
-  display: inline-block;
-  color: #0088CC;
-}
-header nav span i.material-icons.mobile{
-  display: none;
-  color: #0088CC;
+  background-color: #0088CC;
+  color: #FFFFFF;
 }
 header nav span i.material-icons{
   vertical-align: middle;
   width: 60px;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
+  color: #FFFFFF;
+}
+header nav span i.material-icons.pc{
+  display: inline-block;
+}
+header nav span i.material-icons.pc:hover{
+  display: inline-block;
+}
+header nav span i.material-icons.mobile{
+  display: none;
 }
 header nav ul{
   height: 100%;
@@ -60,6 +63,10 @@ header nav ul li{
 header nav ul li.selected{
   transform: scale(1.2);
   font-weight: 700;
+}
+header nav ul li.selected a,
+header nav ul li.selected a i{
+  color: #0088CC;
 }
 header nav ul li a{
   display: inline-block;
@@ -348,9 +355,11 @@ div#start-footer > a.btn-login > i{
     /*box-shadow: none;*/
   }
   header nav.elevate{
-    /*box-shadow: none;*/
+    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.5);
   }
-  header nav span{
+  header nav{
+    background-color: #0088CC;
+    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.5);
   }
   header nav span i.material-icons.pc{
     display: none;
