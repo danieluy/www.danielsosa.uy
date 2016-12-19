@@ -84,3 +84,5 @@ var dsAjax = (function (){
   }
 
 })();
+
+module.exports = dsAjax;

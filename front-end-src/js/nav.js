@@ -1,49 +1,5 @@
-'use strict';
-
-document.addEventListener("DOMContentLoaded", function() {
-  $data.init();
-  $events.on('dataReady', $dev.init.bind($dev))
-  $events.on('dataReady', $nav.init.bind($nav))
-  window.onhashchange = $nav.onHashChange.bind($nav);
-});
-
-
-
-var $session = {
-  setItem: function(key, value){
-    sessionStorage.setItem(key, value);
-  },
-  getItem: function(key){
-    var value = sessionStorage.getItem(key);
-    if(!value || value === 'undefined' || value === 'null')
-      return null;
-    else
-      return value;
-  }
-}
-
-var $dev = {
-  page_templates: {},
-  init: function(){
-    $events.on('navigateToSubpage', this.render.subpage.bind(this));
-    this.domCache();
-  },
-  domCache: function(){
-    var page_content_templates_aux = document.getElementsByClassName('page-content-template');
-    for (var i = 0; i < page_content_templates_aux.length; i++) {
-      this.page_templates[ page_content_templates_aux[i].id.slice(1) ] = page_content_templates_aux[i].innerHTML;
-    }
-    this.page_content = document.getElementById('page-content');
-  },
-  render: {
-    subpage: function(hash){
-      if(hash)
-        this.page_content.innerHTML = Mustache.to_html(this.page_templates[hash.slice(1)], $data.getData.call($data, [hash.slice(1)]));
-      else
-        this.page_content.innerHTML = Mustache.to_html(this.page_templates.home, $data.getData.call($data, 'home'));
-    }
-  }
-}
+const $events = require('./events');
+const $data = require('./data');
 
 var $nav = {
   li_nav_links: [],
@@ -56,6 +12,7 @@ var $nav = {
     $events.on('dinamicDomCacheReady', this.onHashChange.bind(this));
     $events.on('navigateToSubpage', this.highlightNavLink.bind(this));
     $events.on('toggleLang', this.hideMenu.bind(this));
+    window.onhashchange = this.onHashChange.bind(this);
     this.protocol = window.location.protocol + '//';
     this.host = window.location.host;
     this.pathname = window.location.pathname;
@@ -129,65 +86,4 @@ var $nav = {
   }
 }
 
-var $data = {
-  init: function(){
-    this.lang = $session.getItem('selected_lang') || 'es';
-    $events.on('liNavLinksRenderReady', this.dinamicDomCache.bind(this));
-    this.initData();
-  },
-  dinamicDomCache: function(){
-    this.langToggler = document.getElementById('btn-toggle-lang');
-    this.dinamicDomListeners();
-  },
-  dinamicDomListeners: function(){
-    this.langToggler.addEventListener('click', this.toggleLang.bind(this));
-  },
-  toggleLang: function(){
-    if(this.lang === 'en')
-      this.lang = 'es';
-    else
-      this.lang = 'en';
-    $session.setItem('selected_lang', this.lang);
-    this.updateData();
-    $events.emit('toggleLang');
-  },
-  initData: function(){
-    console.log('initData', this.lang);
-    dsAjax.post.call(this, {
-      url: 'http://' + window.location.host + '/lang',
-      successCb: (function(data){
-        this.data = JSON.parse(data);
-        console.log(this.data);
-        $events.emit('dataReady');
-      }).bind(this),
-      errorCb: function(err){
-        console.error(err);
-      },
-      params: {
-        page: 'dev',
-        lang: this.lang
-      }
-    })
-  },
-  updateData: function(){
-    console.log('updateData', this.lang);
-    dsAjax.post.call(this, {
-      url: 'http://' + window.location.host + '/lang',
-      successCb: (function(data){
-        this.data = JSON.parse(data);
-        console.log(this.data);
-        $events.emit('dataUpdated');
-      }).bind(this),
-      errorCb: function(err){
-        console.error(err);
-      },
-      params: {
-        page: 'dev',
-        lang: this.lang
-      }
-    })
-  },
-  getData: function(section){
-    return this.data[section];
-  }
-}
+module.exports = $nav;
