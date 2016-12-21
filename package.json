@@ -14,5 +14,8 @@
     "express": "^4.13.4",
     "firebase": "^3.6.3",
     "nodemailer": "^2.6.4"
+  },
+  "devDependencies": {
+    "webpack": "^1.14.0"
   }
 }
