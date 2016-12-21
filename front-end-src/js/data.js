@@ -2,7 +2,7 @@ const $events = require('./events');
 const $session = require('./session');
 const dsAjax = require('./ds-ajax');
 
-var $data = {
+module.exports = {
   init: function(){
     this.lang = $session.getItem('selected_lang') || 'es';
     $events.on('liNavLinksRenderReady', this.dinamicDomCache.bind(this));
@@ -64,5 +64,3 @@ var $data = {
     return this.data[section];
   }
 }
-
-module.exports = $data;

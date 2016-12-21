@@ -15,6 +15,7 @@
       "github": "Github",
       "contact": "Contact",
       "work": "Work",
+      "stuff": "Stuff",
       "toggle_lang":{ "lang": "English", "title": "Cambiar idioma" }
     },
     "home": {
@@ -84,7 +85,7 @@
           },
           "courses": [
             {"score": "??", "name": "Algorithms & data structures 2", "techs": "OOP | Java | Trees | Graphs | Multi-structures"},
-            {"score": "??", "name": "Software engineering", "techs": "Software project management"}
+            {"score": 93, "name": "Software engineering", "techs": "Software project management"}
           ]
         },
         {
@@ -134,6 +135,9 @@
         "phone": "(+598) 99 000 111 | 099000111",
         "mensaje": "Tell me what can I do for you :)"
       }
+    },
+    "stuff": {
+      "title": "My Stuff"
     }
   }
 }

@@ -1,10 +1,8 @@
 'use strict';
 
-const dsAjax = require('./ds-ajax');
 const $events = require('./events');
 const $data = require('./data');
 const $nav = require('./nav');
-const $session = require('./session');
 
 document.addEventListener("DOMContentLoaded", function() {
   $data.init();

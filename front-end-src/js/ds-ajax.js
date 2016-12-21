@@ -6,7 +6,7 @@
 //   [, onEndCb: function()]
 //   [, delayMs: integer]
 // }
-var dsAjax = (function (){
+module.exports = (function (){
 
   var req;
 
@@ -84,5 +84,3 @@ var dsAjax = (function (){
   }
 
 })();
-
-module.exports = dsAjax;

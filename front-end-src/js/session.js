@@ -1,4 +1,4 @@
-var $session = {
+module.exports = {
   setItem: function(key, value){
     sessionStorage.setItem(key, value);
   },
@@ -10,5 +10,3 @@ var $session = {
       return value;
   }
 }
-
-module.exports = $session;

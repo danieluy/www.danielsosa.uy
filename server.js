@@ -6,14 +6,14 @@ const path = require('path');
 const bodyParser = require("body-parser");
 const sessions = require('client-sessions');
 const nodemailer = require('nodemailer');
-const firebase = require("firebase");
-
-firebase.initializeApp({
-  serviceAccount: __dirname + '/firebase-credentials.json',
-  databaseURL: "https://mywebpage-2f92f.firebaseio.com/"
-});
-
-console.log(firebase);
+// const firebase = require("firebase");
+//
+// firebase.initializeApp({
+//   serviceAccount: __dirname + '/firebase-credentials.json',
+//   databaseURL: "https://mywebpage-2f92f.firebaseio.com/"
+// });
+//
+// console.log(firebase);
 
 const ENGLISH = require('./content/lang-en.json');
 const SPANISH = require('./content/lang-es.json');
@@ -141,11 +141,11 @@ app.get('*', function(req, res){
 
 app.listen(3000, function(){
   console.log(
-    '/////////////////////////////////////////////\n' +
-    '//                                         //\n' +
-    '//   Server listening on: localhost:3000   //\n' +
-    '//       Press Ctrl-C to terminate         //\n' +
-    '//                                         //\n' +
-    '/////////////////////////////////////////////'
+    '···········································\n' +
+    '·                                         ·\n' +
+    '·   Server listening on: localhost:3000   ·\n' +
+    '·       Press Ctrl-C to terminate         ·\n' +
+    '·                                         ·\n' +
+    '···········································'
   );
 });

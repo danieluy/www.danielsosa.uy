@@ -1,7 +1,7 @@
 const $events = require('./events');
 const $data = require('./data');
 
-var $nav = {
+module.exports = {
   li_nav_links: [],
   init: function(){
     $events.on('domCacheReady', this.render.li_nav_links.bind(this));
@@ -85,5 +85,3 @@ var $nav = {
     }
   }
 }
-
-module.exports = $nav;

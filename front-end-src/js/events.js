@@ -1,6 +1,6 @@
 'use strict';
 
-var $events = {
+module.exports = {
   events: {},
   on: function (event_name, callback) {
     this.events[event_name] = this.events[event_name] || [];
@@ -22,5 +22,3 @@ var $events = {
     }
   }
 }
-
-module.exports = $events;
