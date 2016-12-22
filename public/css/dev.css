@@ -123,8 +123,12 @@ header nav button#btn-toggle-lang i{
   animation: slideUp 300ms ease-out;
 }
 #page-content h2{
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 500;
+}
+#page-content h3{
+  font-size: 1.2rem;
+  font-weight: 300;
 }
 #page-content label{
   font-size: 0.75rem;
@@ -132,6 +136,17 @@ header nav button#btn-toggle-lang i{
 }
 #page-content p{
   margin: 15px 0;
+}
+#page-content a{
+  padding: 2px;
+  text-decoration: none;
+  color: #0088CC;
+  transition: all 200ms linear;
+  border-radius: 2px;
+}
+#page-content a:hover{
+  background-color: #0088CC;
+  color: #fff;
 }
 #page-content div.list-header{
   width: 100%;
@@ -170,7 +185,6 @@ header nav button#btn-toggle-lang i{
 }
 #page-content div.list-body{
   width: 100%;
-  /*overflow: auto;*/
   padding: 15px;
 }
 #page-content div.list-body label{
@@ -213,16 +227,25 @@ header nav button#btn-toggle-lang i{
   font-size: 25px;
   margin-left: 2px;
 }
-#page-content div.gallery{
-  width: 100%;
-  height: 400px;
-}
-#page-content div.gallery div.gallery-item{
+/*--  Home  ------------------------------------------------------------------*/
+div.tech-item{
+  width: 33.33333%;
   float: left;
 }
-#page-content div.gallery div.gallery-item img{
-  max-width: 100%;
-  max-height: 100%;
+div.tech-header{
+  width: 75px;
+  height: 75px;
+  margin: 15px auto;
+}
+div.tech-header img{
+  width: 100%;
+  height: 100%;
+}
+div.tech-body{
+  padding: 10px;
+}
+div.tech-body p{
+  font-size: .9rem;
 }
 /*--  Work  ------------------------------------------------------------------*/
 #page-content div.work-wrapper{
