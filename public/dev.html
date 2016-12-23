@@ -38,7 +38,7 @@
   <header>
     <nav id="navbar">
 
-        <span id="menu-button"><a href="/"><i class="material-icons pc">&#xE86F;</i></a><i class="material-icons mobile">&#xE5D2;</i> DS.dev</span>
+      <span id="menu-button"><a href="/"><i class="material-icons pc">&#xE86F;</i></a><i class="material-icons mobile">&#xE5D2;</i> DS.dev</span>
 
       <ul id="dev-nav-links"><!-- Filled from template --></ul>
       <div id="dev-nav-links-back"></div>
@@ -54,31 +54,31 @@
 
   <!-- Nav links template -->
   <script type="text/template" id="dev-nav-links-template">
-      <li class="nav-link">
-        <a href="/dev"><i class="material-icons">&#xE88A;</i> {{home}}</a>
-      </li>
-      <li class="nav-link">
-        <a href="/dev#work"><i class="material-icons">&#xE8F9;</i> {{work}}</a>
-      </li>
-      <li class="nav-link-external">
-        <a href="https://github.com/danieluy" target="_blank"><i class="material-icons">&#xE2BD;</i> {{github}}</a>
-      </li>
-      <li class="nav-link">
-        <a href="/dev#academic"><i class="material-icons">&#xE80C;</i> {{academic}}</a>
-      </li>
-      <li class="nav-link">
-        <a href="/dev#contact"><i class="material-icons">&#xE0BE;</i> {{contact}}</a>
-      </li>
-      <li class="nav-link">
-        <a href="/dev#stuff"><i class="material-icons">&#xE147;</i> {{stuff}}</a>
-      </li>
-      <button type="button" id="btn-toggle-lang" title="{{toggle_lang.title}}">{{toggle_lang.lang}} <i class="material-icons">&#xE894;</i></button>
+    <li class="nav-link">
+      <a href="/dev"><i class="material-icons">&#xE88A;</i> {{home}}</a>
+    </li>
+    <li class="nav-link">
+      <a href="/dev#work"><i class="material-icons">&#xE8F9;</i> {{work}}</a>
+    </li>
+    <li class="nav-link-external">
+      <a href="https://github.com/danieluy" target="_blank"><i class="material-icons">&#xE2BD;</i> {{github}}</a>
+    </li>
+    <li class="nav-link">
+      <a href="/dev#academic"><i class="material-icons">&#xE80C;</i> {{academic}}</a>
+    </li>
+    <li class="nav-link">
+      <a href="/dev#stuff"><i class="material-icons">&#xE147;</i> {{stuff}}</a>
+    </li>
+    <li class="nav-link">
+      <a href="/dev#contact"><i class="material-icons">&#xE0BE;</i> {{contact}}</a>
+    </li>
+    <button type="button" id="btn-toggle-lang" title="{{toggle_lang.title}}">{{toggle_lang.lang}} <i class="material-icons">&#xE894;</i></button>
   </script>
 
   <!-- Content templates -->
   <!-- Home -->
   <script type="text/template" class="page-content-template" id="#home">
-    <h1 class="center">{{title}}</h1>
+    <h1>{{title}}</h1>
     <div class="content-wrapper">
       <div class="list-header">
         <span class="logo-header"><img src="img/avatar.jpg" alt="Avatar"></span>
@@ -98,46 +98,91 @@
           Todo el código de esta página está disponible bajo licencia MIT en GitHub, para consulta y uso de quien así lo quiera. Para llegar al mismo puedes hacerlo a través de mi perfil de Github, o directamente haciendo click <a target="_blank" href="https://github.com/danieluy/www.danielsosa.uy">aquí.</a>
         </p>
         <h2>Tecnologías</h2>
-        <div class="tech-item">
-          <div class="tech-header">
-            <img src="img/html5_icon.png" alt="Icono HTML5">
+        <div class="flex-wrapper">
+          <div class="tech-item">
+            <div class="tech-header">
+              <img src="img/html5_icon.png" alt="Icono HTML5">
+            </div>
+            <div class="tech-body">
+              <h3><a href="https://es.wikipedia.org/wiki/HTML5" target="_blank">HTML5</a></h3>
+              <p>
+                Estructuración de la página y articulación de las demás tecnologías involucradas.
+              </p>
+            </div>
           </div>
-          <div class="tech-body">
-            <h3>HTML5</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-            </p>
+          <div class="tech-item">
+            <div class="tech-header">
+              <img src="img/javascript_icon.png" alt="Icono Javascript">
+            </div>
+            <div class="tech-body">
+              <h3><a href="https://es.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a></h3>
+              <p>
+                Esta tecnología tiene un doble rol. De cara a los usuarios hace posible la interacción de estos con la página, y por otra parte se encarga de hacer funcionar el servidor que alimenta la página.
+              </p>
+            </div>
+          </div>
+          <div class="tech-item">
+            <div class="tech-header">
+              <img src="img/css3_icon.png" alt="Icono CSS3">
+            </div>
+            <div class="tech-body">
+              <h3><a href="https://es.wikipedia.org/wiki/Hoja_de_estilos_en_cascada" target="_blank">CSS3</a></h3>
+              <p>
+                Definición y aplición de los estilos y animaciones que enriquecen la interacción de los usuarios con la página.
+              </p>
+            </div>
+          </div>
+          <div class="tech-item">
+            <div class="tech-header">
+              <img src="img/nodejs_icon.png" alt="Icono Node.js">
+            </div>
+            <div class="tech-body">
+              <h3><a href="https://nodejs.org/es/" target="_blank">Node.js</a></h3>
+              <p>
+                Entorno de ejecución utilizado en el servidor de esta página. Este es el que permite que se utilize JavaScript para esta tarea.
+              </p>
+            </div>
+          </div>
+          <div class="tech-item">
+            <div class="tech-header">
+              <img src="img/express_icon.png" alt="Icono Express">
+            </div>
+            <div class="tech-body">
+              <h3><a href="http://expressjs.com/es/" target="_blank">Express</a></h3>
+              <p>
+                Facilita manejo de la infraestructura del lado servidor en Node.js.
+              </p>
+            </div>
+          </div>
+          <div class="tech-item">
+            <div class="tech-header">
+              <img src="img/mustache_icon.png" alt="Icono Mustache.js">
+            </div>
+            <div class="tech-body">
+              <h3><a href="http://expressjs.com/es/" target="_blank">&#123;&#123; Mustache.js &#125;&#125;</a></h3>
+              <p>
+                Manejo de plantillas HTML con JavaScript. En esta página se utiliza en la interfaz de usuario mayormente para el cambio de idioma.
+              </p>
+            </div>
+          </div>
+          <div class="tech-item">
+            <div class="tech-header">
+              <img src="img/webpack_icon.png" alt="Icono Webpack">
+            </div>
+            <div class="tech-body">
+              <h3><a href="https://webpack.js.org/" target="_blank">Webpack</a></h3>
+              <p>
+                Empaquetamiento y minificación de archivos JavaScript para optimizar la carga de estos recursos.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="tech-item">
-          <div class="tech-header">
-            <img src="img/javascript_icon.png" alt="Icono Javascript">
-          </div>
-          <div class="tech-body">
-            <h3>Javascript</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-          </div>
-        </div>
-        <div class="tech-item">
-          <div class="tech-header">
-            <img src="img/css3_icon.png" alt="Icono CSS3">
-          </div>
-          <div class="tech-body">
-            <h3>CSS3</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
-            </p>
-          </div>
-        </div>
-
       </div>
     </div>
   </script>
   <!-- Work -->
   <script type="text/template" class="page-content-template" id="#work">
-    <h1 class="center">{{title}}</h1>
+    <h1>{{title}}</h1>
     <div class="content-wrapper">
       <div class="list-header">
         <span class="logo-header"><img src="img/employed_128.jpg" alt="{{employed.logo_alt}}"></span>
@@ -182,7 +227,7 @@
 
   <!-- Academic -->
   <script type="text/template" class="page-content-template" id="#academic">
-    <h1 class="center">{{title}}</h1>
+    <h1>{{title}}</h1>
     <div class="content-wrapper">
       {{#careers}}
       <div class="career-wrapper">
@@ -212,7 +257,7 @@
 
   <!-- Contact -->
   <script type="text/template" class="page-content-template" id="#contact">
-    <h1 class="center">{{title}}</h1>
+    <h1>{{title}}</h1>
     <div class="content-wrapper">
       <div class="contact-wrapper">
         <div class="list-header">
@@ -229,10 +274,10 @@
           <form class="" action="/dev/contact" method="post">
             <label for="txt_name">{{label.name}} *</label>
             <input id="txt_name" type="text" name="name" value="" placeholder="{{placeholder.name}}" required>
-              <label for="txt_email">{{label.email}} *</label>
-              <input id="txt_email" type="email" name="email" value="" placeholder="{{placeholder.email}}" required>
-              <label for="txt_phone">{{label.phone}}</label>
-              <input id="txt_phone" type="text" name="phone" value="" placeholder="{{placeholder.phone}}" >
+            <label for="txt_email">{{label.email}} *</label>
+            <input id="txt_email" type="email" name="email" value="" placeholder="{{placeholder.email}}" required>
+            <label for="txt_phone">{{label.phone}}</label>
+            <input id="txt_phone" type="text" name="phone" value="" placeholder="{{placeholder.phone}}" >
             <label for="txt_message">{{label.mensaje}} *</label>
             <textarea id="txt_message" name="message" value="" placeholder="{{placeholder.mensaje}}" required></textarea>
             <button type="submit" name="button" class="send-button"><i class="material-icons">&#xE163;</i></button>
@@ -244,7 +289,7 @@
 
   <!-- Stuff -->
   <script type="text/template" class="page-content-template" id="#stuff">
-    <h1 class="center">{{title}}</h1>
+    <h1>{{title}}</h1>
     <div class="content-wrapper">
       <div class="contact-wrapper">
         <div class="list-header">
@@ -261,10 +306,10 @@
           <form class="" action="/dev/contact" method="post">
             <label for="txt_name">{{label.name}} *</label>
             <input id="txt_name" type="text" name="name" value="" placeholder="{{placeholder.name}}" required>
-              <label for="txt_email">{{label.email}} *</label>
-              <input id="txt_email" type="email" name="email" value="" placeholder="{{placeholder.email}}" required>
-              <label for="txt_phone">{{label.phone}}</label>
-              <input id="txt_phone" type="text" name="phone" value="" placeholder="{{placeholder.phone}}" >
+            <label for="txt_email">{{label.email}} *</label>
+            <input id="txt_email" type="email" name="email" value="" placeholder="{{placeholder.email}}" required>
+            <label for="txt_phone">{{label.phone}}</label>
+            <input id="txt_phone" type="text" name="phone" value="" placeholder="{{placeholder.phone}}" >
             <label for="txt_message">{{label.mensaje}} *</label>
             <textarea id="txt_message" name="message" value="" placeholder="{{placeholder.mensaje}}" required></textarea>
             <button type="submit" name="button" class="send-button"><i class="material-icons">&#xE163;</i></button>

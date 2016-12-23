@@ -110,24 +110,29 @@ header nav button#btn-toggle-lang i{
   left: 0;
   overflow-y: auto;
 }
-#page-content div.content-wrapper{
+#page-content .content-wrapper{
   width: 50%;
   margin: 0 auto;
   animation: slideUp 500ms ease-out;
 }
 #page-content h1{
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 100;
   line-height: 60px;
   margin-bottom: 20px;
   animation: slideUp 300ms ease-out;
+  text-align: center;
 }
 #page-content h2{
-  font-size: 1.3rem;
-  font-weight: 500;
+  font-size: 1.8rem;
+  font-weight: 100;
+  line-height: 40px;
+  margin: 30px 0;
+  text-align: center;
 }
-#page-content h3{
-  font-size: 1.2rem;
+#page-content h3,
+#page-content h3 a{
+  font-size: 1.3rem;
   font-weight: 300;
 }
 #page-content label{
@@ -148,7 +153,7 @@ header nav button#btn-toggle-lang i{
   background-color: #0088CC;
   color: #fff;
 }
-#page-content div.list-header{
+#page-content .list-header{
   width: 100%;
   overflow: auto;
   padding: 15px;
@@ -183,11 +188,11 @@ header nav button#btn-toggle-lang i{
   font-size: 1rem;
   vertical-align: middle;
 }
-#page-content div.list-body{
+#page-content .list-body{
   width: 100%;
   padding: 15px;
 }
-#page-content div.list-body label{
+#page-content .list-body label{
   display: block;
   font-size: .7rem;
   font-weight: 700;
@@ -195,17 +200,17 @@ header nav button#btn-toggle-lang i{
   padding: 5px 0;
   text-transform: uppercase;
 }
-#page-content div.list-body input,
-#page-content div.list-body textarea{
+#page-content .list-body input,
+#page-content .list-body textarea{
   display: block;
   width: 100%;
   padding: 15px 5px;
   border-style: none;
 }
-#page-content div.list-body textarea{
+#page-content .list-body textarea{
   height: 100px;
 }
-#page-content div.list-body button.send-button{
+#page-content .list-body .send-button{
   float: right;
   width: 50px;
   height: 50px;
@@ -218,40 +223,46 @@ header nav button#btn-toggle-lang i{
   transition: box-shadow 200ms ease-out;
   cursor: pointer;
 }
-#page-content div.list-body button:hover{
+#page-content .list-body button:hover{
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
 }
-#page-content div.list-body button i{
+#page-content .list-body button i{
   vertical-align: middle;
   color: #fff;
   font-size: 25px;
   margin-left: 2px;
 }
 /*--  Home  ------------------------------------------------------------------*/
-div.tech-item{
+.flex-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+}
+.tech-item{
   width: 33.33333%;
   float: left;
+  overflow: auto;
 }
-div.tech-header{
+.tech-header{
   width: 75px;
   height: 75px;
   margin: 15px auto;
 }
-div.tech-header img{
+.tech-header img{
   width: 100%;
   height: 100%;
 }
-div.tech-body{
-  padding: 10px;
+.tech-body{
+  padding: 15px;
 }
-div.tech-body p{
+.tech-body p{
   font-size: .9rem;
+  text-align: justify;
 }
 /*--  Work  ------------------------------------------------------------------*/
-#page-content div.work-wrapper{
+#page-content .work-wrapper{
   margin-bottom: 30px;
 }
-#page-content div.list-body div.work-wrapper > img{
+#page-content .list-body .work-wrapper > img{
   width: 100%;
   margin-bottom: 10px;
 }
@@ -272,22 +283,22 @@ div.tech-body p{
   padding-bottom: 5px;
 }
 /*--  Academic  --------------------------------------------------------------*/
-#page-content div.courses-header{
+#page-content .courses-header{
   padding: 15px 15px 0 15px;
 }
-#page-content div.courses-header label.column-label{
+#page-content .courses-header label.column-label{
   display: inline-block;
   width: 75px;
   text-transform: uppercase;
   font-size: .7rem;
   color: #555;
 }
-#page-content div.career-course{
+#page-content .career-course{
   width: 100%;
   overflow: auto;
   padding: 15px 15px 0px 15px;
 }
-#page-content div.career-course span.course-score{
+#page-content .career-course span.course-score{
   margin-left: 12.5px;
   width: 50px;
   line-height: 50px;
@@ -300,15 +311,15 @@ div.tech-body p{
   border: 1px solid #888;
   border-radius: 50%;
 }
-#page-content div.career-course div.course-info{
+#page-content .career-course .course-info{
   margin-left: 85px;
 }
-#page-content div.career-course div.course-info span.course-title{
+#page-content .career-course .course-info span.course-title{
   display: block;
   font-weight: 500;
   margin-top: 6px;
 }
-#page-content div.career-course div.course-info span.course-techs{
+#page-content .career-course .course-info span.course-techs{
   font-size: .8rem;
   display: inline-block;
 }
@@ -363,7 +374,7 @@ div#start-footer > a.btn-login > i{
 
 
 @media (max-width: 1280px) {
-  #page-content div.content-wrapper{
+  #page-content .content-wrapper{
     width: 75%;
     margin: 0 auto;
   }
@@ -456,6 +467,10 @@ div#start-footer > a.btn-login > i{
   header nav button#btn-toggle-lang i{
     /*vertical-align: middle;*/
   }
+  /*--  Home  ----------------------------------------------------------------*/
+  .tech-item{
+    width: 50%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -464,7 +479,7 @@ div#start-footer > a.btn-login > i{
   #page-content{
     padding: 20px 0;
   }
-  #page-content div.content-wrapper{
+  #page-content .content-wrapper{
     width: 100%;
     margin: 0;
   }
@@ -492,11 +507,33 @@ div#start-footer > a.btn-login > i{
     width: 100%;
     text-align: right;
   }
-  #page-content div.list-body{
+  #page-content .list-body{
     padding: 10px;
   }
+  #page-content h3,
+  #page-content h3 a{
+    text-align: center;
+    font-size: 1.8rem;
+  }
+  #page-content a{
+    font-weight: 700;
+  }
+  #page-content a:hover{
+    background-color: #0088CC;
+    color: #fff;
+  }
+  /*--  Home  ----------------------------------------------------------------*/
+  .tech-item{
+    width: 100%;
+  }
+  .tech-body{
+    padding: 0px;
+  }
+  .tech-body p{
+    font-size: 1rem;
+  }
   /*--  Work  ----------------------------------------------------------------*/
-  #page-content div.work-wrapper{
+  #page-content .work-wrapper{
     margin-bottom: 30px;
     padding: 0;
   }
