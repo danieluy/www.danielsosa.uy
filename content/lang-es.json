@@ -84,7 +84,7 @@
             }
           },
           "courses": [
-            {"score": "??", "name": "Algoritmos y Estructuras de Datos 2", "techs": "POO | Java | Arboles | Grafos | Multiestructuras"},
+            {"score": 99, "name": "Algoritmos y Estructuras de Datos 2", "techs": "POO | Java | Arboles | Grafos | Multiestructuras"},
             {"score": 93, "name": "Ingeniría de software", "techs": "Gestión de proyectos de software"}
           ]
         },
