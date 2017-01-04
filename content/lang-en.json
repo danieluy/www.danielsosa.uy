@@ -38,23 +38,22 @@
             "year": 2016,
             "description": "Audience prizes management system",
             "client_name": "Radiocero 104.3 FM  <a href='http://www.radiocero.com.uy/' target='_blank'><i class='material-icons'></i></a>",
-            "cover": {"src": "img/placeholder_1920x1080.jpg", "alt": "Cover image"},
+            "cover": {"src": "img/radiocero_premios_lista.jpg", "alt": "Imagen de cabecera"},
             "images":[
-              {"src": "img/placeholder_1280x720.jpg", "alt": ""},
-              {"src": "img/placeholder_800x600.jpg", "alt": ""},
-              {"src": "img/placeholder_1920x1080.jpg", "alt": ""}
+              {"src": "img/radiocero_premios_lista.jpg", "alt": "Radiocero, prizes list"},
+              {"src": "img/radiocero_premios_nuevo.jpg", "alt": "Radiocero, new prize form"},
+              {"src": "img/radiocero_usuarios_lista.jpg", "alt": "Radiocero, users list"}
             ]
           },
-          "m_tec": {
-            "title": "m-tec",
+          "mtec": {
+            "title": "mtec (placeholder)",
             "year": 2016,
-            "description": "m-tec company's website",
-            "client_name": "m-tec  <a href='http://www.m-tec.com.uy/' target='_blank'><i class='material-icons'></i></a>",
-            "cover": {"src": "img/placeholder_1920x1080.jpg", "alt": "Cover image"},
+            "description": "mtec's corporate website",
+            "client_name": "mtec  <a href='http://mtec.com.uy/' target='_blank'><i class='material-icons'></i></a>",
+            "cover": {"src": "img/mtec_desktop.jpg", "alt": "Cover image"},
             "images":[
-              {"src": "img/placeholder_1280x720.jpg", "alt": ""},
-              {"src": "img/placeholder_800x600.jpg", "alt": ""},
-              {"src": "img/placeholder_1920x1080.jpg", "alt": ""}
+              {"src": "img/mtec_desktop.jpg", "alt": "Mtec desktop version"},
+              {"src": "img/mtec_mobile.jpg", "alt": "Mtec mobile version"}
             ]
           }
         }
