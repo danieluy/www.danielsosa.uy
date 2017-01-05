@@ -83,99 +83,37 @@
       <div class="list-header">
         <span class="logo-header"><img src="img/avatar.jpg" alt="Avatar"></span>
         <span class="header-title">Daniel Sosa Cardozo</span>
-        <span class="header-subtitle">Desarrollador de software</span>
+        <span class="header-subtitle">{{subtitle}}</span>
       </div>
       <div class="list-body">
 
-        <h2>Qué y para qué</h2>
+        <h2>{{h2titles.0}}</h2>
         <p>
-          El propósito de esta página es presentar lo que me gusta hacer, y nace de la necesidad de poder mostrar mi trabajo y aptitudes más alla de mi formación académica.
+          {{paragraphs.0}}
         </p>
         <p>
-          Se trata de un compendio de actividades y proyectos relacionadas únicamente con el desarrollo de software. Para ver otros puedes consultar las secciones <a href="/arq">Arq</a> e <a href="/img">Img</a> de esta página.
+          {{{paragraphs.1}}}
         </p>
         <p>
-          Todo el código de esta página está disponible bajo licencia MIT en GitHub, para consulta y uso de quien así lo quiera. Para llegar al mismo puedes hacerlo a través de mi perfil de Github, o directamente haciendo click <a target="_blank" href="https://github.com/danieluy/www.danielsosa.uy">aquí.</a>
+          {{{paragraphs.2}}}
         </p>
-        <h2>Tecnologías utilizadas</h2>
+        <h2>{{h2titles.1}}</h2>
         <div class="flex-wrapper">
+
+          {{#techs}}
           <div class="tech-item">
             <div class="tech-header">
-              <img src="img/html5_icon.png" alt="Icono HTML5">
+              <img src="{{icon.src}}" alt="{{icon.alt}}">
             </div>
             <div class="tech-body">
-              <h3><a href="https://es.wikipedia.org/wiki/HTML5" target="_blank">HTML5</a></h3>
+              <h3><a href="{{title.href}}" target="_blank">{{title.text}}</a></h3>
               <p>
-                Estructuración de la página y articulación de las demás tecnologías involucradas.
+                {{p}}
               </p>
             </div>
           </div>
-          <div class="tech-item">
-            <div class="tech-header">
-              <img src="img/javascript_icon.png" alt="Icono Javascript">
-            </div>
-            <div class="tech-body">
-              <h3><a href="https://es.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a></h3>
-              <p>
-                Esta tecnología tiene un doble rol. De cara a los usuarios hace posible la interacción de estos con la página, y por otra parte se encarga de hacer funcionar el servidor que alimenta la página.
-              </p>
-            </div>
-          </div>
-          <div class="tech-item">
-            <div class="tech-header">
-              <img src="img/css3_icon.png" alt="Icono CSS3">
-            </div>
-            <div class="tech-body">
-              <h3><a href="https://es.wikipedia.org/wiki/Hoja_de_estilos_en_cascada" target="_blank">CSS3</a></h3>
-              <p>
-                Definición y aplición de los estilos y animaciones que enriquecen la interacción de los usuarios con la página.
-              </p>
-            </div>
-          </div>
-          <div class="tech-item">
-            <div class="tech-header">
-              <img src="img/nodejs_icon.png" alt="Icono Node.js">
-            </div>
-            <div class="tech-body">
-              <h3><a href="https://nodejs.org/es/" target="_blank">Node.js</a></h3>
-              <p>
-                Entorno de ejecución utilizado en el servidor de esta página. Este es el que permite que se utilize JavaScript para esta tarea.
-              </p>
-            </div>
-          </div>
-          <div class="tech-item">
-            <div class="tech-header">
-              <img src="img/express_icon.png" alt="Icono Express">
-            </div>
-            <div class="tech-body">
-              <h3><a href="http://expressjs.com/es/" target="_blank">Express</a></h3>
-              <p>
-                Facilita manejo de la infraestructura del lado servidor en Node.js.
-              </p>
-            </div>
-          </div>
-          <div class="tech-item">
-            <div class="tech-header">
-              <img src="img/mustache_icon.png" alt="Icono Mustache.js">
-            </div>
-            <div class="tech-body">
-              <h3><a href="http://expressjs.com/es/" target="_blank">&#123;&#123; Mustache.js &#125;&#125;</a></h3>
-              <p>
-                Manejo de plantillas HTML con JavaScript. En esta página se utiliza en la interfaz de usuario mayormente para el cambio de idioma.
-              </p>
-            </div>
-          </div>
-          <div class="tech-item">
-            <div class="tech-header">
-              <img src="img/webpack_icon.png" alt="Icono Webpack">
-            </div>
-            <div class="tech-body">
-              <h3><a href="https://webpack.js.org/" target="_blank">Webpack</a></h3>
-              <p>
-                Empaquetamiento y minificación de archivos JavaScript para optimizar la carga de estos recursos.
-              </p>
-            </div>
-          </div>
+          {{/techs}}
+
         </div>
       </div>
     </div>
@@ -233,7 +171,7 @@
       <div class="career-wrapper">
         <div class="list-header">
           <span class="logo-header"><img src="{{institution.logo.src}}" alt="{{institution.logo.alt}}"></span>
-          <span class="header-title">{{name}}</span>
+          <span class="header-title">{{name}} <i><small>{{status}}</small></i></span>
           <span class="header-subtitle">{{institution.name}}</span>
           <a href="{{page}}" target="_blank"><i class="material-icons">&#xE89E;</i></a>
         </div>
