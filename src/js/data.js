@@ -3,10 +3,10 @@ const $session = require('./session');
 const dsAjax = require('./ds-ajax');
 
 module.exports = {
-  init: function(){
+  init: function(page){
     this.lang = $session.getItem('selected_lang') || 'es';
     $events.on('liNavLinksRenderReady', this.dinamicDomCache.bind(this));
-    this.initData();
+    this.initData(page);
   },
   dinamicDomCache: function(){
     this.langToggler = document.getElementById('btn-toggle-lang');
@@ -24,31 +24,27 @@ module.exports = {
     this.updateData();
     $events.emit('toggleLang');
   },
-  initData: function(){
-    console.log('initData', this.lang);
+  initData: function(page){
     dsAjax.post.call(this, {
       url: 'http://' + window.location.host + '/lang',
       successCb: (function(data){
         this.data = JSON.parse(data);
-        console.log(this.data);
         $events.emit('dataReady');
       }).bind(this),
       errorCb: function(err){
         console.error(err);
       },
       params: {
-        page: 'dev',
+        page: page,
         lang: this.lang
       }
     })
   },
   updateData: function(){
-    console.log('updateData', this.lang);
     dsAjax.post.call(this, {
       url: 'http://' + window.location.host + '/lang',
       successCb: (function(data){
         this.data = JSON.parse(data);
-        console.log(this.data);
         $events.emit('dataUpdated');
       }).bind(this),
       errorCb: function(err){

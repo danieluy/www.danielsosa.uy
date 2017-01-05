@@ -5,7 +5,7 @@ const $data = require('./data');
 const $nav = require('./nav');
 
 document.addEventListener("DOMContentLoaded", function() {
-  $data.init();
+  $data.init('dev');
   $events.on('dataReady', $dev.init.bind($dev));
   $events.on('dataReady', $nav.init.bind($nav));
 });

@@ -4,7 +4,11 @@
   "description": "www.danielsosa.uy",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "wp-dev": "webpack --config webpack-dev.config.js",
+    "wp-dev-w": "webpack --config webpack-dev.config.js -w",
+    "wp-home": "webpack --config webpack-home.config.js",
+    "wp-home-w": "webpack --config webpack-home.config.js -w"
   },
   "author": "danielsosa.dev@gmail.com",
   "license": "MIT",
