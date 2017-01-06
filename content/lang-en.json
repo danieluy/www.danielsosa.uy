@@ -106,7 +106,7 @@
             "href": "https://webpack.js.org/",
             "text": "Webpack"
           },
-          "p": "Bundling and minification of JavaScript files to optimize the resource loading."
+          "p": "Bundling and minification of JavaScript and CSS files to optimize the resource loading."
         }
       ]
     },

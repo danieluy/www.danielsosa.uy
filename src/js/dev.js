@@ -1,5 +1,7 @@
 'use strict';
 
+require("../css/main.css");
+require("../css/dev.css");
 const $events = require('./events');
 const $data = require('./data');
 const $nav = require('./nav');

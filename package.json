@@ -20,6 +20,8 @@
     "nodemailer": "^2.6.4"
   },
   "devDependencies": {
+    "css-loader": "^0.26.1",
+    "style-loader": "^0.13.1",
     "webpack": "^1.14.0"
   }
 }

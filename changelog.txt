@@ -1,0 +1,5 @@
+v1.0.0
+  + 20170106 - Added changelog.txt
+  + 20170106 - Webpack now minifies and inlines the css
+  + 20170106 - Replaced material icons font for svg
+  + 20170106 - Improved icons

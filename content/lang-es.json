@@ -106,7 +106,7 @@
             "href": "https://webpack.js.org/",
             "text": "Webpack"
           },
-          "p": "Empaquetamiento y minificación de archivos JavaScript para optimizar la carga de estos recursos."
+          "p": "Empaquetamiento y minificación de archivos JavaScript y CSS para optimizar la carga de estos recursos."
         }
       ]
     },
