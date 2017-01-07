@@ -1,5 +1,9 @@
-v1.0.0
-  + 20170106 - Added changelog.txt
-  + 20170106 - Webpack now minifies and inlines the css
+v1.2.0
+  + 20170106 - Added back to home button on mobile Dev
+  - 20170106 - Removed external fonts from Dev section to improve loading times [ Average loading time 350ms (no cahche, throttling Good3G) ]
+  + 20170106 - Improved icons in general
   + 20170106 - Replaced material icons font for svg
-  + 20170106 - Improved icons
+  + 20170106 - Webpack now handles css
+  + 20170106 - Added changelog.txt
+v1.1.0
+  + 20170105 - FIX footer on Home section wasn't loading

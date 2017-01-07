@@ -126,7 +126,8 @@
             "title": "Premios Radiocero",
             "year": 2016,
             "description": "Sistema de gestión de premios a la audiencia",
-            "client_name": "Radiocero 104.3 FM  <a href='http://www.radiocero.com.uy/' target='_blank'><i class='material-icons'></i></a>",
+            "client_name": "Radiocero 104.3 FM",
+            "client_href": "http://www.radiocero.com.uy/",
             "cover": {"src": "img/radiocero_premios_lista.jpg", "alt": "Imagen de cabecera"},
             "images":[
               {"src": "img/radiocero_premios_lista.jpg", "alt": "Radiocero, listado de premios"},
@@ -135,10 +136,11 @@
             ]
           },
           "mtec": {
-            "title": "mtec (placeholder)",
+            "title": "Mtec (placeholder)",
             "year": 2016,
-            "description": "Sitio Corporativo para la empresa mtec",
-            "client_name": "Manuel Sosa  <a href='http://mtec.com.uy/' target='_blank'><i class='material-icons'></i></a>",
+            "description": "Sitio Corporativo para la empresa Mtec",
+            "client_name": "Manuel Sosa",
+            "client_href": "http://www.mtec.com.uy/",
             "cover": {"src": "img/mtec_desktop.jpg", "alt": "Imagen de cabecera"},
             "images":[
               {"src": "img/mtec_desktop.jpg", "alt": "Mtec versión de escritorio"},
