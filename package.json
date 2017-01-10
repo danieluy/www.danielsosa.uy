@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
+    "test": "mocha --require ignore-styles",
     "wp-dev": "webpack --config webpack-dev.config.js",
     "wp-dev-w": "webpack --config webpack-dev.config.js -w",
     "wp-home": "webpack --config webpack-home.config.js",
@@ -19,10 +20,14 @@
     "client-sessions": "^0.7.0",
     "express": "^4.13.4",
     "firebase": "^3.6.3",
-    "nodemailer": "^2.6.4"
+    "nodemailer": "^2.6.4",
+    "socket.io": "^1.7.2"
   },
   "devDependencies": {
     "css-loader": "^0.26.1",
+    "ignore-styles": "^5.0.1",
+    "mocha": "^3.2.0",
+    "mocha-jsdom": "^1.1.0",
     "style-loader": "^0.13.1",
     "webpack": "^1.14.0"
   }

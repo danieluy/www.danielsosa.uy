@@ -15,6 +15,10 @@ router.get('/whoami', (req, res) => {
   res.status(200).sendFile(path.join(__dirname, '../public/whoami/home.html'));
 });
 
+router.post('/whoami/login', (req, res) => {
+  res.status(200).sendFile(path.join(__dirname, '../public/whoami/home.html'));
+});
+
 // 404 /////////////////////////////////////////////////////////////////////////
 
 router.get('*', function(req, res){

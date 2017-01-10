@@ -2,6 +2,8 @@
 const fs = require('fs')
 const express = require('express');
 const app = express();
+const http = require('http').Server(app);
+const io = require('socket.io')(http);
 const stuff_router = require('./my-modules/stuff-router');
 const path = require('path');
 const bodyParser = require("body-parser");
@@ -125,7 +127,24 @@ app.post('/dev/contact', (req, res) => {
   });
 })
 
+// Socket.IO ///////////////////////////////////////////////////////////////////
+
+app.use((req, res, next) => {
+  req.io = io;
+  next();
+})
+
+io.on('connection', function(socket){
+  socket.on('message', (data) => {
+    console.log(data);
+  });
+  socket.on('disconnect', function(){
+    console.log('user disconnected');
+  });
+});
+
 // Stuff routes ////////////////////////////////////////////////////////////////
+
 app.use('/stuff', stuff_router);
 
 // 404 /////////////////////////////////////////////////////////////////////////
@@ -134,7 +153,7 @@ app.get('*', function(req, res){
   res.sendFile(path.join(__dirname, 'public/404.html'));
 });
 
-app.listen(3000, function(){
+http.listen(3000, function(){
   console.log(
     '···········································\n' +
     '·                                         ·\n' +
