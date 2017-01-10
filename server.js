@@ -2,6 +2,7 @@
 const fs = require('fs')
 const express = require('express');
 const app = express();
+const stuff_router = require('./my-modules/stuff-router');
 const path = require('path');
 const bodyParser = require("body-parser");
 const sessions = require('client-sessions');
@@ -108,6 +109,7 @@ app.post('/dev/contact', (req, res) => {
         <p>${message}</p>
       `
   };
+
   transporter.sendMail(mailOptions, (error, info) => {
     if(error){
       console.log(error);
@@ -123,15 +125,8 @@ app.post('/dev/contact', (req, res) => {
   });
 })
 
-// Access-Control-Allow-Origin: *  /////////////////////////////////////////////
-// From here on cross-origin resource sharing is allowed for any origin to any route
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-});
-
-// API calls here //////////////////////////////////////////////////////////////
+// Stuff routes ////////////////////////////////////////////////////////////////
+app.use('/stuff', stuff_router);
 
 // 404 /////////////////////////////////////////////////////////////////////////
 
