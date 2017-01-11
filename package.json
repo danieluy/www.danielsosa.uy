@@ -9,9 +9,7 @@
     "wp-dev": "webpack --config webpack-dev.config.js",
     "wp-dev-w": "webpack --config webpack-dev.config.js -w",
     "wp-home": "webpack --config webpack-home.config.js",
-    "wp-home-w": "webpack --config webpack-home.config.js -w",
-    "wp-who": "webpack --config webpack-whoami.config.js",
-    "wp-who-w": "webpack --config webpack-whoami.config.js -w"
+    "wp-home-w": "webpack --config webpack-home.config.js -w"
   },
   "author": "danielsosa.dev@gmail.com",
   "license": "MIT",
@@ -20,8 +18,7 @@
     "client-sessions": "^0.7.0",
     "express": "^4.13.4",
     "firebase": "^3.6.3",
-    "nodemailer": "^2.6.4",
-    "socket.io": "^1.7.2"
+    "nodemailer": "^2.6.4"
   },
   "devDependencies": {
     "css-loader": "^0.26.1",

@@ -1,5 +1,4 @@
 v1.2.0
-  + 20170109 - Started to work on Who Am I, the game
   + 20170106 - Added back to home button on mobile Dev
   - 20170106 - Removed external fonts from Dev section to improve loading times [ Average loading time 350ms (no cahche, throttling Good3G) ]
   + 20170106 - Improved icons in general
