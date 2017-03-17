@@ -1,6 +1,6 @@
 {
   "name": "danielsosauy",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "www.danielsosa.uy",
   "main": "server.js",
   "scripts": {

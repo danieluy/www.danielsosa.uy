@@ -108,7 +108,7 @@ header nav button#btn-toggle-lang i{
 /*--  Page Content  ----------------------------------------------------------*/
 #page-content{
   position: fixed;
-  height: calc(100vh - 60px);
+  /*height: calc(100vh - 60px);*/
   padding: 20px;
   width: 100%;
   top: 60px;
