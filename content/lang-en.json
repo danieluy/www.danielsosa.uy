@@ -175,6 +175,7 @@
             }
           },
           "courses": [
+            {"score": "??", "name": "Applications Design and Development", "techs": "OOP | Java | UML"},
             {"score": 99, "name": "Algorithms & data structures 2", "techs": "OOP | Java | Trees | Graphs | Multi-structures"},
             {"score": 93, "name": "Software engineering", "techs": "Software project management"}
           ]

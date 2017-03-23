@@ -7,14 +7,6 @@ const path = require('path');
 const bodyParser = require("body-parser");
 const sessions = require('client-sessions');
 const nodemailer = require('nodemailer');
-// const firebase = require("firebase");
-//
-// firebase.initializeApp({
-//   serviceAccount: __dirname + '/firebase-credentials.json',
-//   databaseURL: "https://mywebpage-2f92f.firebaseio.com/"
-// });
-//
-// console.log(firebase);
 
 const ENGLISH = require('./content/lang-en.json');
 const SPANISH = require('./content/lang-es.json');
