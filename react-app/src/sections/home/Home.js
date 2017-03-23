@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router'
-import './Home.css';
+  import './Home.css';
 
 import HomeHeader from './home-header/HomeHeader';
 import HomeFooter from './home-footer/HomeFooter';

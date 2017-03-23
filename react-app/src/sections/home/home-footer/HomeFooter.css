@@ -14,14 +14,21 @@
 .ftr-element{
   display: flex;
   align-items: center;
+  text-decoration: none;
+  color: #888;
+  transition: color 200ms linear;
 }
 .ftr-icon{
   height: 60px;
   width: 60px;
   padding: 15px;
+  fill: #aaa;
+  transition: fill 200ms linear;
 }
-.ftr-btn-login{
-  align-self: flex-end;
+a.ftr-element:hover,
+a.ftr-element:hover > .ftr-icon{
+  color: #555;
+  fill: #555;
 }
 /*.start-footer span{
   float: left;
