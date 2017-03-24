@@ -53,3 +53,50 @@
 #footer-pointer{
   display: none;
 }
+/*@media screen and (max-width: 1200px){ }*/
+
+@media screen and (max-width: 960px){
+  .nav-link > span{
+    font-size: 2.5rem;
+    transition: none;
+  }
+  .nav-icon{
+    width: 2rem;
+    height: 2rem;
+    margin: 5px 10px 0 0;
+    transition: none;
+  }
+  .arq .nav-link > span,
+  .arq .nav-icon{
+    color: #f33;
+    fill: #f33;
+  }
+  .dev .nav-link > span,
+  .dev .nav-icon{
+    color: #08c;
+    fill: #08c;
+  }
+  .img .nav-link > span,
+  .img .nav-icon{
+    color: #fb0;
+    fill: #fb0;
+  }
+}
+
+@media screen and (max-width: 768px){
+  #footer-pointer{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .links-list{
+    flex-direction: column;
+  }
+}

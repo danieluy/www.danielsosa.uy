@@ -6,12 +6,12 @@ class HomeHeader extends Component {
   constructor() {
     super();
     this.state = {
-      header: { height: window.innerHeight }
+      header: { height: `${window.innerHeight}px` }
     }
   }
 
   componentDidMount() {
-    window.addEventListener('resize', () => { this.setState({ header: { height: window.innerHeight } }) })
+    window.addEventListener('resize', () => { this.setState({ header: { height: `${window.innerHeight}px` } }) })
   }
 
   render() {
@@ -57,7 +57,7 @@ class HomeHeader extends Component {
         </header>
 
         <div id="footer-pointer">
-          <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <svg fill="#888" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
             <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z" />
             <path d="M0-.75h24v24H0z" fill="none" />
           </svg>

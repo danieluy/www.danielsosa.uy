@@ -6,19 +6,28 @@ class HomeFooter extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      header: { height: window.innerHeight }
+      footer: { height: '60px' }
     }
   }
 
-  componentDidMount() {
-    window.addEventListener('resize', () => { this.setState({ header: { height: window.innerHeight } }) })
+  componentWillMount() {
+    this.setHeight();
+    window.addEventListener('resize', this.setHeight.bind(this))
+  }
+
+  setHeight() {
+    if (window.innerWidth <= 768)
+      this.setState({ footer: { height: `${window.innerHeight}px` } })
+    else {
+      this.setState({ footer: { height: '60px' } })
+    }
   }
 
   render() {
     return (
       <div>
 
-        <footer className="home-footer">
+        <footer className="home-footer" style={this.state.footer}>
 
           <div className="ftr-left-elements">
             <span className="ftr-element ftr-copyright">
