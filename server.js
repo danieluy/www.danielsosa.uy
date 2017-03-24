@@ -46,7 +46,7 @@ const transporter = nodemailer.createTransport({
 });
 
 // Middleware //////////////////////////////////////////////////////////////////
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // HttpGET /////////////////////////////////////////////////////////////////////
 
@@ -54,34 +54,32 @@ app.get('/', (req, res) => {
   res.status(200).sendFile(path.join(__dirname, 'public/home.html'));
 });
 
-
-app.get('/dev', (req, res) => {
-  res.status(200).sendFile(path.join(__dirname, 'public/dev.html'));
-});
-
-app.get('/dev/*', (req, res) => {
-  res.status(200).sendFile(path.join(__dirname, 'public/dev.html'));
-});
-
-app.get('/arq', (req, res) => {
-  res.status(200).sendFile(path.join(__dirname, 'public/arq.html'));
-});
-
-app.get('/img', (req, res) => {
-  res.status(200).sendFile(path.join(__dirname, 'public/img.html'));
-});
-
 // HttpPOST  ///////////////////////////////////////////////////////////////////
 
-app.post('/lang', (req, res) => {
-  if(req.body.page !== 'home' && req.body.page !== 'dev' && req.body.page !== 'arq' && req.body.page !== 'img')
-    res.status(400).json({error: '400 Bad Request', details: 'The page ' + req.body.page + ' does not exist'})
-  if(req.body.lang)
-    req.session.lang = req.body.lang;
-  else if(!req.session.lang)
-    req.session.lang = 'es'
-  res.status(200).json(req.session.lang === 'es' ? SPANISH[req.body.page] : ENGLISH[req.body.page])
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  // res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  // res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+  next();
+})
+
+app.post('/lang/:lang/:page', (req, res) => {
+  if (req.params.page !== 'home' && req.params.page !== 'dev' && req.params.page !== 'arq' && req.params.page !== 'img')
+    res.status(400).json({ error: '400 Bad Request', details: 'The page ' + req.params.page + ' does not exist' })
+  if (req.params.lang !== 'es' && req.params.lang !== 'en')
+    res.status(400).json({ error: '400 Bad Request', details: 'The requested language is currently not supported' })
+  res.status(200).json(req.params.lang === 'es' ? SPANISH[req.params.page] : ENGLISH[req.params.page])
 });
+
+// app.post('/lang', (req, res) => {
+//   if(req.body.page !== 'home' && req.body.page !== 'dev' && req.body.page !== 'arq' && req.body.page !== 'img')
+//     res.status(400).json({error: '400 Bad Request', details: 'The page ' + req.body.page + ' does not exist'})
+//   if(req.body.lang)
+//     req.session.lang = req.body.lang;
+//   else if(!req.session.lang)
+//     req.session.lang = 'es'
+//   res.status(200).json(req.session.lang === 'es' ? SPANISH[req.body.page] : ENGLISH[req.body.page])
+// });
 
 app.post('/dev/contact', (req, res) => {
   let name = req.body.name;
@@ -89,11 +87,11 @@ app.post('/dev/contact', (req, res) => {
   let phone = req.body.phone;
   let message = req.body.message;
   const mailOptions = {
-      from: '"Daniel Sosa" <danielsosa.foo@gmail.com>',
-      to: 'danielsosa.dev@gmail.com',
-      subject: 'Message from www.danielsosa.uy',
-      text: 'From: '+name+' <'+email+'> - Phone: '+phone+' - Message: '+message,
-      html: `
+    from: '"Daniel Sosa" <danielsosa.foo@gmail.com>',
+    to: 'danielsosa.dev@gmail.com',
+    subject: 'Message from www.danielsosa.uy',
+    text: 'From: ' + name + ' <' + email + '> - Phone: ' + phone + ' - Message: ' + message,
+    html: `
         <p>From: ${name}</p>
         <p>Email: ${email}</p>
         <p>Phone: ${phone || ''}</p>
@@ -103,7 +101,7 @@ app.post('/dev/contact', (req, res) => {
   };
 
   transporter.sendMail(mailOptions, (error, info) => {
-    if(error){
+    if (error) {
       console.log(error);
       res.status(500).send(`
         <h1>Sorry, there was a server error</h1>
@@ -111,7 +109,7 @@ app.post('/dev/contact', (req, res) => {
         <p>Please try again or contact danielsosa.dev@gmail.com directly</p>
       `);
     }
-    else{
+    else {
       res.status(200).redirect('/dev#contact')
     };
   });
@@ -119,15 +117,15 @@ app.post('/dev/contact', (req, res) => {
 
 // 404 /////////////////////////////////////////////////////////////////////////
 
-app.get('*', function(req, res){
+app.get('*', function (req, res) {
   res.sendFile(path.join(__dirname, 'public/404.html'));
 });
 
-http.listen(3000, function(){
+http.listen(3372, function () {
   console.log(
     '···········································\n' +
     '·                                         ·\n' +
-    '·   Server listening on: localhost:3000   ·\n' +
+    '·   Server listening on: localhost:3372   ·\n' +
     '·       Press Ctrl-C to terminate         ·\n' +
     '·                                         ·\n' +
     '···········································'

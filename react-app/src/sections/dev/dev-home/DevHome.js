@@ -4,7 +4,7 @@ import './DevHome.css';
 class DevHome extends Component {
   render() {
     return (
-      <h2>Dev Home component</h2>
+      <pre>{JSON.stringify(this.props.lang, null, 2)}</pre>
     );
   }
 }
