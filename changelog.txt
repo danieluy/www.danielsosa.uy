@@ -1,4 +1,5 @@
 v1.3.0
+  + 20170326 - Data loading architectura finished
   + 20170324 - Started to work on DevNavbar
   + 20170324 - Added support for toggling language
   + 20170324 - Home page complete

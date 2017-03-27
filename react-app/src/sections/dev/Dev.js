@@ -3,13 +3,8 @@ import './Dev.css';
 
 import DevNavbar from './dev-navbar/DevNavbar';
 
-// import Req from '../../request';
-
 import { es as ES } from '../../assets/lang/lang-dev';
 import { en as EN } from '../../assets/lang/lang-dev';
-
-console.log('ES', ES)
-console.log('EN', EN)
 
 class Dev extends Component {
 
@@ -32,6 +27,7 @@ class Dev extends Component {
     const children_with_props = React.cloneElement(this.props.children, {
       lang: lang
     })
+    
     return (
       <div>
         <DevNavbar parentMethods={{

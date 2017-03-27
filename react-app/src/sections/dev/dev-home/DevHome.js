@@ -3,8 +3,9 @@ import './DevHome.css';
 
 class DevHome extends Component {
   render() {
+    const LANG = this.props.lang.home;
     return (
-      <pre>{JSON.stringify(this.props.lang, null, 2)}</pre>
+      <pre>{JSON.stringify(LANG, null, 2)}</pre>
     );
   }
 }
