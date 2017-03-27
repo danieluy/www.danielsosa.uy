@@ -1,19 +1,24 @@
-v1.3.0
-  + 20170326 - Data loading architectura finished
-  + 20170324 - Started to work on DevNavbar
-  + 20170324 - Added support for toggling language
-  + 20170324 - Home page complete
-  + 20170323 - Home desktop version complete
-  + 20170323 - Started react client development
+
+ToDo
+  00000000 | T | Lang toggle button on Home
+v2.1.0
+  20170327 | + | Started to work on DevNavbar styles
+  20170327 | + | HomeFooter language toggle ready
+  20170326 | + | Data loading architectura finished
+  20170324 | + | Started to work on DevNavbar
+  20170324 | + | Added support for toggling language
+  20170324 | + | Home page complete
+  20170323 | + | Home desktop version complete
+  20170323 | + | Started react client development
 v1.2.1
-  + 20170317 - Home section is now flex-box dependent
-  + 20170317 - Height in the UI is now set from JS to avoid bugs on the use of CSS vh units.
+  20170317 | + | Home section is now flex-box dependent
+  20170317 | + | Height in the UI is now set from JS to avoid bugs on the use of CSS vh units.
 v1.2.0
-  + 20170106 - Added back to home button on mobile Dev
-  - 20170106 - Removed external fonts from Dev section to improve loading times [ Average loading time 350ms (no cahche, throttling Good3G) ]
-  + 20170106 - Improved icons in general
-  + 20170106 - Replaced material icons font for svg
-  + 20170106 - Webpack now handles css
-  + 20170106 - Added changelog.txt
+  20170106 | + | Added back to home button on mobile Dev
+  20170106 | - | Removed external fonts from Dev section to improve loading times [ Average loading time 350ms (no cahche, throttling Good3G) ]
+  20170106 | + | Improved icons in general
+  20170106 | + | Replaced material icons font for svg
+  20170106 | + | Webpack now handles css
+  20170106 | + | Added changelog.txt
 v1.1.0
-  + 20170105 - FIX footer on Home section wasn't loading
+  20170105 | + | FIX footer on Home section wasn't loading

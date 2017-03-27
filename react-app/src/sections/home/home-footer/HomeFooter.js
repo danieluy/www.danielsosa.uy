@@ -24,6 +24,9 @@ class HomeFooter extends Component {
   }
 
   render() {
+
+    const LANG = this.props.lang.footer;
+
     return (
       <div>
 
@@ -37,7 +40,7 @@ class HomeFooter extends Component {
               Daniel Sosa 2016 - {new Date().getFullYear()}
             </span>
 
-            <a className="ftr-element ftr-mailto" href="mailto:danielsosa.uy@gmail.com?Subject=Contact%20from%20www.danielsosa.uy" target="blank" title="{{mail_to}}">
+            <a className="ftr-element ftr-mailto" href="mailto:danielsosa.uy@gmail.com?Subject=Contact%20from%20www.danielsosa.uy" target="blank" title={LANG.mail_to}>
               <svg className="ftr-icon" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                 <path d="M0 0h24v24H0z" fill="none" />
@@ -45,7 +48,7 @@ class HomeFooter extends Component {
               danielsosa.uy@gmail.com
             </a>
 
-            <a className="ftr-element ftr-phone-call" href="tel:0059899636065" target="blank" title="{{call}}">
+            <a className="ftr-element ftr-phone-call" href="tel:0059899636065" target="blank" title={LANG.call}>
               <svg className="ftr-icon" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 0h24v24H0z" fill="none" />
                 <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
@@ -54,7 +57,7 @@ class HomeFooter extends Component {
             </a>
           </div>
 
-          <a className="ftr-element ftr-btn-login" href="/login" title="{{login}}">
+          <a className="ftr-element ftr-btn-login" href="/login" title={LANG.login}>
             <svg className="ftr-icon" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
               <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" />
               <path d="M0 0h24v24H0z" fill="none" />

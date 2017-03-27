@@ -3,9 +3,13 @@ import './DevHome.css';
 
 class DevHome extends Component {
   render() {
+
     const LANG = this.props.lang.home;
+
+    console.log(LANG);
+
     return (
-      <pre>{JSON.stringify(LANG, null, 2)}</pre>
+      <div>Home Component</div>
     );
   }
 }

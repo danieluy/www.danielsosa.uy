@@ -29,14 +29,12 @@ class Home extends Component {
 
     const lang = this.state.lang === 'es' ? ES : EN;
 
-    console.log(lang)
-
     return (
       <div>
 
         <HomeHeader />
 
-        <HomeFooter />
+        <HomeFooter lang={lang} />
 
         <button style={{position: 'fixed', top: 0, left: 0, zIndex: '10', backgroundColor: 'red'}} onClick={this.toggleLang.bind(this)}>lalala</button>
 

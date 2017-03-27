@@ -1,0 +1,57 @@
+.dev-header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+}
+.dev-navbar{
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.dev-nav-title{
+  height: 100%;
+  background-color: #08c;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-right: 20px;
+}
+.nav-link-icon{
+  width: 60px;
+  height: 100%;
+  padding: 18px;
+}
+
+.dev-nav-actions{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.dev-nav-links{
+  display: flex;
+  flex-direction: row;
+}
+.dev-nav-link{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.menu-icon,
+.dev-nav-mobile-back-link{
+  display: none;
+}
