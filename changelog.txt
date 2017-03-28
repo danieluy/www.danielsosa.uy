@@ -2,7 +2,8 @@
 ToDo
   00000000 | T | Lang toggle button on Home
 v2.1.0
-  20170328 | + | Working on DevHome...
+  20170328 | + | Working on DevNavbar responsiveness
+  20170328 | + | DevHome done (enough)
   20170328 | + | DevNavbar styles ready
   20170327 | + | Started to work on DevNavbar styles
   20170327 | + | HomeFooter language toggle ready

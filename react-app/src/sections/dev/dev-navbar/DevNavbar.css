@@ -6,6 +6,7 @@
   height: 60px;
   background-color: #fff;
   z-index: 10;
+  transition: box-shadow 300ms ease-out;  
 }
 .dev-navbar{
   height: 100%;
@@ -76,18 +77,52 @@
 .dev-btn-toggle-lang > svg{
   fill: #aaa;
 }
-
-
-
-
-
-
-
-
-
-
-
 .menu-icon,
 .dev-nav-mobile-back-link{
   display: none;
+}
+
+/*@media screen and (max-width: 1200px){ }*/
+
+/*@media screen and (max-width: 960px){ }*/
+
+/*@media screen and (max-width: 768px){ }*/
+
+@media screen and (max-width: 480px){
+  .dev-header{
+    background-color: #08f;
+  }
+  .menu-icon{
+    display: block;
+  }
+  .dev-nav-mobile-back-link{
+    display: block;
+    background-color: #08f;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  .dev-nav-title-icon{
+    margin-top: 1px;
+  }
+  .dev-nav-link-text{
+    color: #fff;
+  }
+  .dev-nav-actions{
+    position: fixed;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #fff;
+    height: 100vh;
+    width: 300px;
+    overflow-y: auto;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, .5);
+  }
+  .dev-nav-links{
+    flex-direction: column;
+  }
+  .selected{
+    transform: none;
+  }
 }
