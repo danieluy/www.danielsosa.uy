@@ -5,6 +5,11 @@ export default {
     subtitle: "Desarrollador de software",
     avatar: "avatar.jpg"    
   },
+  header_2: {
+    title: 'Lalal',
+    subtitle: "Breve descripción",
+    avatar: "ds_logo_96.png"    
+  },
   h2titles: [
     "Qué y para qué",
     "Tecnologías utilizadas",
@@ -13,7 +18,7 @@ export default {
   techs: [
     {
       icon: {
-        src: "img/html5_icon.png",
+        src: "html5_icon.png",
         alt: "Icono HTML5"
       },
       title: {
@@ -24,7 +29,7 @@ export default {
     },
     {
       icon: {
-        src: "img/javascript_icon.png",
+        src: "javascript_icon.png",
         alt: "Icono Javascript"
       },
       title: {
@@ -35,7 +40,7 @@ export default {
     },
     {
       icon: {
-        src: "img/css3_icon.png",
+        src: "css3_icon.png",
         alt: "Icono CSS3"
       },
       title: {
@@ -46,7 +51,7 @@ export default {
     },
     {
       icon: {
-        src: "img/nodejs_icon.png",
+        src: "nodejs_icon.png",
         alt: "Icono Node.js"
       },
       title: {
@@ -57,7 +62,7 @@ export default {
     },
     {
       icon: {
-        src: "img/express_icon.png",
+        src: "express_icon.png",
         alt: "Icono Express"
       },
       title: {
@@ -68,25 +73,36 @@ export default {
     },
     {
       icon: {
-        src: "img/mustache_icon.png",
-        alt: "Icono Mustache.js"
+        src: "react_icon.png",
+        alt: "Icono React"
       },
       title: {
-        href: "https://mustache.github.io/",
-        text: "{{ Mustache.js }}"
+        href: "https://facebook.github.io/react/",
+        text: "React"
       },
-      p: "Manejo de plantillas HTML con JavaScript. En esta página se utiliza en la interfaz de usuario mayormente para el cambio de idioma."
+      p: "Una librería Javascript para construir interfaces de usuario."
     },
+    // {
+    //   icon: {
+    //     src: "mustache_icon.png",
+    //     alt: "Icono Mustache.js"
+    //   },
+    //   title: {
+    //     href: "https://mustache.github.io/",
+    //     text: "{{ Mustache.js }}"
+    //   },
+    //   p: "Manejo de plantillas HTML con JavaScript. En esta página se utiliza en la interfaz de usuario mayormente para el cambio de idioma."
+    // },
     {
       icon: {
-        src: "img/webpack_icon.png",
+        src: "webpack_icon.png",
         alt: "Icono Webpack"
       },
       title: {
         href: "https://webpack.js.org/",
         text: "Webpack"
       },
-      p: "Empaquetamiento y minificación de archivos JavaScript y CSS para optimizar la carga de estos recursos."
+      p: "Empaquetamiento y minificación de archivos JavaScript, CSS y otros recursos para optimizar la carga de los mismos. En el caso de esta página es utilizado desde los scripts de React."
     }
   ]
 }

@@ -1,11 +1,11 @@
 .dev-content-title-text{
   font-size: 2.5rem;
-  font-weight: 100;
+  font-weight: 500;
+  color: #555;
   line-height: 60px;
-  margin-bottom: 20px;
+  margin: 30px 0;
   animation: slideUp .3s ease-out;
   text-align: center;
-  color: #08c
 }
 @keyframes slideUp {
   0%{

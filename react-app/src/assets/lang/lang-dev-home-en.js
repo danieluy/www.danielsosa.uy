@@ -13,7 +13,7 @@ export default {
   techs: [
     {
       icon: {
-        src: "img/html5_icon.png",
+        src: "html5_icon.png",
         alt: "HTML5 icon"
       },
       title: {
@@ -24,7 +24,7 @@ export default {
     },
     {
       icon: {
-        src: "img/javascript_icon.png",
+        src: "javascript_icon.png",
         alt: "Javascript icon"
       },
       title: {
@@ -35,7 +35,7 @@ export default {
     },
     {
       icon: {
-        src: "img/css3_icon.png",
+        src: "css3_icon.png",
         alt: "CSS3 icon"
       },
       title: {
@@ -46,7 +46,7 @@ export default {
     },
     {
       icon: {
-        src: "img/nodejs_icon.png",
+        src: "nodejs_icon.png",
         alt: "Node.js icon"
       },
       title: {
@@ -57,7 +57,7 @@ export default {
     },
     {
       icon: {
-        src: "img/express_icon.png",
+        src: "express_icon.png",
         alt: "Express icon"
       },
       title: {
@@ -68,25 +68,36 @@ export default {
     },
     {
       icon: {
-        src: "img/mustache_icon.png",
-        alt: "Mustache.js icon"
+        src: "react_icon.png",
+        alt: "React icon"
       },
       title: {
-        href: "https://mustache.github.io/",
-        text: "{{ Mustache.js }}"
+        href: "https://facebook.github.io/react/",
+        text: "React"
       },
-      p: "Handling of HTML templates with JavaScript. In this site it is used in the user interface mostly for language toggling."
+      p: "A Javascript library for building user interfaces."
     },
+    // {
+    //   icon: {
+    //     src: "mustache_icon.png",
+    //     alt: "Mustache.js icon"
+    //   },
+    //   title: {
+    //     href: "https://mustache.github.io/",
+    //     text: "{{ Mustache.js }}"
+    //   },
+    //   p: "Handling of HTML templates with JavaScript. In this site it is used in the user interface mostly for language toggling."
+    // },
     {
       icon: {
-        src: "img/webpack_icon.png",
+        src: "webpack_icon.png",
         alt: "Webpack icon"
       },
       title: {
         href: "https://webpack.js.org/",
         text: "Webpack"
       },
-      p: "Bundling and minification of JavaScript and CSS files to optimize the resource loading."
+      p: "Bundling and minification of JavaScript and CSS files as well as other resources, to optimize the resource loading. In the case of this page it is used from the React scripts."
     }
   ]
 }

@@ -4,12 +4,20 @@ import './DevNavbar.css';
 
 class DevNavbar extends Component {
 
+
+  hoverNavbar(hover) {
+    if(hover)
+      return { boxShadow: '0 2px 4px rgba(0, 0, 0, .5)' }
+    else
+      return { boxShadow: 'none' }
+  }
+
   render() {
 
     const LANG = this.props.lang.nav;
 
     return (
-      <header className="dev-header">
+      <header className="dev-header" style={this.hoverNavbar(this.props.hover)}>
 
         <nav className="dev-navbar">
 

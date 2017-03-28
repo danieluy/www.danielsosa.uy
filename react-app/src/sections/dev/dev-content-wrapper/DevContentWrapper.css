@@ -31,7 +31,7 @@
 
 @media screen and (max-width: 480px){
   .dev-content-center{
-    width: 768px;
+    width: 100%;
   }
 }
 

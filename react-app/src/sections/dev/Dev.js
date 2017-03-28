@@ -12,13 +12,22 @@ class Dev extends Component {
   constructor() {
     super();
     this.state = {
-      lang: 'es'
+      lang: 'es',
+      hoverNavbar: false
     }
   }
 
   toggleLang() {
     const aux = this.state.lang === 'es' ? 'en' : 'es';
     this.setState({ lang: aux })
+  }
+
+  hoverNavbar(evt) {
+    const posY = evt.target.scrollTop;
+    if(posY > 0)
+      this.setState({ hoverNavbar: true })
+    else
+      this.setState({ hoverNavbar: false })
   }
 
   render() {
@@ -32,11 +41,13 @@ class Dev extends Component {
     return (
       <div>
 
-        <DevNavbar lang={LANG} parentMethods={{
+        <DevNavbar lang={LANG} hover={this.state.hoverNavbar} parentMethods={{
           toggleLang: this.toggleLang.bind(this)
         }} />
 
-        <DevContentWrapper children={children_with_props} />
+        <DevContentWrapper children={children_with_props} parentMethods={{
+          hoverNavbar: this.hoverNavbar.bind(this)
+        }} />
 
       </div>
     );
