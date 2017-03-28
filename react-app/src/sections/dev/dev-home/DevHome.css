@@ -1,0 +1,32 @@
+.dev-content-subtitle{
+  font-size: 1.8rem;
+  font-weight: 100;
+  line-height: 40px;
+  margin: 30px 0;
+  text-align: center;
+  color: #08c;
+}
+.dev-content-paragraph{
+  margin: 15px 0;
+  column-count: 3;
+}
+.dev-content-paragraph > a{
+  text-decoration: none;
+  color: #08c;
+}
+
+/*@media screen and (max-width: 1200px){ }*/
+
+@media screen and (max-width: 960px){
+  .dev-content-paragraph{
+    column-count: 2;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .dev-content-paragraph{
+    column-count: 1;
+  }
+}
+
+/*@media screen and (max-width: 480px){ }*/

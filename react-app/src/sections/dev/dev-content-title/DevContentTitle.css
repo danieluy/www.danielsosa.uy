@@ -5,6 +5,7 @@
   margin-bottom: 20px;
   animation: slideUp .3s ease-out;
   text-align: center;
+  color: #08c
 }
 @keyframes slideUp {
   0%{

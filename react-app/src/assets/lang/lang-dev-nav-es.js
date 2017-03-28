@@ -5,5 +5,5 @@ export default {
   contact: "Contacto",
   work: "Trabajo",
   stuff: "Cosas",
-  toggle_lang: { lang: "Español", title: "Toggle language" }
+  toggle_lang: "Switch to english"
 }
