@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Dev.css';
 
 import DevNavbar from './dev-navbar/DevNavbar';
+import DevContentWrapper from './dev-content-wrapper/DevContentWrapper';
 
 import { es as ES } from '../../assets/lang/lang-dev';
 import { en as EN } from '../../assets/lang/lang-dev';
@@ -22,18 +23,21 @@ class Dev extends Component {
 
   render() {
 
-    const lang = this.state.lang === 'es' ? ES : EN;
+    const LANG = this.state.lang === 'es' ? ES : EN;
 
     const children_with_props = React.cloneElement(this.props.children, {
-      lang: lang
+      lang: LANG
     })
-    
+
     return (
       <div>
-        <DevNavbar parentMethods={{
+
+        <DevNavbar lang={LANG} parentMethods={{
           toggleLang: this.toggleLang.bind(this)
         }} />
-        {children_with_props}
+
+        <DevContentWrapper children={children_with_props} />
+
       </div>
     );
   }

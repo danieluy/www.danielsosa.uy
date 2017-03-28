@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import './DevContact.css';
+import './DevWork.css';
 
 import DevContentTitle from '../dev-content-title/DevContentTitle';
 
-class DevContact extends Component {
+class DevWork extends Component {
   render() {
 
-    const LANG = this.props.lang.contact;
+    const LANG = this.props.lang.work;
 
     return (
       <div>
@@ -16,4 +16,4 @@ class DevContact extends Component {
   }
 }
 
-export default DevContact;
+export default DevWork;

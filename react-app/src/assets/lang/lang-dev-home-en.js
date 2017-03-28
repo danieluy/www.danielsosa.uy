@@ -1,6 +1,10 @@
 export default {
   title: "Welcome!",
-  subtitle: "Software developer",
+  header_1: {
+    title: 'Daniel Sosa Cardozo',
+    subtitle: "Software developer",
+    avatar: "avatar.jpg"
+  },
   h2titles: [
     "What and why",
     "Used technologies"

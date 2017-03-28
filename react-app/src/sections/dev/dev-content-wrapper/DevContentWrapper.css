@@ -1,0 +1,36 @@
+.dev-content-wrapper{
+  width: 100%;
+  position: fixed;
+  top: 60px;
+  padding: 20px;
+  overflow-y: auto;
+  animation: slideUp 500ms ease-out;
+}
+.dev-content-center{
+  width: 1200px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px){
+  .dev-content-center{
+    width: 960px;
+  }
+}
+
+@media screen and (max-width: 960px){
+  .dev-content-center{
+    width: 768px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .dev-content-center{
+    width: 480px;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .dev-content-center{
+    width: 768px;
+  }
+}

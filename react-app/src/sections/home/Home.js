@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './Home.css';
 
 import { es as ES } from '../../assets/lang/lang-home';
 import { en as EN } from '../../assets/lang/lang-home';
