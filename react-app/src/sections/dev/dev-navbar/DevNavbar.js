@@ -4,12 +4,27 @@ import './DevNavbar.css';
 
 class DevNavbar extends Component {
 
+  constructor() {
+    super();
+    this.state = {
+      display_menu: 'dev-nav-actions',
+      display_menu_background: 'dev-nav-links-background',
+    }
+  }
+
 
   hoverNavbar(hover) {
-    if(hover)
+    if (hover)
       return { boxShadow: '0 2px 4px rgba(0, 0, 0, .5)' }
     else
       return { boxShadow: 'none' }
+  }
+
+  openOpenCloseMenu(e) {
+    this.setState({
+      display_menu: (this.state.display_menu === 'dev-nav-actions visible' ? 'dev-nav-actions' : 'dev-nav-actions visible'),
+      display_menu_background: (this.state.display_menu_background === 'dev-nav-links-background visible' ? 'dev-nav-links-background' : 'dev-nav-links-background visible')
+    })
   }
 
   render() {
@@ -28,26 +43,27 @@ class DevNavbar extends Component {
                 <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
               </svg>
             </Link>
-            <svg className="menu-icon" height="26" viewBox="0 0 24 24" width="26" xmlns="http://www.w3.org/2000/svg">
+            <svg onClick={this.openOpenCloseMenu.bind(this)} className="dev-nav-menu-icon" height="26" viewBox="0 0 24 24" width="26" xmlns="http://www.w3.org/2000/svg">
               <path d="M0 0h24v24H0z" fill="none" />
               <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
             </svg>
             <span className="dev-nav-title-text"><i>www.danielsosa.uy</i>{window.location.pathname}</span>
           </div>
 
-          <div className="dev-nav-actions">
+          {/*dev-nav-actions*/}
+          <div className={this.state.display_menu}>
 
             <div className="dev-nav-links">
 
               <Link to="/" className="dev-nav-mobile-back-link">
-                <svg className="dev-nav-title-icon" height="32" viewBox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
+                <svg className="dev-nav-back-icon" height="32" viewBox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
                   <path d="M0 0h24v24H0V0z" fill="none" />
                   <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
                 </svg>
-                <span className="dev-nav-link-text">wwww.danielsosa.uy</span>
+                <span className="dev-nav-link-text dev-nav-link-text-white">wwww.danielsosa.uy</span>
               </Link>
 
-              <Link to="/dev" className="dev-nav-link" activeClassName="selected" onlyActiveOnIndex>
+              <Link to="/dev" onClick={this.openOpenCloseMenu.bind(this)} className="dev-nav-link" activeClassName="selected" onlyActiveOnIndex>
                 <svg className="dev-nav-link-icon" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
                   <path d="M0 0h24v24H0z" fill="none" />
@@ -55,7 +71,7 @@ class DevNavbar extends Component {
                 <span className="dev-nav-link-text">{LANG.home}</span>
               </Link>
 
-              <Link to="/dev/work" className="dev-nav-link" activeClassName="selected">
+              <Link to="/dev/work" onClick={this.openOpenCloseMenu.bind(this)} className="dev-nav-link" activeClassName="selected">
                 <svg className="dev-nav-link-icon" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M0 0h24v24H0z" fill="none" />
                   <path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z" />
@@ -63,7 +79,7 @@ class DevNavbar extends Component {
                 <span className="dev-nav-link-text">{LANG.work}</span>
               </Link>
 
-              <Link to="/dev/academic" className="dev-nav-link" activeClassName="selected">
+              <Link to="/dev/academic" onClick={this.openOpenCloseMenu.bind(this)} className="dev-nav-link" activeClassName="selected">
                 <svg className="dev-nav-link-icon" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M0 0h24v24H0z" fill="none" />
                   <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z" />
@@ -78,7 +94,7 @@ class DevNavbar extends Component {
                 <span className="dev-nav-link-text">{LANG.github}</span>
               </Link>
 
-              <Link to="/dev/contact" className="dev-nav-link" activeClassName="selected">
+              <Link to="/dev/contact" onClick={this.openOpenCloseMenu.bind(this)} className="dev-nav-link" activeClassName="selected">
                 <svg className="dev-nav-link-icon" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm6 12H6v-1c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1z" />
                   <path d="M0 0h24v24H0z" fill="none" />
@@ -88,17 +104,20 @@ class DevNavbar extends Component {
 
             </div>
 
-            <button onClick={this.props.parentMethods.toggleLang} className="dev-btn-toggle-lang" type="button" title={LANG.toggle_lang}>
+            <button onClick={() => { this.props.parentMethods.toggleLang(); this.openOpenCloseMenu.call(this); }} className="dev-btn-toggle-lang" type="button" title={LANG.toggle_lang}>
               <svg className="dev-nav-link-icon" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 0h24v24H0z" fill="none" />
                 <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z" />
               </svg>
             </button>
 
-          </div>{/*END dev-nav-actions*/}
+            {/*END dev-nav-actions*/}
+          </div>
+
+          {/*dev-nav-links-background*/}
+          <div onClick={this.openOpenCloseMenu.bind(this)} className={this.state.display_menu_background}></div>
 
 
-          <div className="dev-nav-links-back"></div>
         </nav>
       </header>
     );

@@ -2,6 +2,9 @@
 ToDo
   00000000 | T | Lang toggle button on Home
 v2.1.0
+  20170329 | + | Status bar theme color customization solved (compatible with Android, iOS and Windows Phone)
+  20170329 | B1 | On landscape the nav menu shrinks instead of become scrollable
+  20170329 | + | DevNavbar responsiveness working for portrait
   20170328 | + | Working on DevNavbar responsiveness
   20170328 | + | DevHome done (enough)
   20170328 | + | DevNavbar styles ready

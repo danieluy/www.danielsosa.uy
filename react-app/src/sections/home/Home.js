@@ -17,6 +17,7 @@ class Home extends Component {
 
   componentDidMount() {
     window.addEventListener('resize', () => { this.setState({ header: { height: window.innerHeight } }) })
+    this.props.setStatusBarThemeColor('#000000');
   }
 
   toggleLang() {

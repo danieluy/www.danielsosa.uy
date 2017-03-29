@@ -17,6 +17,10 @@ class Dev extends Component {
     }
   }
 
+  componentDidMount() {
+    this.props.setStatusBarThemeColor('#0088cc');
+  }
+
   toggleLang() {
     const aux = this.state.lang === 'es' ? 'en' : 'es';
     this.setState({ lang: aux })
@@ -24,7 +28,7 @@ class Dev extends Component {
 
   hoverNavbar(evt) {
     const posY = evt.target.scrollTop;
-    if(posY > 0)
+    if (posY > 0)
       this.setState({ hoverNavbar: true })
     else
       this.setState({ hoverNavbar: false })
