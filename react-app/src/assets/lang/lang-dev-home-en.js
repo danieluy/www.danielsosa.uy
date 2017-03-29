@@ -3,7 +3,7 @@ export default {
   header_1: {
     title: 'Daniel Sosa Cardozo',
     subtitle: "Software developer",
-    avatar: "avatar.jpg"
+    avatar: "home/avatar.jpg"
   },
   h2titles: [
     "What and why",

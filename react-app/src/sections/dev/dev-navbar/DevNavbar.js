@@ -14,7 +14,7 @@ class DevNavbar extends Component {
 
 
   hoverNavbar(hover) {
-    if (hover)
+    if (hover && window.innerWidth > 768)
       return { boxShadow: '0 2px 4px rgba(0, 0, 0, .5)' }
     else
       return { boxShadow: 'none' }

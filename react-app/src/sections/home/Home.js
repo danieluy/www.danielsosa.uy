@@ -10,19 +10,18 @@ class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      lang: 'es',
-      header: { height: window.innerHeight }
+      lang: 'es'
     }
   }
 
   componentDidMount() {
-    window.addEventListener('resize', () => { this.setState({ header: { height: window.innerHeight } }) })
     this.props.setStatusBarThemeColor('#000000');
   }
 
   toggleLang() {
-    const aux = this.state.lang === 'es' ? 'en' : 'es';
-    this.setState({ lang: aux })
+    this.setState({
+      lang: (this.state.lang === 'es' ? 'en' : 'es')
+    })
   }
 
   render() {
@@ -32,11 +31,11 @@ class Home extends Component {
     return (
       <div>
 
-        <HomeHeader />
+        <HomeHeader window_height={this.props.window_height}/>
 
-        <HomeFooter lang={lang} />
+        <HomeFooter window_height={this.props.window_height} lang={lang} />
 
-        <button style={{position: 'fixed', top: 0, left: 0, zIndex: '10', backgroundColor: 'red'}} onClick={this.toggleLang.bind(this)}>lalala</button>
+        <button onClick={this.toggleLang.bind(this)} style={{ position: 'fixed', top: 0, left: 0, zIndex: '10', backgroundColor: 'red' }}>lalala</button>
 
       </div>
     );

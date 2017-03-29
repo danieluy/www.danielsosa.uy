@@ -2,6 +2,7 @@
 ToDo
   00000000 | T | Lang toggle button on Home
 v2.1.0
+  20170329 | + | Window height is now determinated in App.js, and propagated as prop through the entire app
   20170329 | + | Status bar theme color customization solved (compatible with Android, iOS and Windows Phone)
   20170329 | B1 | On landscape the nav menu shrinks instead of become scrollable
   20170329 | + | DevNavbar responsiveness working for portrait

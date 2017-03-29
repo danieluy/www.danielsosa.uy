@@ -3,12 +3,12 @@ export default {
   header_1: {
     title: 'Daniel Sosa Cardozo',
     subtitle: "Desarrollador de software",
-    avatar: "avatar.jpg"    
+    avatar: "home/avatar.jpg"    
   },
   header_2: {
     title: 'Lalal',
     subtitle: "Breve descripción",
-    avatar: "ds_logo_96.png"    
+    avatar: "home/ds_logo_96.png"    
   },
   h2titles: [
     "Qué y para qué",

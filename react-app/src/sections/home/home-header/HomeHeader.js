@@ -3,22 +3,13 @@ import { Link } from 'react-router'
 import './HomeHeader.css';
 
 class HomeHeader extends Component {
-  constructor() {
-    super();
-    this.state = {
-      header: { height: `${window.innerHeight}px` }
-    }
-  }
-
-  componentDidMount() {
-    window.addEventListener('resize', () => { this.setState({ header: { height: `${window.innerHeight}px` } }) })
-  }
 
   render() {
+
     return (
       <div>
 
-        <header className="full-header" id="full-header" style={this.state.header}>
+        <header className="full-header" id="full-header" style={{ height: `${this.props.window_height}px` }}>
           <nav className="full-nav">
             <ul className="links-list">
 

@@ -49,7 +49,7 @@ class Dev extends Component {
           toggleLang: this.toggleLang.bind(this)
         }} />
 
-        <DevContentWrapper children={children_with_props} parentMethods={{
+        <DevContentWrapper children={children_with_props} window_height={this.props.window_height} parentMethods={{
           hoverNavbar: this.hoverNavbar.bind(this)
         }} />
 

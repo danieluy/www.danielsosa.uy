@@ -2,6 +2,7 @@ export default {
   title: "Mi trabajo",
   freelance: {
     logo_alt: "Icono de trabajo independiente",
+    logo_src: "work/freelance_128.jpg",
     header_title: "Trabajo Independiente",
     header_subtitle: "Ejemplos de trabajos independientes aún en desarrollo",
     works: {
@@ -16,13 +17,13 @@ export default {
         description: "Sistema de gestión de premios a la audiencia",
         client_name: "Radiocero 104.3 FM",
         client_href: "http://www.radiocero.com.uy/",
-        cover: { src: "img/work/radiocero/radiocero_premios_home.jpg", alt: "Radiocero, Inicio" },
         images: [
-          { src: "img/work/radiocero/radiocero_premios_winners_list.jpg", alt: "Radiocero, listado de premios" },
-          { src: "img/work/radiocero/radiocero_premios_prizes_list.jpg", alt: "Radiocero, listado de premios" },
-          { src: "img/work/radiocero/radiocero_premios_prizes_list_open.jpg", alt: "Radiocero, listado de premios, elemento abierto" },
-          { src: "img/work/radiocero/radiocero_premios_users_list.jpg", alt: "Radiocero, listado de usuarios" },
-          { src: "img/work/radiocero/radiocero_premios_users_new.jpg", alt: "Radiocero, formulario para nuevo usuario" }
+          { src: "radiocero/radiocero_premios_home.jpg", alt: "Radiocero, pagina de inicio" },
+          { src: "radiocero/radiocero_premios_winners_list.jpg", alt: "Radiocero, listado de ganadores" },
+          { src: "radiocero/radiocero_premios_prizes_list.jpg", alt: "Radiocero, listado de premios" },
+          { src: "radiocero/radiocero_premios_prizes_list_open.jpg", alt: "Radiocero, listado de premios, elemento abierto" },
+          { src: "radiocero/radiocero_premios_users_list.jpg", alt: "Radiocero, listado de usuarios" },
+          { src: "radiocero/radiocero_premios_users_new.jpg", alt: "Radiocero, formulario para nuevo usuario" }
         ],
         techs: []
       },
@@ -32,10 +33,10 @@ export default {
         description: "Sitio Corporativo para la empresa Mtec",
         client_name: "Manuel Sosa",
         client_href: "http://www.mtec.com.uy/",
-        cover: { src: "img/work/mtec/mtec_desktop.jpg", alt: "Imagen de cabecera" },
+        cover: { src: "mtec/mtec_desktop.jpg", alt: "Imagen de cabecera" },
         images: [
-          { src: "img/work/mtec/mtec_desktop.jpg", alt: "Mtec versión de escritorio" },
-          { src: "img/work/mtec/mtec_mobile.jpg", alt: "Mtec versión movil" }
+          { src: "mtec/mtec_desktop.jpg", alt: "Mtec versión de escritorio" },
+          { src: "mtec/mtec_mobile.jpg", alt: "Mtec versión movil" }
         ],
         techs: []
       }
@@ -43,6 +44,7 @@ export default {
   },
   employed: {
     logo_alt: "Icono de trabajo dependiente",
+    logo_src: "work/employed_128.jpg",
     header_title: "Trabajo Dependiente",
     header_subtitle: "Aún estoy en busca de un trabajo para listar aquí ;-)",
     works: []

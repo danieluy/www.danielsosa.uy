@@ -3,24 +3,12 @@ import './HomeFooter.css';
 
 
 class HomeFooter extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      footer: { height: '60px' }
-    }
-  }
 
-  componentDidMount() {
-    this.setHeight();
-    window.addEventListener('resize', this.setHeight.bind(this))
-  }
-
-  setHeight() {
+  setHeight(current_height) {
     if (window.innerWidth <= 768)
-      this.setState({ footer: { height: `${window.innerHeight}px` } })
-    else {
-      this.setState({ footer: { height: '60px' } })
-    }
+      return `${current_height}px`;
+    else
+      return '60px';
   }
 
   render() {
@@ -30,7 +18,7 @@ class HomeFooter extends Component {
     return (
       <div>
 
-        <footer className="home-footer" style={this.state.footer}>
+        <footer className="home-footer" style={{ height: this.setHeight(this.props.window_height) }}>
 
           <div className="ftr-left-elements">
             <span className="ftr-element ftr-copyright">
