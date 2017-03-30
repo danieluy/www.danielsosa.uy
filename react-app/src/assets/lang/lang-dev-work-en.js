@@ -14,6 +14,7 @@ export default {
       prizes_management: {
         title: "Premios Radiocero",
         year: 2016,
+        status: 'On production',
         description: "Audience prizes management system",
         client_name: "Radiocero 104.3 FM",
         client_href: "http://www.radiocero.com.uy/",
@@ -29,6 +30,7 @@ export default {
       mtec: {
         title: "Mtec (placeholder)",
         year: 2016,
+        status: 'Under development',
         description: "Mtec's corporate website",
         client_name: "Manuel Sosa",
         client_href: "http://www.mtec.com.uy/",

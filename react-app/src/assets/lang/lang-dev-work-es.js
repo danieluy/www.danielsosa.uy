@@ -4,7 +4,7 @@ export default {
     logo_alt: "Icono de trabajo independiente",
     logo_src: "work/freelance_128.jpg",
     header_title: "Trabajo Independiente",
-    header_subtitle: "Ejemplos de trabajos independientes aún en desarrollo",
+    header_subtitle: "Ejemplos de trabajos independientes.",
     works: {
       labels: {
         title: "Título",
@@ -14,6 +14,7 @@ export default {
       prizes_management: {
         title: "Premios Radiocero",
         year: 2016,
+        status: 'En producción',
         description: "Sistema de gestión de premios a la audiencia",
         client_name: "Radiocero 104.3 FM",
         client_href: "http://www.radiocero.com.uy/",
@@ -30,6 +31,7 @@ export default {
       mtec: {
         title: "Mtec (placeholder)",
         year: 2016,
+        status: 'En desarrollo',
         description: "Sitio Corporativo para la empresa Mtec",
         client_name: "Manuel Sosa",
         client_href: "http://www.mtec.com.uy/",

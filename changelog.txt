@@ -1,31 +1,42 @@
+[www.danielsosa.uy]
 
-ToDo
-  00000000 | T | Lang toggle button on Home
+#   Thu Mar 30 2017 10:06:54 GMT-0300 (Hora estándar de Montevideo)
+
+#   T - ToDo                        #
+#   P - Added something (plus)      #
+#   M - Removed something (minus)   #
+#   R - Refactoring                 #
+#   B - Bug                         #
+#   F - Bug fix                     #
+
+# ToDo
+	00000000 | T | Lang toggle button on Home
 v2.1.0
-  20170329 | + | Window height is now determinated in App.js, and propagated as prop through the entire app
-  20170329 | + | Status bar theme color customization solved (compatible with Android, iOS and Windows Phone)
-  20170329 | B1 | On landscape the nav menu shrinks instead of become scrollable
-  20170329 | + | DevNavbar responsiveness working for portrait
-  20170328 | + | Working on DevNavbar responsiveness
-  20170328 | + | DevHome done (enough)
-  20170328 | + | DevNavbar styles ready
-  20170327 | + | Started to work on DevNavbar styles
-  20170327 | + | HomeFooter language toggle ready
-  20170326 | + | Data loading architectura finished
-  20170324 | + | Started to work on DevNavbar
-  20170324 | + | Added support for toggling language
-  20170324 | + | Home page complete
-  20170323 | + | Home desktop version complete
-  20170323 | + | Started react client development
+	20170330 | P | DevWorkGallery component's first version ready, working on it's controls
+	20170329 | P | Working on DevWorkGallery component
+	20170329 | P | Window height is now determinated in App.js, and propagated as prop through the entire app
+	20170329 | P | Status bar theme color customization solved (compatible with Android, iOS and Windows Phone)
+	20170329 | B1 | On landscape the nav menu shrinks instead of become scrollable
+	20170329 | P | DevNavbar responsiveness working for portrait
+	20170328 | P | Working on DevNavbar responsiveness
+	20170328 | P | DevHome done (enough)
+	20170328 | P | DevNavbar styles ready
+	20170327 | P | Started to work on DevNavbar styles
+	20170327 | P | HomeFooter language toggle ready
+	20170326 | P | Data loading architectura finished
+	20170324 | P | Started to work on DevNavbar
+	20170324 | P | Added support for toggling language
+	20170324 | P | Home page complete
+	20170323 | P | Home desktop version complete
+	20170323 | P | Started react client development
 v1.2.1
-  20170317 | + | Home section is now flex-box dependent
-  20170317 | + | Height in the UI is now set from JS to avoid bugs on the use of CSS vh units.
+	20170317 | P | Home section is now flex-box dependent
+	20170317 | P | Height in the UI is now set from JS to avoid bugs on the use of CSS vh units.
 v1.2.0
-  20170106 | + | Added back to home button on mobile Dev
-  20170106 | - | Removed external fonts from Dev section to improve loading times [ Average loading time 350ms (no cahche, throttling Good3G) ]
-  20170106 | + | Improved icons in general
-  20170106 | + | Replaced material icons font for svg
-  20170106 | + | Webpack now handles css
-  20170106 | + | Added changelog.txt
+	20170106 | P | Added back to home button on mobile Dev
+	20170106 | P | Improved icons in general
+	20170106 | P | Replaced material icons font for svg
+	20170106 | P | Webpack now handles css
+	20170106 | P | Added changelog.txt
 v1.1.0
-  20170105 | + | FIX footer on Home section wasn't loading
+	20170105 | P | FIX footer on Home section wasn't loading
