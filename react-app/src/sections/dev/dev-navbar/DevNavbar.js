@@ -21,10 +21,11 @@ class DevNavbar extends Component {
   }
 
   openOpenCloseMenu(e) {
-    this.setState({
-      display_menu: (this.state.display_menu === 'dev-nav-actions visible' ? 'dev-nav-actions' : 'dev-nav-actions visible'),
-      display_menu_background: (this.state.display_menu_background === 'dev-nav-links-background visible' ? 'dev-nav-links-background' : 'dev-nav-links-background visible')
-    })
+    if (window.innerWidth <= 768)
+      this.setState({
+        display_menu: (this.state.display_menu === 'dev-nav-actions visible' ? 'dev-nav-actions' : 'dev-nav-actions visible'),
+        display_menu_background: (this.state.display_menu_background === 'dev-nav-links-background visible' ? 'dev-nav-links-background' : 'dev-nav-links-background visible')
+      })
   }
 
   render() {

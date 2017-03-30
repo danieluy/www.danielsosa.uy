@@ -5,11 +5,13 @@ export default {
     logo_src: "work/freelance_128.jpg",
     header_title: "Trabajo Independiente",
     header_subtitle: "Ejemplos de trabajos independientes.",
+    theme_color: "#c05454",
     works: {
       labels: {
         title: "Título",
         description: "Descripción",
-        client_name: "Cliente"
+        client_name: "Cliente",
+        status: "Estado"
       },
       prizes_management: {
         title: "Premios Radiocero",
@@ -49,6 +51,7 @@ export default {
     logo_src: "work/employed_128.jpg",
     header_title: "Trabajo Dependiente",
     header_subtitle: "Aún estoy en busca de un trabajo para listar aquí ;-)",
+    theme_color: "#a553bf",
     works: []
   }
 }

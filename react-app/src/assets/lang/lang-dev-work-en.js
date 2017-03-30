@@ -5,11 +5,13 @@ export default {
     logo_src: "work/freelance_128.jpg",
     header_title: "Freelance",
     header_subtitle: "Freelance jobs still under development ",
+    theme_color: "#c05454",
     works: {
       labels: {
         title: "Title",
         description: "Description",
-        client_name: "Client"
+        client_name: "Client",
+        status: "Status"
       },
       prizes_management: {
         title: "Premios Radiocero",
@@ -47,6 +49,7 @@ export default {
     logo_src: "work/employed_128.jpg",
     header_title: "Hired Work",
     header_subtitle: "I'm still searching for a job to list here ;-)",
+    theme_color: "#a553bf",
     works: []
   }
 }

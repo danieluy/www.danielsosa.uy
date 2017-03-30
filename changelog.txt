@@ -12,6 +12,7 @@
 # ToDo
 	00000000 | T | Lang toggle button on Home
 v2.1.0
+	20170330 | P | DevWorkGallery component's controls ready
 	20170330 | P | DevWorkGallery component's first version ready, working on it's controls
 	20170329 | P | Working on DevWorkGallery component
 	20170329 | P | Window height is now determinated in App.js, and propagated as prop through the entire app

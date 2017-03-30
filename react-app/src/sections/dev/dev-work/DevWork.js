@@ -12,11 +12,22 @@ class DevWork extends Component {
 
     return (
       <div>
-        <DevContentTitle title={LANG.title}/>
-        <DevContentHeader  title={LANG.freelance.header_title} subtitle={LANG.freelance.header_subtitle} avatar={LANG.freelance.logo_src} />
-        <DevWorkWrapper lang={LANG.freelance.works.prizes_management} />
-        <DevWorkWrapper lang={LANG.freelance.works.mtec} />
-        <DevContentHeader  title={LANG.employed.header_title} subtitle={LANG.employed.header_subtitle} avatar={LANG.employed.logo_src} />
+        <DevContentTitle title={LANG.title} />
+
+        <DevContentHeader title={LANG.employed.header_title} subtitle={LANG.employed.header_subtitle} avatar={LANG.employed.logo_src} />
+
+        <DevContentHeader title={LANG.freelance.header_title} subtitle={LANG.freelance.header_subtitle} avatar={LANG.freelance.logo_src} />
+        <DevWorkWrapper
+          lang={LANG.freelance.works.prizes_management}
+          theme_color={LANG.freelance.theme_color}
+          labels={LANG.freelance.works.labels}
+        />
+        <DevWorkWrapper
+          lang={LANG.freelance.works.mtec}
+          theme_color={LANG.freelance.theme_color}
+          labels={LANG.freelance.works.labels}
+        />
+
       </div>
     );
   }
