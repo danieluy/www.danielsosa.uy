@@ -1,3 +1,5 @@
+import techs from './techs';
+
 export default {
   title: "Mi trabajo",
   freelance: {
@@ -16,7 +18,7 @@ export default {
       prizes_management: {
         title: "Premios Radiocero",
         year: 2016,
-        status: 'En producción',
+        status: 'Producción',
         description: "Sistema de gestión de premios a la audiencia",
         client_name: "Radiocero 104.3 FM",
         client_href: "http://www.radiocero.com.uy/",
@@ -28,21 +30,27 @@ export default {
           { src: "radiocero/radiocero_premios_users_list.jpg", alt: "Radiocero, listado de usuarios" },
           { src: "radiocero/radiocero_premios_users_new.jpg", alt: "Radiocero, formulario para nuevo usuario" }
         ],
-        techs: []
+        techs: techs(["HTML5" , "JavaScript" , "CSS3" , "Node.js" , "Express" , "Angular" , "MongoDB"], 'ES')
       },
       mtec: {
         title: "Mtec (placeholder)",
         year: 2016,
-        status: 'En desarrollo',
+        status: 'Desarrollo',
         description: "Sitio Corporativo para la empresa Mtec",
         client_name: "Manuel Sosa",
         client_href: "http://www.mtec.com.uy/",
         cover: { src: "mtec/mtec_desktop.jpg", alt: "Imagen de cabecera" },
         images: [
-          { src: "mtec/mtec_desktop.jpg", alt: "Mtec versión de escritorio" },
-          { src: "mtec/mtec_mobile.jpg", alt: "Mtec versión movil" }
+          { src: "mtec/mtec_desktop.jpg", alt: "Mtec, versión de escritorio" },
+          { src: "mtec/mtec_mobile.jpg", alt: "Mtec, versión movil" },
+          { src: "mtec/mtec_dev_clients_desktop.jpg", alt: "Mtec, clientes versión de escritorio" },
+          { src: "mtec/mtec_dev_clients_tablet.jpg", alt: "Mtec, clientes versión de tablets" },
+          { src: "mtec/mtec_dev_clients_phone.jpg", alt: "Mtec, clientes versión de teléfonos" },
+          { src: "mtec/mtec_dev_clients_phone_open_menu.jpg", alt: "Mtec, clientes versión de teléfonos con menú abierto" },
+          { src: "mtec/mtec_dev_hardware_desktop.jpg", alt: "Mtec, equipos versión de escritorio" },
+          { src: "mtec/mtec_dev_hardware_phone.jpg", alt: "Mtec, equipos versión de teléfonos" }
         ],
-        techs: []
+        techs: techs(["HTML5" , "JavaScript" , "CSS3" , "Node.js" , "Express" , "React"], 'ES')
       }
     }
   },

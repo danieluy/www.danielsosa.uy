@@ -10,7 +10,7 @@ class DevHome extends Component {
   render() {
 
     const LANG = this.props.lang.home;
-
+    
     return (
       <div>
         <DevContentTitle title={LANG.title} />
@@ -19,7 +19,7 @@ class DevHome extends Component {
         <h2 className="dev-content-subtitle">{LANG.h2titles[0]}</h2>
         <p className="dev-content-paragraph" dangerouslySetInnerHTML={{ __html: LANG.paragraph_1 }}></p>
         <h2 className="dev-content-subtitle">{LANG.h2titles[1]}</h2>
-        <DevHomeTechGallery techs={LANG.techs}/>
+        <DevHomeTechGallery techs={LANG.techs} />
       </div>
     );
 

@@ -9,6 +9,8 @@ class DevWorkWrapper extends Component {
 
     const LANG = this.props.lang;
 
+    console.log(LANG.techs)
+
     return (
       <div>
         <h2 className="dev-work-title">{LANG.title}</h2>
