@@ -14,6 +14,7 @@
 	00000000 | T | DevWorkWrapper add technologies
 	00000000 | T | DevWorkGallery responsiveness
 v2.1.0
+	20170331 | P | Lots of UI changes
 	20170331 | P | Working on diplaying technologies at DevWorkWrapper
 	20170331 | R | Lang thechs are now loaded from a single file
 	20170330 | P | DevWorkGallery component's controls ready

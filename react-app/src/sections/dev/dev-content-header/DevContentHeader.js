@@ -7,8 +7,10 @@ class DevContentHeader extends Component {
     return (
       <div className="list-header">
         <span className="logo-header"><img src={require(`../../../assets/img/dev/${this.props.avatar}`)} alt="Avatar" /></span>
-        <span className="header-title">{this.props.title}</span>
-        <span className="header-subtitle">{this.props.subtitle}</span>
+        <div className="header-texts">
+          <span className="header-title">{this.props.title}</span>
+          <span className="header-subtitle">{this.props.subtitle}</span>
+        </div>
       </div>
     );
 

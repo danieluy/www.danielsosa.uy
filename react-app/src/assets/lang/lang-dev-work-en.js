@@ -13,7 +13,8 @@ export default {
         title: "Title",
         description: "Description",
         client_name: "Client",
-        status: "Status"
+        status: "Status",
+        technologies: "Technologies"
       },
       prizes_management: {
         title: "Premios Radiocero",

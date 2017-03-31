@@ -13,7 +13,8 @@ export default {
         title: "Título",
         description: "Descripción",
         client_name: "Cliente",
-        status: "Estado"
+        status: "Estado",
+        technologies: "Tecnologías"
       },
       prizes_management: {
         title: "Premios Radiocero",
@@ -30,7 +31,7 @@ export default {
           { src: "radiocero/radiocero_premios_users_list.jpg", alt: "Radiocero, listado de usuarios" },
           { src: "radiocero/radiocero_premios_users_new.jpg", alt: "Radiocero, formulario para nuevo usuario" }
         ],
-        techs: techs(["HTML5" , "JavaScript" , "CSS3" , "Node.js" , "Express" , "Angular" , "MongoDB"], 'ES')
+        techs: techs(["HTML5", "JavaScript" , "CSS3" , "Node.js" , "Express" , "Angular" , "MongoDB"], 'ES')
       },
       mtec: {
         title: "Mtec (placeholder)",

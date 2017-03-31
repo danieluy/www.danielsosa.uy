@@ -30,11 +30,13 @@
 }
 
 @media screen and (max-width: 480px){
+  .dev-content-wrapper{
+    padding: 0 0 20px 0;
+  }
   .dev-content-center{
     width: 100%;
   }
 }
-
 
 @keyframes slideUp {
   0%{
@@ -42,5 +44,16 @@
   }
   100%{
     transform: translateY(0px);
+  }
+}
+/*@media screen and (max-width: 1200px){ }*/
+
+/*@media screen and (max-width: 960px){ }*/
+
+/*@media screen and (max-width: 768px){ }*/
+
+@media screen and (max-width: 480px){
+  .dev-content-wrapper{
+    animation: none;
   }
 }

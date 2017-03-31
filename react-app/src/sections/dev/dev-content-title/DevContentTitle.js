@@ -8,6 +8,7 @@ class DevContentTitle extends Component {
     return (
       <h1 className="dev-content-title-text">{this.props.title}</h1>
     );
+    
   }
 }
 
