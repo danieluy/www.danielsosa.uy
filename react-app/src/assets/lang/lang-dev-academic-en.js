@@ -1,22 +1,24 @@
 export default {
-  title: "Academic Studies",
+  title: "Academic Achievements",
   labels: {
-    grade: "Grade",
-    course_name: "Course"
+    grade: "Score",
+    subject_name: "Subject",
+    average: "Avg."
   },
   careers: [
     {
       name: "Software Analist",
-      status: "(ongoing)",
+      status: "Ongoing",
       page: "http://fi.ort.edu.uy/analista-programador/plan-de-estudios",
+      color_theme: "#8b0000",
       institution: {
-        name: "Universidad ORT Uruguay",
+        name: "ORT University, Uruguay",
         logo: {
-          src: "img/ORT_128.jpg",
+          src: "academic/ORT_128.jpg",
           alt: "Logo ORT University"
         }
       },
-      courses: [
+      subjects: [
         { score: "??", name: "Applications Design and Development", techs: "OOP | Java | UML" },
         { score: 99, name: "Algorithms & data structures 2", techs: "OOP | Java | Trees | Graphs | Multi-structures" },
         { score: 93, name: "Software engineering", techs: "Software project management" }
@@ -24,16 +26,17 @@ export default {
     },
     {
       name: "Web Developer",
-      status: "(completed)",
+      status: "Completed",
       page: "http://fi.ort.edu.uy/analista-programador/plan-de-estudios",
+      color_theme: "#8b0000",
       institution: {
-        name: "Universidad ORT Uruguay",
+        name: "ORT University, Uruguay",
         logo: {
-          src: "img/ORT_128.jpg",
+          src: "academic/ORT_128.jpg",
           alt: "Logo Uiversidad ORT"
         }
       },
-      courses: [
+      subjects: [
         { score: 99, name: "Programming 1", techs: "Javascript | jQuery | HTML | CSS" },
         { score: 98, name: "Programming 2", techs: "OOP | C# | ASP.NET" },
         { score: 96, name: "Programming 3", techs: "OOP | C# | ASP.NET | ADO.NET | Entity Framework | MVC" },

@@ -14,6 +14,7 @@ class DevHome extends Component {
     return (
       <div>
         <DevContentTitle title={LANG.title} />
+        
         <DevContentHeader title={LANG.header_1.title} subtitle={LANG.header_1.subtitle} avatar={LANG.header_1.avatar} />
         {/*<DevContentHeader title={LANG.header_2.title} subtitle={LANG.header_2.subtitle} avatar={LANG.header_2.avatar} />*/}
         <h2>{LANG.h2titles[0]}</h2>

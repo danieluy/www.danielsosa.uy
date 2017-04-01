@@ -2,21 +2,23 @@ export default {
   title: "Formación Académica",
   labels: {
     grade: "Nota",
-    course_name: "Materia"
+    subject_name: "Materia",
+    average: "Prom."
   },
   careers: [
     {
       name: "Analista Programador",
-      status: "(en curso)",
+      status: "En curso",
       page: "http://fi.ort.edu.uy/analista-programador/plan-de-estudios",
+      color_theme: "#8b0000",
       institution: {
         name: "Universidad ORT Uruguay",
         logo: {
-          src: "img/ORT_128.jpg",
+          src: "academic/ORT_128.jpg",
           alt: "Logo Uiversidad ORT"
         }
       },
-      courses: [
+      subjects: [
         { score: "??", name: "Diseño y Desarrollo de Aplicaciones", techs: "POO | Java | UML" },
         { score: 99, name: "Algoritmos y Estructuras de Datos 2", techs: "POO | Java | Arboles | Grafos | Multiestructuras" },
         { score: 93, name: "Ingeniría de software", techs: "Gestión de proyectos de software" }
@@ -24,16 +26,17 @@ export default {
     },
     {
       name: "Programador Web",
-      status: "(completado)",
+      status: "Completado",
       page: "http://fi.ort.edu.uy/analista-programador/plan-de-estudios",
+      color_theme: "#8b0000",
       institution: {
         name: "Universidad ORT Uruguay",
         logo: {
-          src: "img/ORT_128.jpg",
+          src: "academic/ORT_128.jpg",
           alt: "Logo Uiversidad ORT"
         }
       },
-      courses: [
+      subjects: [
         { score: 99, name: "Programación 1", techs: "Javascript | jQuery | HTML | CSS" },
         { score: 98, name: "Programación 2", techs: "POO | C# | ASP.NET" },
         { score: 96, name: "Programación 3", techs: "POO | C# | ASP.NET | ADO.NET | Entity Framework | MVC" },

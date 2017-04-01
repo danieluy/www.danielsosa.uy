@@ -1,18 +1,24 @@
 export default {
   title: "Contáctame",
-  phone: {
-    header_title: "Llamada telefónica",
-    logo_alt: "Icono de teléfono"
-  },
-  mail: {
-    header_title: "Correo electrónico",
-    logo_alt: "Icono de correo electrónico"
-  },
-  label: {
+  labels: {
     name: "Nombre",
     email: "Correo electrónico",
     phone: "Teléfono",
     mensaje: "Mensaje"
+  },
+  phone: {
+    title: "Llamada telefónica",
+    subtitle: "(+598) 99 636 065",
+    icon: "contact/phone_logo_128.jpg",
+    icon_alt: "Icono de teléfono",
+    color_theme: "#5667bf"
+  },
+  mail: {
+    title: "Correo electrónico",
+    subtitle: "danielsosa.dev@gmail.com",
+    icon: "contact/email_logo_128.jpg",
+    icon_alt: "Icono de correo electrónico",
+    color_theme: "#54bfa1"
   },
   placeholder: {
     name: "Tyler Durden",

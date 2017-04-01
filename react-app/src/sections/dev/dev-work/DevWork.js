@@ -13,7 +13,7 @@ class DevWork extends Component {
     return (
       <div>
         <DevContentTitle title={LANG.title} />
-
+        
         <DevContentHeader title={LANG.employed.header_title} subtitle={LANG.employed.header_subtitle} avatar={LANG.employed.logo_src} />
 
         <DevContentHeader title={LANG.freelance.header_title} subtitle={LANG.freelance.header_subtitle} avatar={LANG.freelance.logo_src} />

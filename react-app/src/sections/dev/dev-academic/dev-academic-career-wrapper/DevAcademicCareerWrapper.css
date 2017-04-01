@@ -1,0 +1,55 @@
+.dev-academic-career{
+  position: relative;
+}
+.dev-academic-career-header{
+  display: flex;
+  padding: 15px 15px 0 15px;
+}
+.dev-academic-carrer-header-grade,
+.dev-academic-carrer-header-subject_name{
+  width: 75px;
+  text-transform: uppercase;
+  font-size: .7rem;
+  color: #555;
+  text-align: center;
+  line-height: 30px;
+}
+.dev-academic-carrer-header-subject_name{
+  width: initial;
+  padding-left: 15px;
+}
+
+.dev-academic-career-subjects{
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px 15px 15px;
+}
+
+.dev-academic-career-subject{
+  display: flex;
+  align-items: center;
+}
+
+.dev-academic-career-subject-grade{
+  width: 55px;
+  height: 55px;
+  margin: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 55px;
+  font-weight: 700;
+  color: #555;
+  border: 1px solid #888;
+  border-radius: 50%;
+}
+
+.dev-academic-career-subject-info{
+  padding-left: 15px;
+}
+.dev-academic-career-subject-name{
+  font-size: 1rem;
+  font-weight: 500;
+}
+.dev-academic-career-subject-techs{
+  font-size: .8rem;
+}
