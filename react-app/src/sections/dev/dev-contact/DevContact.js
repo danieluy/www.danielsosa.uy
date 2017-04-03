@@ -10,14 +10,14 @@ import ajax from '../../../ajax';
 class DevContact extends Component {
 
   email_form = {
-    name: 'Tyler Durden',
-    email: 'tyler@tfc.com',
-    phone: '099 099 099',
-    message: 'You do not talk about the Fight Club!'
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
   }
 
   submitEmailReq() {
-    ajax.email(this.email_form, () => {console.log('lalala')})
+    ajax.email(this.email_form, () => { console.log('Message has been sent') })
   }
 
   setEmailValues(inputs) {
@@ -72,7 +72,10 @@ class DevContact extends Component {
           avatar={contact.mail.icon}
           action={this.setDevContentHeaderMailAction(contact.mail)}
         />
-        <DevContactEmailForm formValues={this.email_form} setValues={this.setEmailValues.bind(this)} />
+        <DevContactEmailForm
+          lang={contact.mail}
+          formValues={this.email_form}
+          setValues={this.setEmailValues.bind(this)} />
       </div>
     );
   }

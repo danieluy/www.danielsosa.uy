@@ -1,11 +1,5 @@
 export default {
   title: "Contáctame",
-  labels: {
-    name: "Nombre",
-    email: "Correo electrónico",
-    phone: "Teléfono",
-    mensaje: "Mensaje"
-  },
   phone: {
     title: "Llamada telefónica",
     subtitle: "(+598) 99 636 065",
@@ -18,12 +12,18 @@ export default {
     subtitle: "danielsosa.dev@gmail.com",
     icon: "contact/email_logo_128.jpg",
     icon_alt: "Icono de correo electrónico",
-    color_theme: "#54bfa1"
-  },
-  placeholder: {
-    name: "Tyler Durden",
-    email: "tyler@tfc.com",
-    phone: "(+598) 99 000 111 | 099000111",
-    mensaje: "Dime qué puedo hacer por ti :)"
+    color_theme: "#54bfa1",
+    labels: {
+      name: "Nombre",
+      email: "Correo electrónico",
+      phone: "Teléfono",
+      message: "Mensaje"
+    },
+    placeholders: {
+      name: "Tyler Durden",
+      email: "tyler@tfc.com",
+      phone: "(+598) 99 000 111 | 099000111",
+      message: "Dime qué puedo hacer por ti :)"
+    }
   }
 }

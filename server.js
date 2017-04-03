@@ -92,7 +92,7 @@ app.post('/dev/contact', (req, res) => {
       `);
     }
     else {
-      res.status(200).redirect('/dev#contact')
+      res.status(200).redirect('/dev/contact')
     };
   });
 })
