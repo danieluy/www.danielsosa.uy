@@ -63,24 +63,6 @@ app.use((req, res, next) => {
   next();
 })
 
-app.post('/lang/:lang/:page', (req, res) => {
-  if (req.params.page !== 'home' && req.params.page !== 'dev' && req.params.page !== 'arq' && req.params.page !== 'img')
-    res.status(400).json({ error: '400 Bad Request', details: 'The page ' + req.params.page + ' does not exist' })
-  if (req.params.lang !== 'es' && req.params.lang !== 'en')
-    res.status(400).json({ error: '400 Bad Request', details: 'The requested language is currently not supported' })
-  res.status(200).json(req.params.lang === 'es' ? SPANISH[req.params.page] : ENGLISH[req.params.page])
-});
-
-// app.post('/lang', (req, res) => {
-//   if(req.body.page !== 'home' && req.body.page !== 'dev' && req.body.page !== 'arq' && req.body.page !== 'img')
-//     res.status(400).json({error: '400 Bad Request', details: 'The page ' + req.body.page + ' does not exist'})
-//   if(req.body.lang)
-//     req.session.lang = req.body.lang;
-//   else if(!req.session.lang)
-//     req.session.lang = 'es'
-//   res.status(200).json(req.session.lang === 'es' ? SPANISH[req.body.page] : ENGLISH[req.body.page])
-// });
-
 app.post('/dev/contact', (req, res) => {
   let name = req.body.name;
   let email = req.body.email;
