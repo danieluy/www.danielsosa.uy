@@ -51,8 +51,7 @@ class DevAcademic extends Component {
 
   render() {
 
-    const LANG = this.props.lang.academic;
-    console.log(LANG)
+    const LANG = this.props.lang.academic;  
     return (
       <div>
 

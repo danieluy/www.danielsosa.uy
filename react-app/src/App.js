@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 
+import Notification from './notification/Notification';
+
 class App extends Component {
 
   constructor() {
@@ -37,6 +39,25 @@ class App extends Component {
     return (
       <div>
         {children_with_props}
+        {/*<Notifications />*/}
+        <Notification options={{
+          title: 'Notification Title',
+          subtitle: 'Subtitle for the notification',
+          body: 'Some text to display on the notification',
+          type: ''
+        }} />
+        <Notification options={{
+          title: 'Notification Title',
+          subtitle: 'Subtitle for the notification',
+          body: 'Some text to display on the notification',
+          type: 'Alert'
+        }} />
+        <Notification options={{
+          title: 'Notification Title',
+          subtitle: 'Subtitle for the notification',
+          body: 'Some text to display on the notification',
+          type: 'Error'
+        }} />
       </div>
     );
   }

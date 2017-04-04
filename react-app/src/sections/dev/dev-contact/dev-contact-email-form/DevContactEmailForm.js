@@ -1,103 +1,150 @@
 import React, { Component } from 'react';
 import './DevContactEmailForm.css';
 
+const styles = {
+  invalid: {
+    color: '#f88'
+  }
+}
+
 class DevContactEmailForm extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
       name: {
-        value: props.formValues.name,
+        value: '',
         valid: false,
         touched: false
       },
       email: {
-        value: props.formValues.email,
+        value: '',
         valid: false,
         touched: false
       },
       phone: {
-        value: props.formValues.phone,
+        value: '',
         valid: false,
         touched: false
       },
       message: {
-        value: props.formValues.message,
+        value: '',
         valid: false,
         touched: false
       }
     }
   }
 
-  setValues(evt) {
-    switch (evt.target.getAttribute('data-input-name')) {
-      case 'name': this.updateName(evt.target.value); break;
-      case 'email': this.setState({ email: evt.target.value }); break;
-      case 'phone': this.setState({ phone: evt.target.value }); break;
-      case 'message': this.setState({ message: evt.target.value }); break;
-      default: throw new Error('Unhadled value on comunication email form');
-    }
+  //necesary to handle setState async behaviour
+  componentDidUpdate() {
+    if (this.formIsValid)
+      this.props.parentMethods.setValues({
+        name: this.state.name.value,
+        email: this.state.email.value,
+        phone: this.state.phone.value,
+        message: this.state.message.value
+      })
+    else
+      this.props.parentMethods.setValues(null)
   }
 
-  updateName(name) {
-    if (typeof name === 'string' && name.length > 0)
-      this.setState({ name: { value: name, valid: true, touched: true } });
+  get formIsValid() {
+    return this.state.name.valid && this.state.email.valid && this.state.phone.valid && this.state.message.valid;
+  }
+
+  updateName(evt) {
+    evt.preventDefault();
+    if (typeof evt.target.value === 'string' && evt.target.value.length > 0)
+      this.setState({ name: { value: evt.target.value, valid: true, touched: true } });
     else
       this.setState({ name: { value: '', valid: false, touched: true } });
   }
-
-  updateEmail(email) {
-    if (typeof email === 'string' && email.length > 0 && email.trim().match(/^\S+@\S+\.\S+$/))
-      this.setState({ email: { value: email, valid: true, touched: true } });
+  updateEmail(evt) {
+    evt.preventDefault();
+    if (typeof evt.target.value === 'string' && evt.target.value.length > 0 && evt.target.value.trim().match(/^\S+@\S+\.\S+$/))
+      this.setState({ email: { value: evt.target.value, valid: true, touched: true } });
     else
-      this.setState({ email: { value: '', valid: false, touched: true } });
+      this.setState({ email: { value: evt.target.value, valid: false, touched: true } });
   }
-
-  //necesary to handle setState async behaviour
-  componentDidUpdate() {
-    console.log(this.state.name)
-    this.props.setValues(this.state)
+  updatePhone(evt) {
+    evt.preventDefault();
+    if (typeof evt.target.value === 'string' && evt.target.value.length > 0)
+      this.setState({ phone: { value: evt.target.value, valid: true, touched: true } });
+    else
+      this.setState({ phone: { value: '', valid: false, touched: true } });
+  }
+  updateMessage(evt) {
+    evt.preventDefault();
+    if (typeof evt.target.value === 'string' && evt.target.value.length > 0)
+      this.setState({ message: { value: evt.target.value, valid: true, touched: true } });
+    else
+      this.setState({ message: { value: '', valid: false, touched: true } });
   }
 
   render() {
 
-    const mail = this.props.lang;
+    const lang = this.props.lang;
 
     return (
       <div className="dev-contact-email-form">
-        <label className="dev-contact-email-form-label">{mail.labels.name}</label>
+        {/*Name*/}
+        <label
+          htmlFor="dev-contact-email-form-name"
+          className="dev-contact-email-form-label"
+          style={(!this.state.name.valid && this.state.name.touched) ? styles.invalid : null}
+        >
+          {lang.labels.name}
+        </label>
         <input
-          data-input-name="name"
+          id="dev-contact-email-form-name"
           className="dev-contact-email-form-input"
-          onChange={this.setValues.bind(this)} type="text"
-          placeholder={mail.placeholders.name}
+          onChange={this.updateName.bind(this)} type="text"
+          placeholder={lang.placeholders.name}
           value={this.state.name.value}
         />
-
-        <label className="dev-contact-email-form-label">{mail.labels.email}</label>
+        {/*Email*/}
+        <label
+          htmlFor="dev-contact-email-form-email"
+          className="dev-contact-email-form-label"
+          style={(!this.state.email.valid && this.state.email.touched) ? styles.invalid : null}
+        >
+          {lang.labels.email}
+        </label>
         <input
-          data-input-name="email"
+          id="dev-contact-email-form-email"
           className="dev-contact-email-form-input"
-          onChange={this.setValues.bind(this)} type="email"
-          placeholder={mail.placeholders.email}
+          onChange={this.updateEmail.bind(this)} type="email"
+          placeholder={lang.placeholders.email}
           value={this.state.email.value}
         />
-
-        <label className="dev-contact-email-form-label">{mail.labels.phone}</label>
+        {/*Phone*/}
+        <label
+          htmlFor="dev-contact-email-form-phone"
+          className="dev-contact-email-form-label"
+          style={(!this.state.phone.valid && this.state.phone.touched) ? styles.invalid : null}
+        >
+          {lang.labels.phone}
+        </label>
         <input
-          data-input-name="phone"
+          id="dev-contact-email-form-phone"
           className="dev-contact-email-form-input"
-          onChange={this.setValues.bind(this)} type="phone"
-          placeholder={mail.placeholders.phone}
+          onChange={this.updatePhone.bind(this)} type="phone"
+          placeholder={lang.placeholders.phone}
           value={this.state.phone.value}
         />
-
-        <label className="dev-contact-email-form-label">{mail.labels.message}</label>
+        {/*Message*/}
+        <label
+          htmlFor="dev-contact-email-form-message"
+          className="dev-contact-email-form-label"
+          style={(!this.state.message.valid && this.state.message.touched) ? styles.invalid : null}
+        >
+          {lang.labels.message}
+        </label>
         <textarea
-          data-input-name="message"
+          id="dev-contact-email-form-message"
           className="dev-contact-email-form-input"
-          onChange={this.setValues.bind(this)}
-          placeholder={mail.placeholders.message}
+          onChange={this.updateMessage.bind(this)}
+          placeholder={lang.placeholders.message}
           value={this.state.message.value}
         />
       </div>

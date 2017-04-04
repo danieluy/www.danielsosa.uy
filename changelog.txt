@@ -11,10 +11,9 @@
 
 # ToDo
 	00000000 | T | Lang toggle button on Home
-	00000000 | T | Test ajax method email()
-	00000000 | T | Style DevContact email form
 v2.1.0
-	20170403 | P | Working on DevContact email form
+	20170403 | P | Working on Notification service
+	20170403 | P | DevContact section ready
 	20170403 | P | DevContentHeader now recieves a complete element with it's action within it
 	20170401 | P | Started the DevContact section
 	20170401 | P | Added the DevAcademic section

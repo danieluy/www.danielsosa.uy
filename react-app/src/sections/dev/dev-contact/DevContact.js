@@ -9,24 +9,30 @@ import ajax from '../../../ajax';
 
 class DevContact extends Component {
 
-  email_form = {
-    name: '',
-    email: '',
-    phone: '',
-    message: ''
-  }
+  email_form = null;
 
   submitEmailReq() {
-    ajax.email(this.email_form, () => { console.log('Message has been sent') })
+    if (this.email_form)
+      ajax.email(this.email_form, (err, body) => {
+        if (err)
+          console.error(err);
+        else
+          console.log(body);
+      });
+    else
+      alert('Tas loco?');
   }
 
   setEmailValues(inputs) {
-    this.email_form = {
-      name: inputs.name,
-      email: inputs.email,
-      phone: inputs.phone,
-      message: inputs.message
-    }
+    if (inputs)
+      this.email_form = {
+        name: inputs.name,
+        email: inputs.email,
+        phone: inputs.phone,
+        message: inputs.message
+      }
+    else
+      this.email_form = null;
   }
 
   setDevContentHeaderMailAction(mail) {
@@ -74,8 +80,8 @@ class DevContact extends Component {
         />
         <DevContactEmailForm
           lang={contact.mail}
-          formValues={this.email_form}
-          setValues={this.setEmailValues.bind(this)} />
+          parentMethods={{ setValues: this.setEmailValues.bind(this) }}
+        />
       </div>
     );
   }
