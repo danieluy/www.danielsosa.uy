@@ -5,7 +5,7 @@ class Notification extends Component {
 
   getIcon(type) {
     switch (type) {
-      case 'Error':
+      case 'error':
         return (
           <svg className="notification-header-icon" fill="#c94242" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 0h24v24H0z" fill="none" />
@@ -13,7 +13,7 @@ class Notification extends Component {
           </svg>
         );
 
-      case 'Alert':
+      case 'alert':
         return (
           <svg className="notification-header-icon" fill="#c9c242" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 0h24v24H0z" fill="none" />

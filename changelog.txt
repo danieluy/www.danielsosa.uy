@@ -11,8 +11,11 @@
 
 # ToDo
 	00000000 | T | Lang toggle button on Home
+	00000000 | T | NotificationsTray styles
+	00000000 | T | Implement notifications throughout the app
 v2.1.0
-	20170403 | P | Working on Notification service
+	20170403 | P | NotificationsTray component logic ready
+	20170403 | P | Working on notifications service
 	20170403 | P | DevContact section ready
 	20170403 | P | DevContentHeader now recieves a complete element with it's action within it
 	20170401 | P | Started the DevContact section
