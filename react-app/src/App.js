@@ -21,35 +21,35 @@ class App extends Component {
     }
   }
 
-  componentDidMount() {
-    window.addEventListener('resize', () => {
-      this.setState({
-        window_height: window.innerHeight
-      })
-    });
-    this.createNotifitacion({
-      title: 'Notification',
-      subtitle: 'Just an example',
-      body: 'You are seeing this notification just so that you know that this page can show you notifications.',
-      type: ''
-    })
-    setTimeout(() => {
-      this.createNotifitacion({
-        title: 'Notification',
-        subtitle: 'Just another example',
-        body: 'You are seeing this second notification to let you know that there are more than one type of notifications, in this case you are seeing an Alert. Could there be more types...?',
-        type: 'alert'
-      })
-    }, 3000);
-    setTimeout(() => {
-      this.createNotifitacion({
-        title: 'Notification',
-        subtitle: 'Yet another example',
-        body: 'There you go, another type of notification, this time you are seeing an error, well, not really an error just a simulation ;)',
-        type: 'error'
-      })
-    }, 10000);
-  }
+  // componentDidMount() {
+  //   window.addEventListener('resize', () => {
+  //     this.setState({
+  //       window_height: window.innerHeight
+  //     })
+  //   });
+  //   this.createNotifitacion({
+  //     title: 'Notification',
+  //     subtitle: 'Just an example',
+  //     body: ['You are seeing this notification just so that you know that this page can show you notifications.'],
+  //     type: ''
+  //   })
+  //   setTimeout(() => {
+  //     this.createNotifitacion({
+  //       title: 'Alert',
+  //       subtitle: 'Just another example',
+  //       body: ['You are seeing this second notification to let you know that there are more than one type of notifications, in this case you are seeing an Alert. Could there be more types...?'],
+  //       type: 'alert'
+  //     })
+  //   }, 3000);
+  //   setTimeout(() => {
+  //     this.createNotifitacion({
+  //       title: 'Error',
+  //       subtitle: 'Yet another example',
+  //       body: ['There you go, another type of notification, this time you are seeing an error, well, not really an error just a simulation ;)'],
+  //       type: 'error'
+  //     })
+  //   }, 10000);
+  // }
 
   createNotifitacion(notif) {
     this.setState({

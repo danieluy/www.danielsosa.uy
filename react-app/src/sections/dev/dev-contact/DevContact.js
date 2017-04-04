@@ -9,18 +9,25 @@ import ajax from '../../../ajax';
 
 class DevContact extends Component {
 
+  constructor(props) {
+    super();
+    this.notify = props.notify;
+  }
+
   email_form = null;
 
   submitEmailReq() {
     if (this.email_form)
       ajax.email(this.email_form, (err, body) => {
-        if (err)
+        if (err) {
+          this.notify(this.props.lang.contact.error.conection);
           console.error(err);
+        }
         else
-          console.log(body);
+          this.notify(this.props.lang.contact.message.success);
       });
     else
-      alert('Tas loco?');
+      this.notify(this.props.lang.contact.alert.validation);
   }
 
   setEmailValues(inputs) {

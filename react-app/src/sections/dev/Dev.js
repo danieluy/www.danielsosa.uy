@@ -39,7 +39,8 @@ class Dev extends Component {
     const LANG = this.state.lang === 'es' ? ES : EN;
 
     const children_with_props = React.cloneElement(this.props.children, {
-      lang: LANG
+      lang: LANG,
+      notify: this.props.notify
     })
 
     return (

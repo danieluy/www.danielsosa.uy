@@ -12,7 +12,6 @@ class Notification extends Component {
             <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z" />
           </svg>
         );
-
       case 'alert':
         return (
           <svg className="notification-header-icon" fill="#c9c242" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
@@ -34,17 +33,26 @@ class Notification extends Component {
   render() {
 
     const options = this.props.options;
+    const id = this.props.id;
 
     return (
       <div className="notification-wrapper">
-        <div className="notification">
-          <div className="notification-header">
-            {this.getIcon(options.type)}
-            <div>{options.title}</div>
-          </div>
-          <div>{options.subtitle}</div>
-          <div>{options.body}</div>
+        <div className="notification-header">
+          {this.getIcon(options.type)}
         </div>
+        <div className="notification-body">
+          <div className="notification-title">{options.title}</div>
+          <div className="notification-subtitle">{options.subtitle}</div>
+          <div className="notification-body-content">
+            {options.body.map((txt, i) => <p key={i}>{txt}</p>)}
+          </div>
+        </div>
+        <button onClick={this.props.close.bind(null, id)} className="notification-button-close">
+          <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+            <path d="M0 0h24v24H0z" fill="none" />
+          </svg>
+        </button>
       </div>
     );
   }

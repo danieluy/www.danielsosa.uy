@@ -13,19 +13,19 @@
 
 @media screen and (max-width: 1200px){
   .dev-content-center{
-    width: 960px;
+    width: 930px;
   }
 }
 
 @media screen and (max-width: 960px){
   .dev-content-center{
-    width: 768px;
+    width: 738px;
   }
 }
 
 @media screen and (max-width: 768px){
   .dev-content-center{
-    width: 480px;
+    width: 450px;
   }
 }
 

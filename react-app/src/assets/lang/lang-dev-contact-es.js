@@ -25,5 +25,42 @@ export default {
       phone: "(+598) 99 000 111 | 099000111",
       message: "Dime qué puedo hacer por ti :)"
     }
+  },
+  message: {
+    success: {
+      title: "Éxito!",
+      subtitle: "Su mensaje ha sido enviado",
+      body: [
+        'Gracias por escribirme, a la brevedad me pondré en contanto contigo.'
+      ],
+      type: ''
+    }
+  },
+  alert: {
+    validation: {
+      title: "Datos no válidos",
+      subtitle: "Revisa los datos ingresados",
+      body: [
+        'Nombre: debes escribir tu nombre, este campo es obligatorio.',
+        'Email: debes ingresar una dirección de correo válida, este campo es obligatorio.',
+        'Teléfono: debes ingresar un número de teléfono válido, este campo es obligatorio.',
+        'Mensaje: debes escribir tu mensaje, este campo es obligatorio.'
+      ],
+      type: 'alert'
+    }
+  },
+  error: {
+    conection: {
+      title: "Error",
+      subtitle: "Tu mensaje no se ha enviado",
+      body: [
+        'Ah ocurrido uno de los siguientes problemas:',
+        '1. No tienes conexión a internet en este momento.',
+        '2. El servidor no puede responder en este momento.',
+        'Inténtalo más tarde y si el problema persiste intenta comunicarte directamente a la dirección: danielsosa.dev@gmail.com',
+        'Muchas gracias.'
+      ],
+      type: 'error'
+    }
   }
 }
