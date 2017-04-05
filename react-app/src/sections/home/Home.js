@@ -10,8 +10,14 @@ class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      lang: 'es'
+      lang: this.getSystemLanguage()
     }
+  }
+
+  getSystemLanguage() {
+    if (navigator)
+      return ((navigator.language || navigator.userLanguage) || 'es').slice(0, 2);
+    return 'es';
   }
 
   componentDidMount() {
@@ -35,7 +41,7 @@ class Home extends Component {
 
         <HomeFooter window_height={this.props.window_height} lang={lang} />
 
-        <button onClick={this.toggleLang.bind(this)} style={{ position: 'fixed', top: 0, left: 0, zIndex: '10', backgroundColor: 'red' }}>lalala</button>
+        {/*<button onClick={this.toggleLang.bind(this)} style={{ position: 'fixed', top: 0, left: 0, zIndex: '10', backgroundColor: 'red' }}>lalala</button>*/}
 
       </div>
     );

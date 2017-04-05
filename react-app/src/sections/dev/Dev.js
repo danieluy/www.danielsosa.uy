@@ -12,9 +12,15 @@ class Dev extends Component {
   constructor() {
     super();
     this.state = {
-      lang: 'es',
+      lang: this.getSystemLanguage(),
       hoverNavbar: false
     }
+  }
+
+  getSystemLanguage() {
+    if (navigator)
+      return ((navigator.language || navigator.userLanguage) || 'es').slice(0, 2);
+    return 'es';
   }
 
   componentDidMount() {

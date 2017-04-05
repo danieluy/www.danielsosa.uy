@@ -1,0 +1,23 @@
+.placeholder{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.placeholder-img{
+  width: 200px;
+}
+.placeholder-title{
+  font-size: 1.2rem;
+  line-height: 30px;
+  font-weight: 900;
+  color: #555;
+}
+.placeholder-subtitle{
+  font-size: .9rem;
+  line-height: 30px;
+  font-weight: 300;
+  color: #555;
+}

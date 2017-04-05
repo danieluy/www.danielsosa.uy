@@ -10,8 +10,12 @@
 #   F - Bug fix                     #
 
 # ToDo
-	00000000 | T | Lang toggle button on Home
+	00000000 | T | Lang toggle button on Home ???
+	00000000 | T | HTTP status codes handler
 v2.1.0
+	20170405 | P | Ready to deploy v2.1.0
+	20170405 | P | Arq section placeholder ready
+	20170405 | P | Img section placeholder ready
 	20170405 | P | Improved ajax.js. It now handles the response internally
 	20170404 | P | UI improvement, compact DevNavbar now displayed from media query (max-width: 960p)
 	20170404 | P | UI improvement, DevContentWrapper width reduced by 30px to account for the padding

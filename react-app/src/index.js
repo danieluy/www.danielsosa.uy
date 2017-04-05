@@ -3,7 +3,12 @@ import ReactDOM from 'react-dom';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
 import App from './App';
+
 import Home from './sections/home/Home';
+
+import Img from './sections/img/Img';
+
+import Arq from './sections/arq/Arq';
 
 import Dev from './sections/dev/Dev';
 import DevHome from './sections/dev/dev-home/DevHome';
@@ -22,6 +27,8 @@ ReactDOM.render(
         <Route path="/dev/academic" component={DevAcademic}></Route>
         <Route path="/dev/contact" component={DevContact}></Route>
       </Route>
+      <Route path="/arq" component={Arq} />
+      <Route path="/img" component={Img} />
     </Route>
   </Router>
   , document.getElementById('root')

@@ -1,7 +1,7 @@
 import request from 'request';
 
-// const origin = `${location.protocol}//${location.host}`;
-const origin = 'http://localhost:3372';
+const origin = `${location.protocol}//${location.host}`;
+// const origin = 'http://localhost:3372';
 
 /*
 cb: function(err, res, body){
@@ -13,7 +13,7 @@ cb: function(err, res, body){
 export default {
   email: function (form, cb) {
     request.post({
-      url: `${origin}/dev/contact`,
+      url: `${origin}/api/sendmail`,
       form: {
         name: form.name,
         email: form.email,
