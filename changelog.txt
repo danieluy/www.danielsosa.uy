@@ -12,7 +12,8 @@
 # ToDo
 	00000000 | T | Lang toggle button on Home
 v2.1.0
-	20170404 | P | UI improvement, compact DevNavbar not displayed from media query (max-width: 960p)
+	20170405 | P | Improved ajax.js. It now handles the response internally
+	20170404 | P | UI improvement, compact DevNavbar now displayed from media query (max-width: 960p)
 	20170404 | P | UI improvement, DevContentWrapper width reduced by 30px to account for the padding
 	20170404 | P | Notifications implemented for DevContact component.
 	20170404 | P | NotificationsTray component logic ready

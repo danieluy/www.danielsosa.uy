@@ -16,12 +16,12 @@ class DevContact extends Component {
 
   email_form = null;
 
-  submitEmailReq() {
+  emailRequest() {
     if (this.email_form)
       ajax.email(this.email_form, (err, body) => {
         if (err) {
           this.notify(this.props.lang.contact.error.conection);
-          console.error(err);
+          console.error(err, err.stack);
         }
         else
           this.notify(this.props.lang.contact.message.success);
@@ -45,7 +45,7 @@ class DevContact extends Component {
   setDevContentHeaderMailAction(mail) {
     return (
       <div className="dev-content-action" style={{ backgroundColor: mail.color_theme }}>
-        <svg onClick={this.submitEmailReq.bind(this)} fill="#ffffff" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        <svg onClick={this.emailRequest.bind(this)} fill="#ffffff" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
           <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
           <path d="M0 0h24v24H0z" fill="none" />
         </svg>

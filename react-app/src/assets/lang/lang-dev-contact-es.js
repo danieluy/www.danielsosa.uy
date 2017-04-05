@@ -29,7 +29,7 @@ export default {
   message: {
     success: {
       title: "Éxito!",
-      subtitle: "Su mensaje ha sido enviado",
+      subtitle: "Tu mensaje ha sido enviado",
       body: [
         'Gracias por escribirme, a la brevedad me pondré en contanto contigo.'
       ],

@@ -84,12 +84,8 @@ app.post('/dev/contact', (req, res) => {
 
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
-      console.log(error);
-      res.status(500).send(`
-        <h1>Sorry, there was a server error</h1>
-        <p>Something went wrong when triyng to send your message</p>
-        <p>Please try again or contact danielsosa.dev@gmail.com directly</p>
-      `);
+      console.error(error, error.stack ? error.stack : '');
+      res.status(500).json({});
     }
     else {
       res.status(200).redirect('/dev/contact')
