@@ -12,6 +12,8 @@
 # ToDo
 	00000000 | T | Lang toggle button on Home ???
 	00000000 | T | HTTP status codes handler
+v2.1.1
+	20170405 | B2 | Page height is not updating on window resize
 v2.1.0
 	20170405 | P | Ready to deploy v2.1.0
 	20170405 | P | Arq section placeholder ready
