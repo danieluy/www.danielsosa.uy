@@ -5,7 +5,7 @@
   display: flex;
   padding: 15px 15px 0 15px;
 }
-.dev-academic-carrer-header-grade,
+.dev-academic-carrer-header-score,
 .dev-academic-carrer-header-subject_name{
   width: 75px;
   text-transform: uppercase;
@@ -30,7 +30,7 @@
   align-items: center;
 }
 
-.dev-academic-career-subject-grade{
+.dev-academic-career-subject-score{
   width: 55px;
   height: 55px;
   margin: 10px;
@@ -41,6 +41,7 @@
   color: #555;
   border: 1px solid #888;
   border-radius: 50%;
+  flex-shrink: 0;
 }
 
 .dev-academic-career-subject-info{

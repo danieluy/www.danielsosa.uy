@@ -7,7 +7,7 @@ class DevAcademicCareerWrapper extends Component {
     return subjects.map((subject, i) => {
       return (
         <div key={i} className="dev-academic-career-subject">
-          <div className="dev-academic-career-subject-grade">{subject.score}</div>
+          <div className="dev-academic-career-subject-score">{subject.score}</div>
           <div className="dev-academic-career-subject-info">
             <div className="dev-academic-career-subject-name">{subject.name}</div>
             <div className="dev-academic-career-subject-techs">{subject.techs}</div>
@@ -25,7 +25,7 @@ class DevAcademicCareerWrapper extends Component {
       <div className="dev-academic-career">
 
         <div className="dev-academic-career-header">
-          <div className="dev-academic-carrer-header-grade">{this.props.labels.grade}</div>
+          <div className="dev-academic-carrer-header-score">{this.props.labels.grade}</div>
           <div className="dev-academic-carrer-header-subject_name">{this.props.labels.subject_name}</div>
         </div>
 

@@ -11,13 +11,18 @@
 
 # ToDo
 	00000000 | T | Lang toggle button on Home ???
+	00000000 | T | Check problems on one small device screen, sample screenshot on danielsosa.uy's Google Keep
 	00000000 | T | HTTP status codes handler
+v2.1.2
+# commited
+	20170417 | F3 | They where shrinking because it's parents property "display: flex;". Solved through item property "flex-shink: 0;"
+	20170417 | B3 | UI Score badges are getting deformed when screen width shrinks. This also happens to the menú items.
 v2.1.1
-#commited
+# commited
 	20170405 | F2 | The method that handles the resize events was commented by mistake
 	20170405 | B2 | Page height is not updating on window resize
 v2.1.0
-#commited
+# commited
 	20170405 | P | Ready to deploy v2.1.0
 	20170405 | P | Arq section placeholder ready
 	20170405 | P | Img section placeholder ready
