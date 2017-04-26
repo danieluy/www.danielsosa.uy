@@ -1,5 +1,5 @@
 # www.danielsosa.uy v2.1.1
-In this repository I'm going to develop my own website, making it open source in every aspect.
+In this repository I'm developing my own website, making it open source in every aspect.
 ## config.json
 ```javascript
 {
