@@ -15,6 +15,7 @@ import DevHome from './sections/dev/dev-home/DevHome';
 import DevWork from './sections/dev/dev-work/DevWork';
 import DevAcademic from './sections/dev/dev-academic/DevAcademic';
 import DevContact from './sections/dev/dev-contact/DevContact';
+import DevStuff from './sections/dev/dev-stuff/DevStuff';
 
 
 ReactDOM.render(
@@ -26,6 +27,7 @@ ReactDOM.render(
         <Route path="/dev/work" component={DevWork}></Route>
         <Route path="/dev/academic" component={DevAcademic}></Route>
         <Route path="/dev/contact" component={DevContact}></Route>
+        <Route path="/dev/stuff" component={DevStuff}></Route>
       </Route>
       <Route path="/arq" component={Arq} />
       <Route path="/img" component={Img} />

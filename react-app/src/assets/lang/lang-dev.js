@@ -8,20 +8,24 @@ import academic_es from './lang-dev-academic-es';
 import academic_en from './lang-dev-academic-en';
 import contact_es from './lang-dev-contact-es';
 import contact_en from './lang-dev-contact-en';
+import stuff_es from './lang-dev-stuff-es';
+import stuff_en from './lang-dev-stuff-en';
 
 const es = {
   nav: nav_es,
   home: home_es,
   work: work_es,
   academic: academic_es,
-  contact: contact_es
+  contact: contact_es,
+  stuff: stuff_es
 }
 const en = {
   nav: nav_en,
   home: home_en,
   work: work_en,
   academic: academic_en,
-  contact: contact_en
+  contact: contact_en,
+  stuff: stuff_en
 }
 
 
