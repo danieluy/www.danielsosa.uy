@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './DevWorkWrapper.css';
 
-// import DevWorkGallery from '../dev-work-gallery/DevWorkGallery';
 import DsGallery from 'ds-gallery';
 import DevWorkTechBadge from '../dev-work-tech-badge/DevWorkTechBadge';
 

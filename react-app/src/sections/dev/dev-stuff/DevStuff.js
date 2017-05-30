@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+import DevContentTitle from '../dev-content-title/DevContentTitle';
+import DevContentHeader from '../dev-content-header/DevContentHeader';
+
 class DevStuff extends Component {
   render() {
 
@@ -7,8 +10,10 @@ class DevStuff extends Component {
 
     return (
       <div>
-        {LANG.title}
-     </div>
+        <DevContentTitle title={LANG.title} />
+
+        <DevContentHeader title={LANG.stuff[0].title} subtitle={LANG.stuff[0].subtitle} avatar={LANG.stuff[0].logo} />
+      </div>
     );
   }
 }
