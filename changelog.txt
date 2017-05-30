@@ -13,6 +13,9 @@
 	00000000 | T | Lang toggle button on Home ???
 	00000000 | T | Check problems on one small device screen, sample screenshot on danielsosa.uy's Google Keep
 	00000000 | T | HTTP status codes handler
+v2.3.0
+	20170529 | P | Minor improvements here and there
+	20170529 | P | Added DsGallery
 v2.1.2
 # commited
 	20170417 | F3 | They where shrinking because it's parents property "display: flex;". Solved through item property "flex-shink: 0;"

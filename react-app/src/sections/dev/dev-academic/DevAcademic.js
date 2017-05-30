@@ -39,7 +39,7 @@ class DevAcademic extends Component {
   }
 
   setTitleAppend(career) {
-    return `${career.status} (${this.props.lang.academic.labels.average} ${this.scoresAverage(career.subjects)})`;
+    return `${career.status} (${this.props.lang.academic.labels.average} ${this.scoresAverage(career.subjects)}/100)`;
   }
 
   scoresAverage(subjects) {

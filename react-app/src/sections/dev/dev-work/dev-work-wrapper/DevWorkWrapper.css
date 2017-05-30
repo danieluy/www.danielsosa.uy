@@ -25,12 +25,21 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+.dev-work-gallery-wrapper{
+  width: 100%;
+  height: 600px;
+  margin-bottom: 60px;
+}
 
 /*@media screen and (max-width: 1200px){ }*/
 
 /*@media screen and (max-width: 960px){ }*/
 
-/*@media screen and (max-width: 768px){ }*/
+@media screen and (max-width: 768px){
+  .dev-work-gallery-wrapper{
+    height: 400px;
+  }
+}
 
 @media screen and (max-width: 480px){
   .dev-work-info{
@@ -41,5 +50,8 @@
     font-size: 1.1rem;
     font-weight: 300;
     padding: 5px 0;
+  }
+  .dev-work-gallery-wrapper{
+    height: 200px;
   }
 }

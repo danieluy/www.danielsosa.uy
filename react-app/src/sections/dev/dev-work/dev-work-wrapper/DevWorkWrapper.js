@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './DevWorkWrapper.css';
 
-import DevWorkGallery from '../dev-work-gallery/DevWorkGallery';
+// import DevWorkGallery from '../dev-work-gallery/DevWorkGallery';
+import DsGallery from 'ds-gallery';
 import DevWorkTechBadge from '../dev-work-tech-badge/DevWorkTechBadge';
 
 class DevWorkWrapper extends Component {
@@ -16,10 +17,12 @@ class DevWorkWrapper extends Component {
 
     return (
       <div>
-        
+
         <h2>{LANG.title}</h2>
 
-        <DevWorkGallery images={LANG.images} />
+        <div className="dev-work-gallery-wrapper">
+          <DsGallery images={LANG.images.map(obj => obj.src)} />
+        </div>
 
         <div className="dev-work-tech-badges">
           {this.setBadges(LANG.techs)}
