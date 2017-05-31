@@ -14,8 +14,8 @@
 	00000000 | T | Check problems on one small device screen, sample screenshot on danielsosa.uy's Google Keep
 	00000000 | T | HTTP status codes handler
 v2.4.0
-# commited
-	20170529 | P | Adding new section Stuff
+	20170531 | P | Improved Stuff content
+	20170529 | P | Added new section Stuff
 v2.3.0
 # commited
 	20170529 | P | Minor improvements here and there
