@@ -13,6 +13,10 @@
 	00000000 | T | Lang toggle button on Home ???
 	00000000 | T | Check problems on one small device screen, sample screenshot on danielsosa.uy's Google Keep
 	00000000 | T | HTTP status codes handler
+v2.4.1
+	20170710 | R | Replaced SVG declarations from references icons.js
+	20170710 | P | Improved performance by reducing DevNavbar render cicles
+	20170710 | P | Minor UI tweaks
 v2.4.0
 	20170531 | P | Improved Stuff content
 	20170529 | P | Added new section Stuff

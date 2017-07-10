@@ -18,7 +18,7 @@ class HomeFooter extends Component {
     return (
       <div>
 
-        <footer className="home-footer" style={{ height: this.setHeight(this.props.window_height) }}>
+        <footer className="home-footer" style={{ height: this.setHeight(window.innerHeight) }}>
 
           <div className="ftr-left-elements">
             <span className="ftr-element ftr-copyright">

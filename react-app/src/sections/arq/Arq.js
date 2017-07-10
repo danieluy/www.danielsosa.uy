@@ -30,7 +30,7 @@ class Arq extends Component {
     return (
       <div>
 
-        <Placeholder window_height={this.props.window_height} lang={lang}/>
+        <Placeholder lang={lang}/>
 
       </div>
     );

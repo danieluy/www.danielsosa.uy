@@ -34,10 +34,10 @@ class Dev extends Component {
 
   hoverNavbar(evt) {
     const posY = evt.target.scrollTop;
-    if (posY > 0)
-      this.setState({ hoverNavbar: true })
-    else
+    if (posY === 0)
       this.setState({ hoverNavbar: false })
+    else if (!this.state.hoverNavbar)
+      this.setState({ hoverNavbar: true })
   }
 
   render() {
@@ -56,9 +56,13 @@ class Dev extends Component {
           toggleLang: this.toggleLang.bind(this)
         }} />
 
-        <DevContentWrapper children={children_with_props} window_height={this.props.window_height} parentMethods={{
-          hoverNavbar: this.hoverNavbar.bind(this)
-        }} />
+        <DevContentWrapper
+          children={children_with_props}
+          parentMethods={{
+            hoverNavbar: this.hoverNavbar.bind(this)
+          }}
+          window_height={this.props.window_height}
+        />
 
       </div>
     );

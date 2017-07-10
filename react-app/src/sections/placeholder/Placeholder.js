@@ -9,7 +9,7 @@ class Placeholder extends Component {
     const lang = this.props.lang;
 
     return (
-      <Link className="placeholder" to="/" style={{height: `${this.props.window_height}px`}}>
+      <Link className="placeholder" to="/" style={{height: `${window.innerHeight}px`}}>
         <img className="placeholder-img" src={require(`../../assets/img/${lang.placeholder}`)} alt="" />
         <div className="placeholder-title">{lang.title}</div>
         <div className="placeholder-subtitle">{lang.subtitle}</div>

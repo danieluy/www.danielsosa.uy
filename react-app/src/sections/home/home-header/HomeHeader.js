@@ -6,9 +6,9 @@ class HomeHeader extends Component {
 
   render() {
 
+    console.log(this.props)
     return (
       <div>
-
         <header className="full-header" id="full-header" style={{ height: `${this.props.window_height}px` }}>
           <nav className="full-nav">
             <ul className="links-list">
@@ -21,7 +21,6 @@ class HomeHeader extends Component {
                   </svg>
                   <span>arq</span>
                 </Link>
-
               </li>
               <li className="dev">
                 <Link className="nav-link" to="/dev">
@@ -31,7 +30,6 @@ class HomeHeader extends Component {
                   </svg>
                   <span>dev</span>
                 </Link>
-
               </li>
               <li className="img">
                 <Link className="nav-link" to="/img">

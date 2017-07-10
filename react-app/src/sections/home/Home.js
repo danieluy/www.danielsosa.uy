@@ -37,9 +37,9 @@ class Home extends Component {
     return (
       <div>
 
-        <HomeHeader window_height={this.props.window_height}/>
+        <HomeHeader window_height={this.props.window_height} />
 
-        <HomeFooter window_height={this.props.window_height} lang={lang} />
+        <HomeFooter lang={lang} window_height={this.props.window_height} />
 
         {/*<button onClick={this.toggleLang.bind(this)} style={{ position: 'fixed', top: 0, left: 0, zIndex: '10', backgroundColor: 'red' }}>lalala</button>*/}
 

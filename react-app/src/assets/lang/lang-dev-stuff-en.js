@@ -1,7 +1,7 @@
 import { dsNewTab } from './lang-dev-stuff-mutual';
 
 export default {
-  title: "Stuff",
+  title: "My Stuff",
   label:{
     description: 'Description',
     license: 'License'
