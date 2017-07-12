@@ -1,13 +1,16 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import './DevWorkWrapper.css';
 
 import DsGallery from 'ds-gallery';
-import DevWorkTechBadge from '../dev-work-tech-badge/DevWorkTechBadge';
+import DevTechBadge from '../../dev-tech-badge/DevTechBadge';
 
-class DevWorkWrapper extends Component {
+import { LinkIcon } from '../../../../assets/icons';
+import { COLOR } from '../../../../assets/styles';
+
+class DevWorkWrapper extends PureComponent {
 
   setBadges(techs) {
-    return techs.map((tech, i) => <DevWorkTechBadge key={i} lang={tech} />)
+    return techs.map((tech, i) => <DevTechBadge key={i} lang={tech} />)
   }
 
   render() {
@@ -17,32 +20,36 @@ class DevWorkWrapper extends Component {
     return (
       <div>
 
-        <h2>{LANG.title}</h2>
+        <h2 className="dev-title-1">{LANG.title}</h2>
 
-        <div className="dev-work-gallery-wrapper">
+        <div className="dev-gallery-wrapper">
           <DsGallery images={LANG.images.map(obj => obj.src)} />
         </div>
 
-        <div className="dev-work-tech-badges">
-          {this.setBadges(LANG.techs)}
-        </div>
 
-        <div className="dev-work-info">
-          <h3>{LANG.description}</h3>
+        <div className="dev-info-wrapper">
 
-          <label className="dev-work-label">{this.props.labels.client_name}</label>
+          <label className="dev-label">{this.props.labels.description}</label>
+          <p className="dev-paragraph">{LANG.description}</p>
+
+          <label className="dev-label">{this.props.labels.client_name}</label>
           <div className="dev-work-client-wrapper">
-            <p className="dev-work-client-name">{LANG.client_name}</p>
-            <a className="dev-work-client-link" href={LANG.client_href} target="_blank">
-              <svg height="24" fill={this.props.theme_color} viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 0h24v24H0z" fill="none"></path>
-                <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path>
-              </svg>
-            </a>
+            <p className="dev-paragraph">
+              {LANG.client_name}
+              <a className="dev-work-client-link" href={LANG.client_href} target="_blank" title={LANG.client_href}>
+                <LinkIcon fill={COLOR.PRIMARY} />
+              </a>
+            </p>
           </div>
 
-          <label className="dev-work-label">{this.props.labels.status}</label>
-          <p className="dev-work-status">{LANG.status}</p>
+          <label className="dev-label">{this.props.labels.status}</label>
+          <p className="dev-paragraph">{LANG.status}</p>
+
+          <label className="dev-label">{this.props.labels.technologies}</label>
+          <div className="dev-tech-badges">
+            {this.setBadges(LANG.techs)}
+          </div>
+
         </div>
 
       </div>

@@ -38,6 +38,8 @@
   position: absolute;
   bottom: -25px;
   right: 15px;
+  cursor: pointer;
+  z-index: 2;
 }
 
 /*@media screen and (max-width: 1200px){ }*/

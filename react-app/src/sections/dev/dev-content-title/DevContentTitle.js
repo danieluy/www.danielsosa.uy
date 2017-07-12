@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import './DevContentTitle.css';
 
-class DevContentTitle extends Component {
+class DevContentTitle extends PureComponent {
 
   render() {
     

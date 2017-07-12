@@ -6,6 +6,17 @@
   overflow-y: auto;
   animation: slideUp 500ms ease-out;
 }
+.dev-content-wrapper::-webkit-scrollbar {
+  width: 5px;
+}
+.dev-content-wrapper::-webkit-scrollbar-track {
+  /*background-color: #EEEEEE;*/
+}
+.dev-content-wrapper::-webkit-scrollbar-thumb {
+  background-color: #CCCCCC;
+  border-radius: 2px;
+}
+
 .dev-content-center{
   width: 1200px;
   margin: 0 auto;

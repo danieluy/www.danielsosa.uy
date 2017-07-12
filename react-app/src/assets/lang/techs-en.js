@@ -108,5 +108,27 @@ export default [
       text: "MongoDB"
     },
     p: "No SQL database"
+  },
+  {
+    icon: {
+      src: "chrome.png",
+      alt: "Google Chrome icon"
+    },
+    title: {
+      href: "https://developer.chrome.com/extensions",
+      text: "Chrome Extension"
+    },
+    p: "Google Chrome Extension"
+  },
+  {
+    icon: {
+      src: "material-ui.png",
+      alt: "Material-UI icon"
+    },
+    title: {
+      href: "http://www.material-ui.com/#/",
+      text: "Material-UI"
+    },
+    p: "A Set of React Components that Implement Google's Material Design"
   }
 ]

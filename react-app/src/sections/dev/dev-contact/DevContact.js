@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import './DevContact.css';
 
 import DevContentTitle from '../dev-content-title/DevContentTitle';
@@ -7,7 +7,7 @@ import DevContactEmailForm from './dev-contact-email-form/DevContactEmailForm';
 
 import ajax from '../../../ajax';
 
-class DevContact extends Component {
+class DevContact extends PureComponent {
 
   constructor(props) {
     super();

@@ -8,7 +8,7 @@ class DevContentWrapper extends PureComponent {
       <div
         className="dev-content-wrapper"
         style={{ height: `${this.props.window_height - 60}px` }}
-        onScroll={this.props.parentMethods.hoverNavbar}
+        onScroll={this.props.parentMethods.toggleNavbarShadow}
       >
         <div className="dev-content-center">
           {this.props.children}

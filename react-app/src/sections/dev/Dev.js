@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import './Dev.css';
 
 import DevNavbar from './dev-navbar/DevNavbar';
@@ -7,13 +7,13 @@ import DevContentWrapper from './dev-content-wrapper/DevContentWrapper';
 import { es as ES } from '../../assets/lang/lang-dev';
 import { en as EN } from '../../assets/lang/lang-dev';
 
-class Dev extends Component {
+class Dev extends PureComponent {
 
   constructor() {
     super();
     this.state = {
       lang: this.getSystemLanguage(),
-      hoverNavbar: false
+      navbar_shadow: false
     }
   }
 
@@ -32,12 +32,12 @@ class Dev extends Component {
     this.setState({ lang: aux })
   }
 
-  hoverNavbar(evt) {
+  toggleNavbarShadow(evt) {
     const posY = evt.target.scrollTop;
     if (posY === 0)
-      this.setState({ hoverNavbar: false })
-    else if (!this.state.hoverNavbar)
-      this.setState({ hoverNavbar: true })
+      this.setState({ navbar_shadow: false })
+    else if (!this.state.navbar_shadow)
+      this.setState({ navbar_shadow: true })
   }
 
   render() {
@@ -52,14 +52,14 @@ class Dev extends Component {
     return (
       <div>
 
-        <DevNavbar lang={LANG} hover={this.state.hoverNavbar} parentMethods={{
+        <DevNavbar lang={LANG} hover={this.state.navbar_shadow} parentMethods={{
           toggleLang: this.toggleLang.bind(this)
         }} />
 
         <DevContentWrapper
           children={children_with_props}
           parentMethods={{
-            hoverNavbar: this.hoverNavbar.bind(this)
+            toggleNavbarShadow: this.toggleNavbarShadow.bind(this)
           }}
           window_height={this.props.window_height}
         />

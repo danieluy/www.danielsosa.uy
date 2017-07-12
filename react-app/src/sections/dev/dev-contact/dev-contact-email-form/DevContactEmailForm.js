@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import './DevContactEmailForm.css';
 
 const styles = {
@@ -7,7 +7,7 @@ const styles = {
   }
 }
 
-class DevContactEmailForm extends Component {
+class DevContactEmailForm extends PureComponent {
 
   constructor(props) {
     super(props);

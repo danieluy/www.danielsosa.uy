@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import './NotificationsTray.css';
 
 import Notification from './notification/Notification';
 
 
-class NotificationsTray extends Component {
+class NotificationsTray extends PureComponent {
 
   constructor() {
     super();

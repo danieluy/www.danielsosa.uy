@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import './Notification.css';
 
-class Notification extends Component {
+class Notification extends PureComponent {
 
   getIcon(type) {
     switch (type) {

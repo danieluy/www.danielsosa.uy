@@ -6,21 +6,21 @@ import { CodeIcon, MenuIcon, HomeIcon, WorkIcon, StufIcon, GitHubIcon, AcademicI
 
 class DevNavbar extends PureComponent {
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       display_menu: 'dev-nav-actions',
       display_menu_background: 'dev-nav-links-background',
     }
   }
 
-  hoverNavbar(hover) {
+  hoverNavbar() {
     const window_width = window.innerWidth;
-    return hover || window_width > 960 ? { boxShadow: '0 2px 4px rgba(0, 0, 0, .5)' } : { boxShadow: 'none' }
+    return this.props.hover || window_width > 960 ? { boxShadow: '0 2px 4px rgba(0, 0, 0, 0.25)' } : { boxShadow: 'none' }
   }
 
   openOpenCloseMenu(e) {
-    if (window.innerWidth <= 768)
+    if (window.innerWidth <= 960)
       this.setState({
         display_menu: this.state.display_menu === 'dev-nav-actions visible' ? 'dev-nav-actions' : 'dev-nav-actions visible',
         display_menu_background: this.state.display_menu_background === 'dev-nav-links-background visible' ? 'dev-nav-links-background' : 'dev-nav-links-background visible'

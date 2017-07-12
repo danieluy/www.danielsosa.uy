@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import './DevAcademicCareerWrapper.css';
 
-class DevAcademicCareerWrapper extends Component {
+class DevAcademicCareerWrapper extends PureComponent {
 
   setSubjects(subjects) {
     return subjects.map((subject, i) => {

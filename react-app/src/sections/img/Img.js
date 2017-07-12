@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
 import { es as ES } from '../../assets/lang/lang-img';
 import { en as EN } from '../../assets/lang/lang-img';
 
 import Placeholder from '../placeholder/Placeholder';
 
-class Img extends Component {
+class Img extends PureComponent {
   constructor() {
     super();
     this.state = {

@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { Link } from 'react-router';
 
 import './Placeholder.css';
 
-class Placeholder extends Component {
+class Placeholder extends PureComponent {
   render() {
 
     const lang = this.props.lang;

@@ -2,56 +2,16 @@
   display: flex;
   align-items: center;
 }
-.dev-work-client-name,
-.dev-work-status{
-  font-size: 1.1rem;
-  font-weight: 500;
-  padding: 5px 0;
-}
 .dev-work-client-link{
+  display: inline-block;
+  vertical-align: middle;
   padding: 0 10px;
-}
-.dev-work-label{
-  display: block;
-  font-size: .7rem;
-  font-weight: 700;
-  color: #555;
-  padding: 5px 0;
-  text-transform: uppercase;
-}
-.dev-work-tech-badges{
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.dev-work-gallery-wrapper{
-  width: 100%;
-  height: 600px;
-  margin-bottom: 60px;
 }
 
 /*@media screen and (max-width: 1200px){ }*/
 
 /*@media screen and (max-width: 960px){ }*/
 
-@media screen and (max-width: 768px){
-  .dev-work-gallery-wrapper{
-    height: 400px;
-  }
-}
+/*@media screen and (max-width: 768px){ }*/
 
-@media screen and (max-width: 480px){
-  .dev-work-info{
-    padding: 0 15px; 
-  }
-  .dev-work-client-name,
-  .dev-work-status{
-    font-size: 1.1rem;
-    font-weight: 300;
-    padding: 5px 0;
-  }
-  .dev-work-gallery-wrapper{
-    height: 200px;
-  }
-}
+/*@media screen and (max-width: 480px){ }*/

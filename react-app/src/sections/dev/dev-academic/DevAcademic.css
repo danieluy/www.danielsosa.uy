@@ -4,6 +4,7 @@
   border-radius: 50%;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0,0,0,.6);
+  background-color: #0088CC;
 }
 .dev-content-action > a > svg{
   width: 100%;

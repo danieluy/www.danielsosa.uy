@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import './DevWork.css';
 
 import DevContentTitle from '../dev-content-title/DevContentTitle';
 import DevContentHeader from '../dev-content-header/DevContentHeader';
 import DevWorkWrapper from './dev-work-wrapper/DevWorkWrapper';
 
-class DevWork extends Component {
+class DevWork extends PureComponent {
   render() {
 
     const LANG = this.props.lang.work;

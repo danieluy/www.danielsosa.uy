@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import './HomeFooter.css';
 
 
-class HomeFooter extends Component {
+class HomeFooter extends PureComponent {
 
   setHeight(current_height) {
     if (window.innerWidth <= 768)

@@ -1,20 +1,19 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import './DevAcademic.css';
 
 import DevContentTitle from '../dev-content-title/DevContentTitle';
 import DevContentHeader from '../dev-content-header/DevContentHeader';
 import DevAcademicCareerWrapper from './dev-academic-career-wrapper/DevAcademicCareerWrapper';
 
-class DevAcademic extends Component {
+import { LinkIcon } from '../../../assets/icons';
 
-  setContentHeaderAction(career) {
+class DevAcademic extends PureComponent {
+
+  contentHeaderAction(career) {
     return (
-      <div className="dev-content-action" style={{ backgroundColor: career.color_theme }}>
+      <div className="dev-content-action" title={career.page}>
         <a href={career.page} target="_blank">
-          <svg fill="#ffffff" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 0h24v24H0z" fill="none" />
-            <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z" />
-          </svg>
+          <LinkIcon fill="#FFFFFF" />
         </a>
       </div>
     )
@@ -30,7 +29,7 @@ class DevAcademic extends Component {
             title_append={this.setTitleAppend(career)}
             subtitle={career.institution.name}
             avatar={career.institution.logo.src}
-            action={this.setContentHeaderAction(career)}
+            action={this.contentHeaderAction(career)}
           />
           <DevAcademicCareerWrapper labels={this.props.lang.academic.labels} career={career} />
         </div>
@@ -51,7 +50,7 @@ class DevAcademic extends Component {
 
   render() {
 
-    const LANG = this.props.lang.academic;  
+    const LANG = this.props.lang.academic;
     return (
       <div>
 

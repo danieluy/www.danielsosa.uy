@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
 import { es as ES } from '../../assets/lang/lang-home';
 import { en as EN } from '../../assets/lang/lang-home';
@@ -6,7 +6,7 @@ import { en as EN } from '../../assets/lang/lang-home';
 import HomeHeader from './home-header/HomeHeader';
 import HomeFooter from './home-footer/HomeFooter';
 
-class Home extends Component {
+class Home extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {

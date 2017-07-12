@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
 import { es as ES } from '../../assets/lang/lang-arq';
 import { en as EN } from '../../assets/lang/lang-arq';
 
 import Placeholder from '../placeholder/Placeholder';
 
-class Arq extends Component {
+class Arq extends PureComponent {
   constructor() {
     super();
     this.state = {

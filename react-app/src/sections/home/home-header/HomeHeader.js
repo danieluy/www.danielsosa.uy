@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { Link } from 'react-router';
 import './HomeHeader.css';
 
-class HomeHeader extends Component {
+class HomeHeader extends PureComponent {
 
   render() {
 

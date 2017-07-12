@@ -1,12 +1,18 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import './DevStuff.css';
 
 import DsGallery from 'ds-gallery';
 
 import DevContentTitle from '../dev-content-title/DevContentTitle';
 import DevContentHeader from '../dev-content-header/DevContentHeader';
+import DevTechBadge from '../dev-tech-badge/DevTechBadge';
 
-class DevStuff extends Component {
+class DevStuff extends PureComponent {
+
+  setBadges(techs) {
+    return techs.map((tech, i) => <DevTechBadge key={i} lang={tech} />)
+  }
+
   render() {
 
     const LANG = this.props.lang.stuff;
@@ -19,14 +25,23 @@ class DevStuff extends Component {
           return (
             <div key={i}>
               <DevContentHeader title={`${stuff.title} v${stuff.current_version}`} subtitle={stuff.subtitle} avatar={stuff.logo} />
-              <div className="dev-work-gallery-wrapper">
+              <div className="dev-gallery-wrapper">
                 <DsGallery images={stuff.gallery} />
               </div>
-              <label className="dev-stuff-label">{LANG.label.description}</label>
-              {stuff.description}
+              <div className="dev-info-wrapper">
+
+                <label className="dev-label">{LANG.label.description}</label>
+                <p className="dev-paragraph">{stuff.description}</p>
+
+                <label className="dev-label">{LANG.label.license}</label>
+                <p className="dev-paragraph">{stuff.license}</p>
               
-              <label className="dev-stuff-label">{LANG.label.license}</label>
-              {stuff.license}
+                <label className="dev-label">{LANG.label.techs}</label>
+                <div className="dev-tech-badges">
+                  {this.setBadges(stuff.techs)}
+                </div>
+
+              </div>
             </div>
           )
         })}
