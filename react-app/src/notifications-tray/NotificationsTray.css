@@ -4,3 +4,18 @@
   right: 5px;
   width: 400px;
 }
+
+/*@media screen and (max-width: 1200px){ }*/
+
+/*@media screen and (max-width: 960px){ } */
+
+/*@media screen and (max-width: 768px){ } */
+
+@media screen and (max-width: 480px){
+   .notifications-tray-wrapper{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+  }
+} 

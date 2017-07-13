@@ -23,7 +23,7 @@ export default {
       name: "Marla Singer",
       email: "marla@tfc.com",
       phone: "(+598) 99 000 111 | 099000111",
-      message: "Tell me what can I do for you :)"
+      message: "What can I do for you :)"
     }
   },
   message: {

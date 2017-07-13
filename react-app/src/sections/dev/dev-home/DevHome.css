@@ -18,6 +18,7 @@
   border: none;
   border-radius: 3px;
   display: flex;
+  background-color: #FFFFFF;
 }
 .dev-tech-header{
   height: 100%;
@@ -67,5 +68,8 @@
     padding: 0 15px;
     text-align: justify;
     font-size: .9rem;
+  }
+  .dev-tech-item{
+    margin: 5px 0;
   }
 }

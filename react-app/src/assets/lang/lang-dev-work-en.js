@@ -14,22 +14,25 @@ export default {
         description: "Description",
         client_name: "Client",
         status: "Status",
-        technologies: "Technologies"
+        technologies: "Technologies",
+        modality: "Modality"
       },
       prizes_management: {
         title: "Premios Radiocero",
         year: 2016,
         status: 'Production',
+        modality: "Freelance Job",
         description: "Audience prizes management system",
         client_name: "Radiocero 104.3 FM",
         client_href: "http://www.radiocero.com.uy/",
+        logo: { src: "work/radiocero_logo.png", alt: "Radiocero logo" },
         images: [
-          { src: "img/work/radiocero/radiocero_premios_home.jpg", alt: "Radiocero, home page" },
-          { src: "img/work/radiocero/radiocero_premios_winners_list.jpg", alt: "Radiocero, winners list" },
-          { src: "img/work/radiocero/radiocero_premios_prizes_list.jpg", alt: "Radiocero, prizes list" },
-          { src: "img/work/radiocero/radiocero_premios_prizes_list_open.jpg", alt: "Radiocero, prizes list, open element" },
-          { src: "img/work/radiocero/radiocero_premios_users_list.jpg", alt: "Radiocero, users list" },
-          { src: "img/work/radiocero/radiocero_premios_users_new.jpg", alt: "Radiocero, new user form" }
+          { src: "img/work/radiocero/radiocero_premios_home.jpg", alt: "Radiocero home page" },
+          { src: "img/work/radiocero/radiocero_premios_winners_list.jpg", alt: "Radiocero winners list" },
+          { src: "img/work/radiocero/radiocero_premios_prizes_list.jpg", alt: "Radiocero prizes list" },
+          { src: "img/work/radiocero/radiocero_premios_prizes_list_open.jpg", alt: "Radiocero prizes list, open element" },
+          { src: "img/work/radiocero/radiocero_premios_users_list.jpg", alt: "Radiocero users list" },
+          { src: "img/work/radiocero/radiocero_premios_users_new.jpg", alt: "Radiocero new user form" }
         ],
         techs: techs(["HTML5" , "JavaScript" , "CSS3" , "Node.js" , "Express" , "Angular" , "MongoDB"], 'EN')
       },

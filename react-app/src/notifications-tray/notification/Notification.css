@@ -50,3 +50,15 @@
   height: 100%;
   fill: #555;
 }
+
+/*@media screen and (max-width: 1200px){ }*/
+
+/*@media screen and (max-width: 960px){ } */
+
+/*@media screen and (max-width: 768px){ } */
+
+@media screen and (max-width: 480px){
+  .notification-wrapper{
+    margin-bottom: 0;
+  }
+} 

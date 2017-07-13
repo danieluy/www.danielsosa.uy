@@ -16,7 +16,9 @@ class App extends PureComponent {
   setStatusBarThemeColor(color_hex) {
     const metas = document.getElementsByTagName('meta');
     for (let i = 0; i < metas.length; i++) {
-      if (metas[i].name === 'theme-color' || metas[i].name === 'msapplication-navbutton-color' || metas[i].name === 'apple-mobile-web-app-status-bar-style')
+      if (metas[i].name === 'theme-color'
+        || metas[i].name === 'msapplication-navbutton-color'
+        || metas[i].name === 'apple-mobile-web-app-status-bar-style')
         metas[i].content = color_hex || '#000000';
     }
   }

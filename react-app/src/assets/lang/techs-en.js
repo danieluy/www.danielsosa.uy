@@ -130,5 +130,16 @@ export default [
       text: "Material-UI"
     },
     p: "A Set of React Components that Implement Google's Material Design"
+  },
+  {
+    icon: {
+      src: "hammerjs_icon.png",
+      alt: "Hammer.js icon"
+    },
+    title: {
+      href: "http://hammerjs.github.io/",
+      text: "Hammer.js"
+    },
+    p: "Hammer helps you add support for touch gestures to your page, and remove the 300ms delay from clicks."
   }
 ]

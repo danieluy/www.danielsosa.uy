@@ -3,6 +3,7 @@ import './DevWorkWrapper.css';
 
 import DsGallery from 'ds-gallery';
 import DevTechBadge from '../../dev-tech-badge/DevTechBadge';
+import DevContentHeader from '../../dev-content-header/DevContentHeader';
 
 import { LinkIcon } from '../../../../assets/icons';
 import { COLOR } from '../../../../assets/styles';
@@ -20,7 +21,13 @@ class DevWorkWrapper extends PureComponent {
     return (
       <div>
 
-        <h2 className="dev-title-1">{LANG.title}</h2>
+        <DevContentHeader
+          title={LANG.title}
+          subtitle={`${LANG.modality} ${LANG.year}`}
+          avatar={LANG.logo.src}
+        />
+
+        {/* <h2 className="dev-title-1">{LANG.title}</h2> */}
 
         <div className="dev-gallery-wrapper">
           <DsGallery images={LANG.images.map(obj => obj.src)} />
@@ -28,6 +35,11 @@ class DevWorkWrapper extends PureComponent {
 
 
         <div className="dev-info-wrapper">
+
+          <label className="dev-label">{this.props.labels.technologies}</label>
+          <div className="dev-tech-badges">
+            {this.setBadges(LANG.techs)}
+          </div>
 
           <label className="dev-label">{this.props.labels.description}</label>
           <p className="dev-paragraph">{LANG.description}</p>
@@ -44,11 +56,6 @@ class DevWorkWrapper extends PureComponent {
 
           <label className="dev-label">{this.props.labels.status}</label>
           <p className="dev-paragraph">{LANG.status}</p>
-
-          <label className="dev-label">{this.props.labels.technologies}</label>
-          <div className="dev-tech-badges">
-            {this.setBadges(LANG.techs)}
-          </div>
 
         </div>
 

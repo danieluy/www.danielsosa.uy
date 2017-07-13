@@ -6,6 +6,10 @@ import DevContentHeader from '../dev-content-header/DevContentHeader';
 
 class DevHome extends PureComponent {
 
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   return this.props.lang.home.title !== nextProps.lang.home.title;
+  // }
+
   render() {
 
     const LANG = this.props.lang.home;

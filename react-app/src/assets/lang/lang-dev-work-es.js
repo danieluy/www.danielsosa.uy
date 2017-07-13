@@ -14,15 +14,18 @@ export default {
         description: "Descripción",
         client_name: "Cliente",
         status: "Estado",
-        technologies: "Tecnologías"
+        technologies: "Tecnologías",
+        modality: "Modalidad"
       },
       prizes_management: {
         title: "Premios Radiocero",
         year: 2016,
         status: 'Producción',
+        modality: "Trabajo Independiente",
         description: "Sistema de gestión de premios a la audiencia",
         client_name: "Radiocero 104.3 FM",
         client_href: "http://www.radiocero.com.uy/",
+        logo: { src: "work/radiocero_logo.png", alt: "Radiocero logo" },
         images: [
           { src: "img/work/radiocero/radiocero_premios_home.jpg", alt: "Radiocero, pagina de inicio" },
           { src: "img/work/radiocero/radiocero_premios_winners_list.jpg", alt: "Radiocero, listado de ganadores" },

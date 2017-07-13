@@ -10,9 +10,16 @@
 #   F - Bug fix                     #
 
 # ToDo
+	00000000 | T | Rethink the whole content header stuff, it sucks!
 	00000000 | T | Lang toggle button on Home ???
 	00000000 | T | Check problems on one small device screen, sample screenshot on danielsosa.uy's Google Keep
 	00000000 | T | HTTP status codes handler
+v2.4.3
+	20170713 | P | Improved overall UI coherence
+	20170713 | P | Improved Stuff section content
+	20170712 | P | Improved the Work section UI
+v2.4.2
+	20170712 | P | Merged addStuffSection -> master
 v2.4.1
 	20170712 | P | Normalized Work and Stuff UI
 	20170711 | P | Improved tech display on Dev/Home

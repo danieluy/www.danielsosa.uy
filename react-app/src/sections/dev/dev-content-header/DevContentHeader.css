@@ -3,8 +3,8 @@
   width: 100%;
   min-height: 100px;
   padding: 15px;
-  border-bottom: 1px solid #ccc;
   display: flex;
+  margin-bottom: 0px;
 }
 .dev-content-header-logo{
   width: 75px;
@@ -36,7 +36,7 @@
 
 .dev-content-favicon{
   position: absolute;
-  bottom: -25px;
+  top: 25px;
   right: 15px;
   cursor: pointer;
   z-index: 2;
@@ -52,11 +52,11 @@
   .dev-content-header{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
   .dev-content-header-info{
     margin-top: 15px;
-    align-items: center;
+    padding-left: 0;
   }
   .dev-content-header-info-title{
     font-size: 1.3rem;
@@ -66,9 +66,5 @@
   .dev-content-header-info-title-appendix{
     display: block;
     padding-left: 0;
-    text-align: center;
-  }
-  .dev-content-header-info-subtitle{
-    text-align: center;
   }
 }
