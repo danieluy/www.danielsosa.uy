@@ -19,24 +19,6 @@ class DevAcademic extends PureComponent {
     )
   }
 
-
-  setCareers(careers) {
-    return careers.map((career, i) => {
-      return (
-        <div key={i}>
-          <DevContentHeader
-            title={career.name}
-            title_append={this.setTitleAppend(career)}
-            subtitle={career.institution.name}
-            avatar={career.institution.logo.src}
-            action={this.contentHeaderAction(career)}
-          />
-          <DevAcademicCareerWrapper labels={this.props.lang.academic.labels} career={career} />
-        </div>
-      )
-    })
-  }
-
   setTitleAppend(career) {
     return `${career.status} (${this.props.lang.academic.labels.average} ${this.scoresAverage(career.subjects)}/100)`;
   }
@@ -51,12 +33,29 @@ class DevAcademic extends PureComponent {
   render() {
 
     const LANG = this.props.lang.academic;
+    console.log(LANG)
     return (
       <div>
 
         <DevContentTitle title={LANG.title} />
 
-        {this.setCareers(LANG.careers)}
+        <div className="dev-container">
+
+          {LANG.careers.map((career, i) => {
+            return (
+              <div key={i}>
+                <DevContentHeader
+                  title={career.name}
+                  title_append={this.setTitleAppend(career)}
+                  subtitle={career.institution.name}
+                  avatar={career.institution.logo.src}
+                />
+                <DevAcademicCareerWrapper labels={this.props.lang.academic.labels} career={career} />
+              </div>
+            )
+          })}
+          
+        </div>
 
       </div>
     );

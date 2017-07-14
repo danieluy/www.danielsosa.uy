@@ -9,9 +9,9 @@ export const ds_new_tab = {
     'img/stuff/dsNewTab/ds_new_tab_drawer_open.png',
     'img/stuff/dsNewTab/ds_new_tab_wallpaper_settings.png'
   ],
-  refs: {
-    github: 'https://github.com/danieluy/ds-new-tab'
-  }
+  refs: [
+    { text: 'Github', href: 'https://github.com/danieluy/ds-new-tab' }
+  ]
 }
 export const ds_gallery = {
   title: 'DS Gallery',
@@ -28,8 +28,8 @@ export const ds_gallery = {
     'http://lorempixel.com/1920/400',
     'http://lorempixel.com/1000/1000'
   ],
-  refs: {
-    github: 'https://github.com/danieluy/ds-gallery',
-    npm: 'https://www.npmjs.com/package/ds-gallery'
-  }
+  refs: [
+    { text: 'Github', href: 'https://github.com/danieluy/ds-gallery' },
+    { text: 'npm', href: 'https://www.npmjs.com/package/ds-gallery' }
+  ]
 }

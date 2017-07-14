@@ -1,3 +1,5 @@
+import { software_analist } from './lang-dev-academic-mutual';
+
 export default {
   title: "Formación Académica",
   labels: {
@@ -9,12 +11,11 @@ export default {
     {
       name: "Analista Programador",
       status: "En curso",
-      page: "http://fi.ort.edu.uy/analista-programador/plan-de-estudios",
-      color_theme: "#8b0000",
+      color_theme: software_analist.color_theme,  
       institution: {
         name: "Universidad ORT Uruguay",
         logo: {
-          src: "academic/ORT_128.jpg",
+          src: software_analist.institution.logo.src,
           alt: "Logo Uiversidad ORT"
         }
       },
@@ -22,17 +23,17 @@ export default {
         { score: "??", name: "Diseño y Desarrollo de Aplicaciones", techs: "POO | Java | UML" },
         { score: 99, name: "Algoritmos y Estructuras de Datos 2", techs: "POO | Java | Arboles | Grafos | Multiestructuras" },
         { score: 93, name: "Ingeniría de software", techs: "Gestión de proyectos de software" }
-      ]
+      ],
+      refs: software_analist.refs
     },
     {
       name: "Programador Web",
       status: "Completado",
-      page: "http://fi.ort.edu.uy/analista-programador/plan-de-estudios",
-      color_theme: "#8b0000",
+      color_theme: software_analist.color_theme,
       institution: {
         name: "Universidad ORT Uruguay",
         logo: {
-          src: "academic/ORT_128.jpg",
+          src: software_analist.institution.logo.src,
           alt: "Logo Uiversidad ORT"
         }
       },
@@ -47,7 +48,8 @@ export default {
         { score: 95, name: "Taller de Usabilidad y Accesibilidad", techs: "HTML | CSS | Bootstrap | Javascript | jQuery" },
         { score: 95, name: "Introducción a la Computación", techs: "Hardware | Windows | Linux | Redes" },
         { score: 89, name: "Taller de Objetos", techs: "Documentación y Diagramas | C# | ASP.NET" }
-      ]
+      ],
+      refs: software_analist.refs
     }
   ]
 }

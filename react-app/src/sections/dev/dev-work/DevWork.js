@@ -13,20 +13,24 @@ class DevWork extends PureComponent {
     return (
       <div>
         <DevContentTitle title={LANG.title} />
-        
-        {/* <DevContentHeader title={LANG.employed.header_title} subtitle={LANG.employed.header_subtitle} avatar={LANG.employed.logo_src} />
+        <div className="dev-container">
 
-        <DevContentHeader title={LANG.freelance.header_title} subtitle={LANG.freelance.header_subtitle} avatar={LANG.freelance.logo_src} /> */}
-        <DevWorkWrapper
-          lang={LANG.freelance.works.prizes_management}
-          theme_color={LANG.freelance.theme_color}
-          labels={LANG.freelance.works.labels}
-        />
-        {/* <DevWorkWrapper
-          lang={LANG.freelance.works.mtec}
-          theme_color={LANG.freelance.theme_color}
-          labels={LANG.freelance.works.labels}
-        /> */}
+          {/* <DevContentHeader title={LANG.employed.header_title} subtitle={LANG.employed.header_subtitle} avatar={LANG.employed.logo_src} /> */}
+
+          {/* <DevContentHeader title={LANG.freelance.header_title} subtitle={LANG.freelance.header_subtitle} avatar={LANG.freelance.logo_src} />  */}
+
+          <DevWorkWrapper
+            lang={LANG.freelance.works.prizes_management}
+            theme_color={LANG.freelance.theme_color}
+            labels={LANG.freelance.works.labels}
+          />
+
+          {/* <DevWorkWrapper
+            lang={LANG.freelance.works.mtec}
+            theme_color={LANG.freelance.theme_color}
+            labels={LANG.freelance.works.labels}
+          /> */}
+        </div>
 
       </div>
     );

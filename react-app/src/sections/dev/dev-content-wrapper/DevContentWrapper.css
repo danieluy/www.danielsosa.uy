@@ -2,14 +2,15 @@
   width: 100%;
   position: fixed;
   top: 60px;
-  padding: 20px;
   overflow-y: auto;
-  /* animation: slideUp 500ms ease-out; */
+  z-index: 1;
+  background-color: #EFEFEF;
 }
 
-.dev-content-center{
+.dev-container{
   width: 1200px;
   margin: 0 auto;
+  animation: slideDown 500ms ease-in-out; 
 }
 
 /*-- Custom scrollbar except in mobile phones*/
@@ -24,19 +25,19 @@
 }
 
 @media screen and (max-width: 1200px){
-  .dev-content-center{
+  .dev-container{
     width: 930px;
   }
 }
 
 @media screen and (max-width: 960px){
-  .dev-content-center{
+  .dev-container{
     width: 738px;
   }
 }
 
 @media screen and (max-width: 768px){
-  .dev-content-center{
+  .dev-container{
     width: 450px;
   }
 }
@@ -44,28 +45,9 @@
 @media screen and (max-width: 480px){
   .dev-content-wrapper{
     padding: 0 0 20px 0;
-  }
-  .dev-content-center{
-    width: 100%;
-  }
-}
-
-@keyframes slideUp {
-  0%{
-    transform: translateY(100px);
-  }
-  100%{
-    transform: translateY(0px);
-  }
-}
-/*@media screen and (max-width: 1200px){ }*/
-
-/*@media screen and (max-width: 960px){ }*/
-
-/*@media screen and (max-width: 768px){ }*/
-
-@media screen and (max-width: 480px){
-  .dev-content-wrapper{
     animation: none;
+  }
+  .dev-container{
+    width: 100%;
   }
 }

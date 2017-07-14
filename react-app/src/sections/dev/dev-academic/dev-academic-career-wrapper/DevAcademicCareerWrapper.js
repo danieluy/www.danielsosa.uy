@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react';
 import './DevAcademicCareerWrapper.css';
 
+import DevContentActions, { DevContentLink } from '../../dev-content-actions/DevContentActions';
+
 class DevAcademicCareerWrapper extends PureComponent {
 
   setSubjects(subjects) {
@@ -31,7 +33,11 @@ class DevAcademicCareerWrapper extends PureComponent {
 
         <div className="dev-academic-career-subjects">
           {this.setSubjects(career.subjects)}
+          <DevContentActions
+            actions={<DevContentLink text={career.refs[0].text} href={career.refs[0].href} />}
+          />
         </div>
+
 
       </div>
     );

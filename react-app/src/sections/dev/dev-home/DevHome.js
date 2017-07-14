@@ -17,33 +17,32 @@ class DevHome extends PureComponent {
     return (
       <div>
         <DevContentTitle title={LANG.title} />
+        <div className="dev-container">
+          <DevContentHeader title={LANG.header_1.title} subtitle={LANG.header_1.subtitle} avatar={LANG.header_1.avatar} />
+          {/*<DevContentHeader title={LANG.header_2.title} subtitle={LANG.header_2.subtitle} avatar={LANG.header_2.avatar} />*/}
+          <div className="dev-info-wrapper">
 
-        <DevContentHeader title={LANG.header_1.title} subtitle={LANG.header_1.subtitle} avatar={LANG.header_1.avatar} />
-        {/*<DevContentHeader title={LANG.header_2.title} subtitle={LANG.header_2.subtitle} avatar={LANG.header_2.avatar} />*/}
-        <div className="dev-info-wrapper">
+            <h2 className="dev-title-1">{LANG.h2titles[0]}</h2>
+            <p className="dev-paragraph" dangerouslySetInnerHTML={{ __html: LANG.paragraph_1 }}></p>
 
-          <h2 className="dev-title-1">{LANG.h2titles[0]}</h2>
-          <p className="dev-paragraph" dangerouslySetInnerHTML={{ __html: LANG.paragraph_1 }}></p>
-
-          <h2 className="dev-title-1">{LANG.h2titles[1]}</h2>
-          <div className="dev-tech-items">
-            {LANG.techs.map((tech, i) => (
-              <div key={i} className="dev-tech-item">
-                <div className="dev-tech-header">
-                  <img src={require(`../../../assets/img/dev/techs/${tech.icon.src}`)} alt={tech.icon.src} />
+            <h2 className="dev-title-1">{LANG.h2titles[1]}</h2>
+            <div className="dev-tech-items">
+              {LANG.techs.map((tech, i) => (
+                <div key={i} className="dev-tech-item">
+                  <div className="dev-tech-header">
+                    <img src={require(`../../../assets/img/dev/techs/${tech.icon.src}`)} alt={tech.icon.src} />
+                  </div>
+                  <div className="dev-tech-body">
+                    <a href={tech.title.href} target="_blank">{tech.title.text}</a>
+                    <p>{tech.p}</p>
+                  </div>
                 </div>
-                <div className="dev-tech-body">
-                  <a href={tech.title.href} target="_blank">{tech.title.text}</a>
-                  <p>{tech.p}</p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-
         </div>
       </div>
     );
-
   }
 }
 

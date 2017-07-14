@@ -78,3 +78,23 @@
     font-weight: 100;
   }
 }
+
+@keyframes slideUp {
+  0%{
+    transform: translateY(100px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}
+@keyframes slideDown {
+  0%{
+    transform: translateY(-120px);
+  }
+  70%{
+    transform: translateY(10px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}

@@ -10,10 +10,13 @@
 #   F - Bug fix                     #
 
 # ToDo
-	00000000 | T | Rethink the whole content header stuff, it sucks!
 	00000000 | T | Lang toggle button on Home ???
 	00000000 | T | Check problems on one small device screen, sample screenshot on danielsosa.uy's Google Keep
 	00000000 | T | HTTP status codes handler
+v2.5.0
+	20170714 | P | Improved global content layout
+	20170714 | P | Added new DevContentActions component
+	20170714 | M | Removed actions from DevContentHeaders
 v2.4.3
 	20170713 | P | Improved overall UI coherence
 	20170713 | P | Improved Stuff section content

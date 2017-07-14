@@ -1,16 +1,18 @@
 *, html{
-   margin: 0px;
-   padding: 0px;
-   box-sizing: border-box;
-   font-family: Roboto, FreeSans, Helvetica, Arial, sans-serif;
-   color: #555;
-   font-size: 16px;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: Roboto, FreeSans, Helvetica, Arial, sans-serif;
+  color: #555;
+  font-size: 16px;
+}
+html{
+  background-color: #E0E0E0;
 }
 body{
-   font-family: Roboto, sans-serif;
-   color: #555;
-   font-size: 16px;
-   background-color: #EFEFEF;
+  font-family: Roboto, sans-serif;
+  color: #555;
+  font-size: 16px;
 }
 /*@media screen and (max-width: 1200px){ }*/
 

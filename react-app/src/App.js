@@ -13,6 +13,10 @@ class App extends PureComponent {
     }
   }
 
+  // shouldComponentUpdate(nextProps, nextState){
+  //   return nextState.notification !== this.state.notification;
+  // }
+
   setStatusBarThemeColor(color_hex) {
     const metas = document.getElementsByTagName('meta');
     for (let i = 0; i < metas.length; i++) {
@@ -32,6 +36,7 @@ class App extends PureComponent {
   }
 
   createNotifitacion(notif) {
+    console.log(notif)
     this.setState({
       notification: notif
     })
