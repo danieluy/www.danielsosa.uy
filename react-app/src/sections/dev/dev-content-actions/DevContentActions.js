@@ -4,9 +4,7 @@ import './DevContentActions.css';
 import { LinkIcon } from '../../../assets/icons';
 
 class DevContentActions extends Component {
-  constructor(props) {
-    super(props);
-  }
+  
   renderActions() {
     if (Array.prototype.isPrototypeOf(this.props.actions))
       return this.props.actions.map((action, i) => <div key={i}>{action}</div>);
@@ -24,9 +22,7 @@ class DevContentActions extends Component {
 export default DevContentActions;
 
 export class DevContentLink extends Component {
-  constructor(props) {
-    super(props);
-  }
+  
   setIcon() {
     if (this.props.icon) {
       return React.cloneElement(this.props.icon, {
@@ -51,9 +47,7 @@ export class DevContentLink extends Component {
 }
 
 export class DevContentButton extends Component {
-  constructor(props) {
-    super(props);
-  }
+  
   setIcon() {
     if (this.props.icon) {
       return React.cloneElement(this.props.icon, {

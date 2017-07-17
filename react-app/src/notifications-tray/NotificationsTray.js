@@ -1,10 +1,11 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './NotificationsTray.css';
 
 import Notification from './notification/Notification';
 
 
-class NotificationsTray extends PureComponent {
+class NotificationsTray extends Component {
 
   constructor() {
     super();
@@ -13,45 +14,49 @@ class NotificationsTray extends PureComponent {
     }
   }
 
-  getNotifications() {
-    return this.state.notifications.map((notif, i) => <Notification
-      key={i}
-      id={i}
-      options={notif}
-      close={this.closeNotification.bind(this)}
-    />);
+  renderNotifications() {
+    return this.state.notifications.map((notif, i) => (
+      <Notification
+        key={i}
+        id={i}
+        options={notif}
+        close={this.closeNotification.bind(this)}
+      />
+    ));
   }
-
-  // nextProps.notification: {
-  //   title: String,
-  //   subtitle: String,
-  //   body: String,
-  //   type: String <''><'alert'><'error'>
-  // }
+  
   componentWillReceiveProps(nextProps) {
-    if (nextProps.notification && !this.props.notification)
-      this.setState({ notifications: [nextProps.notification] });
-    else if (nextProps.notification && nextProps.notification !== this.props.notification) {
-      let aux = this.state.notifications.slice();
-      aux.push(nextProps.notification);
-      this.setState({ notifications: aux });
+    if (nextProps.notification) {
+      const aux = this.state.notifications
+      aux.push(nextProps.notification)
+      this.setState({
+        notifications: aux
+      })
     }
   }
 
   closeNotification(id) {
-    let aux = this.state.notifications.filter((notif, i) => i !== id);
     this.setState({
-      notifications: aux
+      notifications: this.state.notifications.filter((notif, i) => i !== id)
     })
   }
 
   render() {
     return (
       <div className="notifications-tray-wrapper">
-        {this.getNotifications()}
+        {this.renderNotifications()}
       </div>
     );
   }
 }
+
+NotificationsTray.propTypes = {
+  notification: PropTypes.shape({
+    title: PropTypes.string,
+    subtitle: PropTypes.string,
+    body: PropTypes.arrayOf(PropTypes.string),
+    type: PropTypes.string
+  } )
+};
 
 export default NotificationsTray;

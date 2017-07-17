@@ -13,6 +13,8 @@
 	00000000 | T | Lang toggle button on Home ???
 	00000000 | T | Check problems on one small device screen, sample screenshot on danielsosa.uy's Google Keep
 	00000000 | T | HTTP status codes handler
+v2.5.1
+	20170717 | F | Fixed some incoherences on the NotificationsTray component
 v2.5.0
 	20170714 | P | Improved global content layout
 	20170714 | P | Added new DevContentActions component

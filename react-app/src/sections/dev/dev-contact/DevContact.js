@@ -12,10 +12,6 @@ import ajax from '../../../ajax';
 
 class DevContact extends PureComponent {
 
-  constructor(props) {
-    super(props);
-  }
-
   email_form = null;
 
   emailRequest() {

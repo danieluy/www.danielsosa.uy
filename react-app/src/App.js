@@ -1,9 +1,9 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 import './App.css';
 
 import NotificationsTray from './notifications-tray/NotificationsTray';
 
-class App extends PureComponent {
+class App extends Component {
 
   constructor() {
     super();
@@ -12,10 +12,6 @@ class App extends PureComponent {
       notification: null
     }
   }
-
-  // shouldComponentUpdate(nextProps, nextState){
-  //   return nextState.notification !== this.state.notification;
-  // }
 
   setStatusBarThemeColor(color_hex) {
     const metas = document.getElementsByTagName('meta');
@@ -36,9 +32,12 @@ class App extends PureComponent {
   }
 
   createNotifitacion(notif) {
-    console.log(notif)
     this.setState({
       notification: notif
+    }, () => {
+      this.setState({
+        notification: null
+      })
     })
   }
 

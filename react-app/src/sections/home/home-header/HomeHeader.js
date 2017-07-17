@@ -5,8 +5,6 @@ import './HomeHeader.css';
 class HomeHeader extends PureComponent {
 
   render() {
-
-    console.log(this.props)
     return (
       <div>
         <header className="full-header" id="full-header" style={{ height: `${this.props.window_height}px` }}>

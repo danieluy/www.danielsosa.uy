@@ -33,7 +33,6 @@ class DevAcademic extends PureComponent {
   render() {
 
     const LANG = this.props.lang.academic;
-    console.log(LANG)
     return (
       <div>
 

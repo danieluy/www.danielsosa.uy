@@ -8,8 +8,6 @@ import DevContentHeader from '../dev-content-header/DevContentHeader';
 import DevContentActions, { DevContentLink } from '../dev-content-actions/DevContentActions';
 import DevTechBadge from '../dev-tech-badge/DevTechBadge';
 
-import { GitHubIcon } from '../../../assets/icons';
-
 class DevStuff extends PureComponent {
 
   setBadges(techs) {
