@@ -1,6 +1,6 @@
 {
   "name": "www.danielsosa.uy",
-  "version": "2.3.0",
+  "version": "2.6.1",
   "description": "Daniel Sosa's Website",
   "main": "server.js",
   "scripts": {
@@ -11,10 +11,10 @@
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.15.2",
-    "csurf": "^1.9.0",
     "express": "^4.13.4",
     "express-session": "^1.15.3",
-    "nodemailer": "^2.6.4"
+    "nodemailer": "^2.6.4",
+    "request": "^2.81.0"
   },
   "devDependencies": {
     "ignore-styles": "^5.0.1",

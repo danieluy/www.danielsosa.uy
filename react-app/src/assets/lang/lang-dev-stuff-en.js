@@ -25,7 +25,7 @@ export default {
       current_version: ds_gallery.current_version,
       logo: ds_gallery.logo,
       subtitle: `React component to display static images.`,
-      description: `Simple gallery component for React with swipe support. It's the one used to display the images in some sections of this website. You can check an example above with all kind of images sizes. (Images randomically obtained from http://lorempixel.com/)`,
+      description: `Simple gallery component for React with swipe support. It's the one used to display the images in some sections of this website. You can check an example above with all kind of image sizes. (Images randomically obtained from http://lorempixel.com/)`,
       license: ds_gallery.license,
       gallery: ds_gallery.gallery,
       techs: techs(["HTML5", "JavaScript", "CSS3", "React", "Hammer.js", "Webpack"], 'EN'),

@@ -8,12 +8,6 @@
   z-index: 0;
   animation: slideDown 500ms ease-in-out; 
 }
-/* .dev-content-icon{
-  height: 60px;
-  padding: 15px;
-  fill: #FFFFFF;
-  margin: 0 25px;
-} */
 .dev-content-title-text{
   font-size: 3rem;
   font-weight: 100; 
@@ -40,6 +34,7 @@
     background-color: #08c;
     padding-left: 15px;
     box-shadow: none;
+    animation: none;
   }
   .dev-content-title-text{
     font-size: 1.2rem;

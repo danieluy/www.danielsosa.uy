@@ -35,3 +35,7 @@
 .dev-content-icon{
   margin-right: 15px;
 }
+.dev-content-button:disabled{
+  box-shadow: none;
+  opacity: 0.15;
+}

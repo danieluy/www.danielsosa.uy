@@ -62,6 +62,7 @@ export class DevContentButton extends Component {
         className='dev-content-button'
         onClick={this.props.onClick}
         style={this.props.style}
+        disabled={!!this.props.disabled}
       >
         {this.setIcon()}
         {this.props.text}

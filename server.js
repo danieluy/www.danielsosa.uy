@@ -7,7 +7,6 @@ const path = require('path');
 const home_router = require('./routers/home-router');
 const json_api_router = require('./routers/json-api-router');
 const session = require('express-session');
-const csurf = require('csurf')
 
 const config = require('./config.json');
 
@@ -27,18 +26,6 @@ app.use(session({
     httpOnly: false
   }
 }))
-// app.use(sessions({
-//   cookieName: 'session',
-//   secret: secret,
-//   duration: duration * 60 * 60 * 1000,
-//   activeDuration: activeDuration * 60 * 60 * 1000,
-//   cookie:
-//   {
-//     ephemeral: false,
-//     httpOnly: false,
-//     secure: false
-//   }
-// }));
 
 app.use('/', home_router);
 app.use('/api', json_api_router);

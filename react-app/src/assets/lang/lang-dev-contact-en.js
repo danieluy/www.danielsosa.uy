@@ -20,8 +20,8 @@ export default {
       message: "Message"
     },
     placeholders: {
-      name: "Marla Singer",
-      email: "marla@tfc.com",
+      name: "Tyler Durden",
+      email: "tyler@tfc.com",
       phone: "(+598) 99 000 111 | 099000111",
       message: "What can I do for you :)"
     }
@@ -47,6 +47,17 @@ export default {
         'Message: you must write your message, this field is mandatory.'
       ],
       type: 'alert'
+    },
+    captcha: {
+      title: "Error on reCAPTCHA",
+      subtitle: "Please complete the captcha",
+      body: [
+        'You must solve the challenge presented in the reCAPTCHA widget.',
+        'You should be able to find the widget below the contact form.',
+        'Please try again later, and if the problem persist try communicate directly to: danielsosa.dev@gmail.com',
+        'Thank you.'
+      ],
+      type: 'alert'
     }
   },
   error: {
@@ -57,7 +68,7 @@ export default {
         'It may has occurred one of this problems:',
         '1. At this time you have no internet access',
         '2. At this time the server cannot answer your request',
-        'Please try again later, and if the problem persist try to communicate directly to: danielsosa.dev@gmail.com',
+        'Please try again later, and if the problem persist try communicate directly to: danielsosa.dev@gmail.com',
         'Thank you.'
       ],
       type: 'error'

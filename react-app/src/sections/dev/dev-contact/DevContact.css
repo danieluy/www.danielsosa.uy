@@ -11,3 +11,8 @@
   padding: 13px;
   cursor: pointer;
 }
+.dev-contact-captcha-wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

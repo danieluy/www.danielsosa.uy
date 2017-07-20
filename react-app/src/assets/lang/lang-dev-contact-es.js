@@ -47,6 +47,17 @@ export default {
         'Mensaje: debes escribir tu mensaje, este campo es obligatorio.'
       ],
       type: 'alert'
+    },
+    captcha: {
+      title: "Error en reCAPTCHA",
+      subtitle: "Por favor completa el captcha",
+      body: [
+        'Debes completar el desafío presentado en el widget de reCAPTCHA.',
+        'Deberías poder ver el widget debajo del formulario de contacto.',
+        'Inténtalo más tarde y si el problema persiste intenta comunicarte directamente a la dirección: danielsosa.dev@gmail.com',
+        'Muchas gracias.'
+      ],
+      type: 'alert'
     }
   },
   error: {

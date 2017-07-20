@@ -15,7 +15,7 @@ export const ds_new_tab = {
 }
 export const ds_gallery = {
   title: 'DS Gallery',
-  logo: `stuff/ds_gallery_logo.jpg`,
+  logo: `stuff/ds_gallery_logo.png`,
   license: 'MIT',
   current_version: '0.2.8',
   gallery: [

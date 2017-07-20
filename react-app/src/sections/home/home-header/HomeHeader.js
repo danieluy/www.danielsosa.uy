@@ -2,6 +2,8 @@ import React, { PureComponent } from 'react';
 import { Link } from 'react-router';
 import './HomeHeader.css';
 
+import { TriangleIcon, CodeIcon, RectangleIcon } from '../../../assets/icons';
+
 class HomeHeader extends PureComponent {
 
   render() {
@@ -13,28 +15,19 @@ class HomeHeader extends PureComponent {
 
               <li className="arq">
                 <Link className="nav-link" to="/arq">
-                  <svg className="nav-icon" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 7.77L18.39 18H5.61L12 7.77M12 4L2 20h20L12 4z" />
-                    <path d="M0 0h24v24H0V0z" fill="none" />
-                  </svg>
+                  <TriangleIcon className="nav-icon" height="24" width="24" />
                   <span>arq</span>
                 </Link>
               </li>
               <li className="dev">
                 <Link className="nav-link" to="/dev">
-                  <svg className="nav-icon" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 0h24v24H0V0z" fill="none" />
-                    <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
-                  </svg>
+                  <CodeIcon className="nav-icon" height="24" width="24" />
                   <span>dev</span>
                 </Link>
               </li>
               <li className="img">
                 <Link className="nav-link" to="/img">
-                  <svg className="nav-icon" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 0h24v24H0z" fill="none" />
-                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z" />
-                  </svg>
+                  <RectangleIcon className="nav-icon" height="24" width="24" />
                   <span>img</span>
                 </Link>
               </li>

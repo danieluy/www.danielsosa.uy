@@ -98,7 +98,8 @@ class DevContactEmailForm extends PureComponent {
         <input
           id="dev-contact-email-form-name"
           className="dev-contact-email-form-input"
-          onChange={this.updateName.bind(this)} type="text"
+          onChange={this.updateName.bind(this)}
+          type="text"
           placeholder={lang.placeholders.name}
           value={this.state.name.value}
         />
@@ -113,7 +114,8 @@ class DevContactEmailForm extends PureComponent {
         <input
           id="dev-contact-email-form-email"
           className="dev-contact-email-form-input"
-          onChange={this.updateEmail.bind(this)} type="email"
+          onChange={this.updateEmail.bind(this)}
+          type="email"
           placeholder={lang.placeholders.email}
           value={this.state.email.value}
         />
@@ -128,7 +130,8 @@ class DevContactEmailForm extends PureComponent {
         <input
           id="dev-contact-email-form-phone"
           className="dev-contact-email-form-input"
-          onChange={this.updatePhone.bind(this)} type="phone"
+          onChange={this.updatePhone.bind(this)}
+          type="phone"
           placeholder={lang.placeholders.phone}
           value={this.state.phone.value}
         />
@@ -147,6 +150,7 @@ class DevContactEmailForm extends PureComponent {
           placeholder={lang.placeholders.message}
           value={this.state.message.value}
         />
+        <div id="captcha-wrapper"></div>
       </div>
     );
   }

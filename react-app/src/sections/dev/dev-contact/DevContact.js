@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react';
 import './DevContact.css';
 
+import Recaptcha from 'react-recaptcha';
+
 import DevContentTitle from '../dev-content-title/DevContentTitle';
 import DevContentHeader from '../dev-content-header/DevContentHeader';
 import DevContactEmailForm from './dev-contact-email-form/DevContactEmailForm';
@@ -12,18 +14,35 @@ import ajax from '../../../ajax';
 
 class DevContact extends PureComponent {
 
+  constructor() {
+    super();
+    this.state = {
+      disableSubmitButton: true
+    }
+  }
+
   email_form = null;
+  captcha = null;
 
   emailRequest() {
-    if (this.email_form)
-      ajax.email(this.email_form, (err, body) => {
-        if (err) {
-          this.props.notify(this.props.lang.contact.error.conection);
-          console.error(err, err.stack);
-        }
-        else
-          this.props.notify(this.props.lang.contact.message.success);
-      });
+    if (this.email_form) {
+      if (this.captcha) {
+        this.email_form['g-recaptcha-response'] = this.captcha
+        ajax.email(this.email_form, (err, body) => {
+          if (err) {
+            if (err.code === 401)
+              this.props.notify(this.props.lang.contact.alert.captcha);
+            else
+              this.props.notify(this.props.lang.contact.error.conection);
+            console.error(err);
+          }
+          else
+            this.props.notify(this.props.lang.contact.message.success);
+        });
+      }
+      else
+        this.props.notify(this.props.lang.contact.alert.captcha);
+    }
     else
       this.props.notify(this.props.lang.contact.alert.validation);
   }
@@ -40,23 +59,17 @@ class DevContact extends PureComponent {
       this.email_form = null;
   }
 
-  // setDevContentHeaderMailAction(mail) {
-  //   return (
-  //     <div className="dev-content-action">
-  //       <SendIcon style={{ fill: '#888888' }} onClick={this.emailRequest.bind(this)} height="24" width="24" />
-  //     </div>
-  //   )
-  // }
-
-  // setDevContentHeaderCallAction(phone) {
-  //   return (
-  //     <div className="dev-content-action">
-  //       <a href="tel:0059899636065" target="_blank">
-  //         <PhoneIcon height="24" width="24" />
-  //       </a>
-  //     </div>
-  //   )
-  // }
+  captchaVerifyCallback(response) {
+    if (response)
+      this.setState({
+        disableSubmitButton: false
+      })
+    this.captcha = response;
+    console.log('this.captcha', this.captcha)
+  }
+  captchaOnloadCallback() {
+    console.log('reCAPTCHA widget loaded');
+  }
 
   render() {
 
@@ -70,12 +83,19 @@ class DevContact extends PureComponent {
             title={contact.mail.title}
             subtitle={contact.mail.subtitle}
             avatar={contact.mail.icon}
-          //action={this.setDevContentHeaderMailAction(contact.mail)}
           />
           <DevContactEmailForm
             lang={contact.mail}
             parentMethods={{ setValues: this.setEmailValues.bind(this) }}
           />
+          <div className="dev-contact-captcha-wrapper">
+            <Recaptcha
+              sitekey="6Lf9rikUAAAAAKTuY2GtFFzxn-_zoKMkeDPcGygM"
+              render="explicit"
+              verifyCallback={this.captchaVerifyCallback.bind(this)}
+              onloadCallback={this.captchaOnloadCallback}
+            />
+          </div>
           <div className="dev-contact-actions">
             <DevContentActions
               actions={
@@ -83,7 +103,8 @@ class DevContact extends PureComponent {
                   text={contact.mail.title}
                   icon={<SendIcon height="24" width="24" />}
                   onClick={this.emailRequest.bind(this)}
-                  style={{backgroundColor: contact.mail.color_theme}}
+                  style={{ backgroundColor: contact.mail.color_theme }}
+                  disabled={this.state.disableSubmitButton}
                 />
               }
             />
@@ -92,7 +113,6 @@ class DevContact extends PureComponent {
             title={contact.phone.title}
             subtitle={contact.phone.subtitle}
             avatar={contact.phone.icon}
-          //action={this.setDevContentHeaderCallAction(contact.phone)}
           />
           <div className="dev-contact-actions">
             <DevContentActions
@@ -102,7 +122,7 @@ class DevContact extends PureComponent {
                   href={'tel:0059899636065'}
                   icon={<PhoneIcon height="24" width="24" />}
                   target={'_blank'}
-                  style={{backgroundColor: contact.phone.color_theme}}
+                  style={{ backgroundColor: contact.phone.color_theme }}
                 />
               }
             />

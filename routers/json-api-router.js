@@ -5,6 +5,7 @@ const json_api_router = express.Router();
 const body_parser = require("body-parser");
 const nodemailer = require('nodemailer');
 const config = require('../config.json');
+const reCaptcha = require('../my-modules/reCaptcha');
 
 // Nodemailrer Config
 const nodemailer_auth_user = config.nodemailer.auth.user;
@@ -28,7 +29,7 @@ json_api_router.use((req, res, next) => {
   next();
 })
 
-json_api_router.post('/sendmail', (req, res) => {
+json_api_router.post('/sendmail', reCaptcha, (req, res) => {
   const name = req.body.name;
   const email = req.body.email;
   const phone = req.body.phone;

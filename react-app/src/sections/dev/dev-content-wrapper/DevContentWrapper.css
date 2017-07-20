@@ -13,7 +13,7 @@
   animation: slideDown 500ms ease-in-out; 
 }
 
-/*-- Custom scrollbar except in mobile phones*/
+/*-- Custom scrollbar except in mobile --*/
 @media screen and (min-width: 480px){
   .dev-content-wrapper::-webkit-scrollbar {
     width: 5px;
@@ -45,7 +45,6 @@
 @media screen and (max-width: 480px){
   .dev-content-wrapper{
     padding: 0 0 20px 0;
-    animation: none;
   }
   .dev-container{
     width: 100%;

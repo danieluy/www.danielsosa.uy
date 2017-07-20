@@ -13,6 +13,9 @@ In this repository I'm developing my own website, making it open source in every
       "user": "account@gmail.com",
       "pass": "NOREALPASSWORDHERE"
     }
+  },
+  "captcha":{
+    "secret": "NOREALSECRETHERE"
   }
 }
 ```

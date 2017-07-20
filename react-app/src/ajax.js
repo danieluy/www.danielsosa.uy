@@ -14,12 +14,7 @@ export default {
   email: function (form, cb) {
     request.post({
       url: `${origin}/api/sendmail`,
-      form: {
-        name: form.name,
-        email: form.email,
-        phone: form.phone,
-        message: form.message
-      }
+      form: form
     }, responseHandler.bind(null, cb))
   }
 }
@@ -30,9 +25,10 @@ function responseHandler(cb, err, res, body) {
   else if (res)
     switch (res.statusCode) {
       case 200: cb(null, JSON.parse(body)); break;
+      case 401: cb(new Error401()); break;
       case 404: cb(new Error404()); break;
       case 500: cb(new Error500()); break;
-      default: cb(new Error('Unhandled error')); break;
+      default: cb(new Error()); break;
     }
   else
     cb(new ErrorUnreachable());
@@ -50,6 +46,15 @@ function ErrorUnreachable() {
 }
 ErrorUnreachable.prototype = Object.create(Error.prototype);
 ErrorUnreachable.prototype.constructor = ErrorUnreachable;
+
+function Error401() {
+  this.name = 'Unauthorized';
+  this.code = 401;
+  this.message = 'Authorization required';
+  this.stack = (new Error()).stack;
+}
+Error401.prototype = Object.create(Error.prototype);
+Error401.prototype.constructor = Error401;
 
 function Error404() {
   this.name = 'Error404';

@@ -13,6 +13,12 @@
 	00000000 | T | Lang toggle button on Home ???
 	00000000 | T | Check problems on one small device screen, sample screenshot on danielsosa.uy's Google Keep
 	00000000 | T | HTTP status codes handler
+v2.6.1
+	20170720 | P | Minor improvements on Home jsx markup
+v2.6.0
+	20170720 | P | Completed reCAPTCHA implementation on front and backend
+	20170720 | F | Fixed a race contition problem to add the reCAPTCHA token to the body of the request
+	20170719 | P | Added reCAPTCHA to DevContact component email form
 v2.5.1
 	20170717 | F | Fixed some incoherences on the NotificationsTray component
 v2.5.0
