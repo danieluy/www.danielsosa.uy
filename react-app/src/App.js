@@ -9,6 +9,7 @@ class App extends Component {
     super();
     this.state = {
       window_height: window.innerHeight,
+      window_width: window.innerWidth,
       notification: null
     }
   }
@@ -26,7 +27,8 @@ class App extends Component {
   componentDidMount() {
     window.addEventListener('resize', () => {
       this.setState({
-        window_height: window.innerHeight
+        window_height: window.innerHeight,
+        window_width: window.innerWidth
       })
     });
   }
@@ -46,6 +48,7 @@ class App extends Component {
     const children_with_props = React.cloneElement(this.props.children, {
       setStatusBarThemeColor: this.setStatusBarThemeColor,
       window_height: this.state.window_height,
+      window_width: this.state.window_width,
       notify: this.createNotifitacion.bind(this)
     })
 

@@ -1,9 +1,11 @@
 import React, { PureComponent } from 'react';
+import './Arq.css';
 
 import { es as ES } from '../../assets/lang/lang-arq';
 import { en as EN } from '../../assets/lang/lang-arq';
 
-import Placeholder from '../placeholder/Placeholder';
+import ArqNavbar from './arq-navbar/ArqNavbar';
+import ArqContent from './arq-content/ArqContent';
 
 class Arq extends PureComponent {
   constructor() {
@@ -26,12 +28,11 @@ class Arq extends PureComponent {
   render() {
 
     const lang = this.state.lang === 'es' ? ES : EN;
-
+    
     return (
-      <div>
-
-        <Placeholder lang={lang}/>
-
+      <div className="arq-root" style={{ width: '100%', height: `${this.props.window_height}px` }}>
+        <ArqNavbar lang={lang} />
+        <ArqContent lang={lang} />
       </div>
     );
   }

@@ -1,0 +1,18 @@
+.arq-work-history{
+  width: 100%;
+  padding-left: 300px;
+}
+.arq-work-history-year{
+  width: 100px;
+  color: #FF3333;
+  font-size: 1.5rem;
+  font-weight: 100;
+  padding: 20px;
+  text-align: center;
+}
+.arq-work-history-item{
+  padding: 0 15px 0 100px;
+}
+.arq-content-footer{
+  height: 100px;
+}
