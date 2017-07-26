@@ -1,4 +1,4 @@
-import { software_analist } from './lang-dev-academic-mutual';
+import { software_analist } from './lang-dev-academic-common';
 
 export default {
   title: "Academic Achievements",

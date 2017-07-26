@@ -1,18 +1,38 @@
-.arq-work-history{
+.arq-content{
   width: 100%;
-  padding-left: 300px;
+  padding-left: 250px;
 }
-.arq-work-history-year{
-  width: 100px;
+.arq-content-section{
+  width: 100%;
+  padding: 0 60px;
+}
+.arq-content-title{
+  height: 90px;
+  padding: 20px 10px;
+  display: flex;
+  align-items: center;
+}
+.arq-content-title-icon{
+  width:40px;
+  height:40px;
+  fill:#FF3333;
+  margin: 0 10px 0 0;
+}
+.arq-content-title-text{
   color: #FF3333;
   font-size: 1.5rem;
-  font-weight: 100;
-  padding: 20px;
-  text-align: center;
+  font-weight: 500;
 }
-.arq-work-history-item{
-  padding: 0 15px 0 100px;
+.arq-work-history-item, .arq-content-achievement{
+  margin: 0 0 20px 0;
+}
+.arq-content-proficiency{
+  display: flex;
+  flex-wrap: wrap;
 }
 .arq-content-footer{
   height: 100px;
+}
+.color-red{
+  color: #FF3333;
 }

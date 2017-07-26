@@ -14,6 +14,7 @@
 	00000000 | T | Check problems on one small device screen, sample screenshot on danielsosa.uy's Google Keep
 	00000000 | T | HTTP status codes handler
 v2.7.0
+	20170726 | P | Improved Arq component content
 	20170721 | P | Started the Arq section
 v2.6.1
 	20170720 | P | Minor improvements on Home jsx markup
