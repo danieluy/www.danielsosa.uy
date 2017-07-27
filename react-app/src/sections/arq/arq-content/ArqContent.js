@@ -6,14 +6,59 @@ import ArqGraph from '../arq-graph/ArqGraph';
 import { CalendarIcon, LaptopIcon, AcademicIcon, StarIcon, LanguageIcon } from '../../../assets/icons';
 
 class ArqContent extends PureComponent {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      anchors: []
+    }
+  }
+
+  componentDidUpdate() {
+    this.setAndResetAnchors();
+  }
+
+  componentDidMount() {
+    this.setAndResetAnchors();
+  }
+
+  setAndResetAnchors() {
+    this.props.setAchors(this.state.anchors);
+    this.setState({
+      anchors: []
+    })
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    if (nextProps.windowWidth !== this.props.windowWidth)
+      return true; //accounts for window width changes
+    if (nextProps.lang.achievements.title !== this.props.lang.achievements.title)
+      return true; //accounts for language changes
+    return false;
+  }
+
+  addAchor(node) {
+    if (node) {
+      const auxState = this.state.anchors
+      auxState.push({ id: node.getAttribute('id'), offsetTop: node.offsetTop })
+      this.setState({
+        anchors: auxState
+      })
+    }
+  }
+
   render() {
     return (
 
       <div className="arq-content">
 
+        {/* <div className="arq-content-header"></div> */}
+
         <ArqContentTitle
           title={this.props.lang.education.header_title}
+          windowWidth={this.props.windowWidth}
           icon={AcademicIcon}
+          addAchor={this.addAchor.bind(this)}
         />
         <div className="arq-content-section">
           <h1 className="arq-title color-red">{this.props.lang.education.title}</h1>
@@ -23,7 +68,9 @@ class ArqContent extends PureComponent {
 
         <ArqContentTitle
           title={this.props.lang.work_history.title}
+          windowWidth={this.props.windowWidth}
           icon={CalendarIcon}
+          addAchor={this.addAchor.bind(this)}
         />
         <div className="arq-content-section">
           {this.props.lang.work_history.items.map((work, i) => {
@@ -40,7 +87,9 @@ class ArqContent extends PureComponent {
 
         <ArqContentTitle
           title={this.props.lang.proficiency.title}
+          windowWidth={this.props.windowWidth}
           icon={LaptopIcon}
+          addAchor={this.addAchor.bind(this)}
         />
         <div className="arq-content-section">
           <div className="arq-content-proficiency">
@@ -59,7 +108,9 @@ class ArqContent extends PureComponent {
 
         <ArqContentTitle
           title={this.props.lang.languages.title}
+          windowWidth={this.props.windowWidth}
           icon={LanguageIcon}
+          addAchor={this.addAchor.bind(this)}
         />
         <div className="arq-content-section">
           <div className="arq-content-proficiency">
@@ -78,7 +129,9 @@ class ArqContent extends PureComponent {
 
         <ArqContentTitle
           title={this.props.lang.achievements.title}
+          windowWidth={this.props.windowWidth}
           icon={StarIcon}
+          addAchor={this.addAchor.bind(this)}
         />
         <div className="arq-content-section">
           {this.props.lang.achievements.items.map((item, i) => {
@@ -103,16 +156,21 @@ class ArqContent extends PureComponent {
 export default ArqContent;
 
 class ArqContentTitle extends PureComponent {
-  logNode(node){
-    console.log('node', node.scrollHeight)
+  shouldComponentUpdate(nextProps, nextState) {
+    if (nextProps.windowWidth !== this.props.windowWidth)
+      return true;
+    return false;
+  }
+  removeSpaces(str) {
+    return str.replace(' ', '_')
   }
   render() {
     const Icon = this.props.icon;
     return (
       <div
-        id={`arq-content-ancor-${this.props.title}`}
+        id={this.removeSpaces(this.props.title)}
         className="arq-content-title"
-        ref={this.logNode}
+        ref={this.props.addAchor}
       >
         <Icon className="arq-content-title-icon" />
         <div className="arq-content-title-text">

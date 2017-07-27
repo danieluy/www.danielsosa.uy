@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import './ArqNavbar.css';
 
+import { Link } from 'react-router'
+
 import { TriangleIcon, CalendarIcon, LaptopIcon, AcademicIcon, StarIcon, LanguageIcon } from '../../../assets/icons';
 
 class ArqNavbar extends Component {
   render() {
     return (
       <div className="arq-navbar">
+
         <div className="arq-navbar-header">
           <a href="/" title="Home">
             <TriangleIcon className="arq-navbar-header-icon" />
@@ -16,30 +19,15 @@ class ArqNavbar extends Component {
           </div>
         </div>
 
-        <div className="arq-navbar-item">
-           <AcademicIcon className="arq-navbar-item-icon" /> 
-          <a className="arq-navbar-item-link" href={`#arq-content-ancor-${this.props.lang.education.header_title}`}>{this.props.lang.education.header_title}</a>
-        </div>
+        <ArqNavbarLink icon={AcademicIcon}>{this.props.lang.education.header_title}</ArqNavbarLink>
 
-        <div className="arq-navbar-item">
-           <CalendarIcon className="arq-navbar-item-icon" /> 
-          <a className="arq-navbar-item-link" href={`#arq-content-ancor-${this.props.lang.work_history.title}`}>{this.props.lang.work_history.title}</a>
-        </div>
+        <ArqNavbarLink icon={CalendarIcon}>{this.props.lang.work_history.title}</ArqNavbarLink>
 
-        <div className="arq-navbar-item">
-           <LaptopIcon className="arq-navbar-item-icon" /> 
-          <a className="arq-navbar-item-link" href={`#arq-content-ancor-${this.props.lang.proficiency.title}`}>{this.props.lang.proficiency.title}</a>
-        </div>
+        <ArqNavbarLink icon={LaptopIcon}>{this.props.lang.proficiency.title}</ArqNavbarLink>
 
-        <div className="arq-navbar-item">
-           <LanguageIcon className="arq-navbar-item-icon" /> 
-          <a className="arq-navbar-item-link" href={`#arq-content-ancor-${this.props.lang.languages.title}`}>{this.props.lang.languages.title}</a>
-        </div>
+        <ArqNavbarLink icon={LanguageIcon}>{this.props.lang.languages.title}</ArqNavbarLink>
 
-        <div className="arq-navbar-item">
-           <StarIcon className="arq-navbar-item-icon" /> 
-          <a className="arq-navbar-item-link" href={`#arq-content-ancor-${this.props.lang.achievements.title}`}>{this.props.lang.achievements.title}</a>
-        </div>
+        <ArqNavbarLink icon={StarIcon}>{this.props.lang.achievements.title}</ArqNavbarLink>
 
       </div>
     );
@@ -47,3 +35,23 @@ class ArqNavbar extends Component {
 }
 
 export default ArqNavbar;
+
+class ArqNavbarLink extends Component {
+  setActive() {
+    return window.location.hash === `#${this.removeSpaces(this.props.children)}` ? 'arq-navbar-item-active' : ''
+  }
+  removeSpaces(str) {
+    return str.replace(' ', '_')
+  }
+  render() {
+    const Icon = this.props.icon
+    return (
+      <div className={'arq-navbar-item ' + this.setActive()}>
+        <Icon className="arq-navbar-item-icon" />
+        <Link className="arq-navbar-item-link" href={`#${this.removeSpaces(this.props.children)}`}>
+          {this.props.children}
+        </Link>
+      </div>
+    )
+  }
+}

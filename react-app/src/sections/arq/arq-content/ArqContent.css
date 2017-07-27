@@ -1,6 +1,7 @@
 .arq-content{
-  width: 100%;
+  width: 90%;
   padding-left: 250px;
+  margin: 0 auto;
 }
 .arq-content-section{
   width: 100%;
@@ -15,11 +16,11 @@
 .arq-content-title-icon{
   width:40px;
   height:40px;
-  fill:#FF3333;
+  fill:#666666;
   margin: 0 10px 0 0;
 }
 .arq-content-title-text{
-  color: #FF3333;
+  color: #666666;
   font-size: 1.5rem;
   font-weight: 500;
 }
@@ -30,9 +31,9 @@
   display: flex;
   flex-wrap: wrap;
 }
-.arq-content-footer{
-  height: 100px;
+.arq-content-footer, .arq-content-header{
+  height: 60px;
 }
 .color-red{
-  color: #FF3333;
+  color: #FF3300;
 }

@@ -3,7 +3,6 @@
   left: 0;
   width: 250px;
   height: 100%;
-  background-color: #FF3333;
   color: rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
@@ -14,17 +13,18 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+   background-color: #FF3300; 
 }
 .arq-navbar-header-icon{
-  width: 120px;
-  height: 120px;
-  fill: rgba(0, 0, 0, 0.75);
+  width: 100px;
+  height: 100px;
+  fill: rgba(0, 0, 0, 0.5);
   padding: 15px;
 }
 .arq-navbar-header-title{
   font-size: 1.4rem;
   font-weight: 500;
-  color: rgba(0, 0, 0, 0.75);
+  color: rgba(0, 0, 0, 0.5);
 }
 .arq-navbar-item{
   display: flex;
@@ -34,13 +34,21 @@
 .arq-navbar-item-icon{
   width: 60px;
   height: 40px;
-  fill: rgba(0, 0, 0, 0.25);
+  fill: #666666;
   padding: 10px;
+  transition: fill 300ms linear;
 }
 .arq-navbar-item-link{
   text-decoration: none;
   font-size: 0.75rem;
   font-weight: 500;
-  color: rgba(0, 0, 0, 0.25);
+  color: #666666;
   text-transform: uppercase;
+  transition: color 300ms linear;
+}
+.arq-navbar-item-active > .arq-navbar-item-icon{
+  fill: #FF3300;
+}
+.arq-navbar-item-active > .arq-navbar-item-link{
+  color: #FF3300;
 }

@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import './ArqGraph.css';
 
 import Chart from 'chart.js';
 
-class ArqGraph extends Component {
+class ArqGraph extends PureComponent {
   onCanvasReady(node) {
     new Chart(node.getContext("2d"), {
       type: 'doughnut',
@@ -15,7 +15,7 @@ class ArqGraph extends Component {
             this.props.proficiency,
             100 - this.props.proficiency
           ],
-          backgroundColor: ['#FF3333', '#CCCCCC'],
+          backgroundColor: ['#FF3300', '#CCCCCC'],
           borderWidth: 0
         }]
       },
