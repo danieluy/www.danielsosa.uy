@@ -56,18 +56,20 @@ class ArqContent extends PureComponent {
 
         <ArqContentTitle
           title={this.props.lang.education.header_title}
+          anchor={this.props.lang.education.anchor}
           windowWidth={this.props.windowWidth}
           icon={AcademicIcon}
           addAchor={this.addAchor.bind(this)}
         />
         <div className="arq-content-section">
           <h1 className="arq-title color-red">{this.props.lang.education.title}</h1>
-          <h2 className="arq-subtitle">Anteproyecto 5 aprobado.</h2>
-          <p className="arq-paragraph">Interrumpida en 2014</p>
+          <h2 className="arq-subtitle">{this.props.lang.education.subtitle}</h2>
+          <p className="arq-paragraph">{this.props.lang.education.status}</p>
         </div>
 
         <ArqContentTitle
           title={this.props.lang.work_history.title}
+          anchor={this.props.lang.work_history.anchor}
           windowWidth={this.props.windowWidth}
           icon={CalendarIcon}
           addAchor={this.addAchor.bind(this)}
@@ -87,6 +89,7 @@ class ArqContent extends PureComponent {
 
         <ArqContentTitle
           title={this.props.lang.proficiency.title}
+          anchor={this.props.lang.proficiency.anchor}
           windowWidth={this.props.windowWidth}
           icon={LaptopIcon}
           addAchor={this.addAchor.bind(this)}
@@ -108,6 +111,7 @@ class ArqContent extends PureComponent {
 
         <ArqContentTitle
           title={this.props.lang.languages.title}
+          anchor={this.props.lang.languages.anchor}
           windowWidth={this.props.windowWidth}
           icon={LanguageIcon}
           addAchor={this.addAchor.bind(this)}
@@ -129,6 +133,7 @@ class ArqContent extends PureComponent {
 
         <ArqContentTitle
           title={this.props.lang.achievements.title}
+          anchor={this.props.lang.achievements.anchor}
           windowWidth={this.props.windowWidth}
           icon={StarIcon}
           addAchor={this.addAchor.bind(this)}
@@ -159,16 +164,15 @@ class ArqContentTitle extends PureComponent {
   shouldComponentUpdate(nextProps, nextState) {
     if (nextProps.windowWidth !== this.props.windowWidth)
       return true;
+    if (nextProps.title !== this.props.windowWidth)
+      return true;
     return false;
-  }
-  removeSpaces(str) {
-    return str.replace(' ', '_')
   }
   render() {
     const Icon = this.props.icon;
     return (
       <div
-        id={this.removeSpaces(this.props.title)}
+        id={this.props.anchor}
         className="arq-content-title"
         ref={this.props.addAchor}
       >

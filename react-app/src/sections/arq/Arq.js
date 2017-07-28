@@ -15,29 +15,25 @@ class Arq extends PureComponent {
       anchors: []
     }
   }
+  getSystemLanguage() {
+    if (navigator)
+      return ((navigator.language || navigator.userLanguage) || 'es').slice(0, 2);
+    return 'es';
+  }
+  toggleLang() {
+    const aux = this.state.lang === 'es' ? 'en' : 'es';
+    this.setState({ lang: aux })
+  }
   componentDidMount() {
     this.props.setStatusBarThemeColor('#FF3300');
     window.addEventListener('scroll', this.handleScroll.bind(this))
   }
-  scrollTop = 0
   handleScroll(evt) {
-    const dir = this.scrollTop >= evt.srcElement.activeElement.scrollTop ? 1 : -1
-    this.scrollTop = evt.srcElement.activeElement.scrollTop
-    console.log(dir > 0 ? 'up' : 'down')
-    if (dir < 0) {
-      for (let i = 0; i < this.state.anchors.length; i++)
-        if (this.scrollTop >= this.state.anchors[i].offsetTop) {
-          this.setHash(this.state.anchors[i])
-          break
-        }
-    }
-    else {
-      for (let i = this.state.anchors.length - 1; i > -1; i--)
-        if (this.scrollTop < this.state.anchors[i].offsetTop) {
-          this.setHash(this.state.anchors[i])
-          break
-        }
-    }
+    for (let i = 0; i < this.state.anchors.length; i++)
+      if (evt.srcElement.activeElement.scrollTop >= this.state.anchors[i].offsetTop) {
+        this.setHash(this.state.anchors[i])
+        break
+      }
   }
   setAchors(anchors) {
     this.setState({
@@ -45,21 +41,18 @@ class Arq extends PureComponent {
     })
   }
   setHash(anchor) {
-    window.location.hash = `#${anchor.id}`
-  }
-  getSystemLanguage() {
-    if (navigator)
-      return ((navigator.language || navigator.userLanguage) || 'es').slice(0, 2);
-    return 'es';
+    history.pushState(null, null, `#${anchor.id}`);
   }
   render() {
 
     const lang = this.state.lang === 'es' ? ES : EN;
-
+    
     return (
       <div className="arq-root" style={{ width: '100%', height: `${this.props.window_height}px` }}>
         <ArqNavbar
           lang={lang}
+          anchors={this.state.anchors}
+          toggleLang={this.toggleLang.bind(this)}
         />
         <ArqContent
           lang={lang}

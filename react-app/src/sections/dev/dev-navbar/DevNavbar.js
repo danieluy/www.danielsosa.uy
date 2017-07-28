@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import { Link } from 'react-router';
 import './DevNavbar.css';
 
-import { CodeIcon, MenuIcon, HomeIcon, WorkIcon, StufIcon, GitHubIcon, AcademicIcon, ContactIcon, LanguageIcon } from '../../../assets/icons';
+import { CodeIcon, MenuIcon, HomeIcon, WorkIcon, StufIcon, GitHubIcon, AcademicIcon, ContactIcon, TranslateIcon } from '../../../assets/icons';
 
 class DevNavbar extends PureComponent {
 
@@ -87,7 +87,7 @@ class DevNavbar extends PureComponent {
             </div>
 
             <button onClick={() => { this.props.parentMethods.toggleLang(); this.openOpenCloseMenu.call(this); }} className="dev-btn-toggle-lang" type="button" title={LANG.toggle_lang}>
-              <LanguageIcon className="dev-nav-link-icon" />
+              <TranslateIcon className="dev-nav-link-icon" />
             </button>
 
           </div>

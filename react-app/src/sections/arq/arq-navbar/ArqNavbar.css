@@ -8,6 +8,7 @@
   flex-direction: column;
 }
 .arq-navbar-header{
+  width: 250px;
   height: 250px;
   display: flex;
   flex-direction: column;
@@ -18,13 +19,13 @@
 .arq-navbar-header-icon{
   width: 100px;
   height: 100px;
-  fill: rgba(0, 0, 0, 0.5);
+  fill: #FFFFFF;
   padding: 15px;
 }
 .arq-navbar-header-title{
   font-size: 1.4rem;
   font-weight: 500;
-  color: rgba(0, 0, 0, 0.5);
+  color: #FFFFFF;
 }
 .arq-navbar-item{
   display: flex;
@@ -46,9 +47,88 @@
   text-transform: uppercase;
   transition: color 300ms linear;
 }
+button.arq-navbar-item-link{
+  background-color: transparent;
+  border-style: none;
+}
 .arq-navbar-item-active > .arq-navbar-item-icon{
   fill: #FF3300;
 }
 .arq-navbar-item-active > .arq-navbar-item-link{
   color: #FF3300;
+}
+.arq-navbar-btn-translate{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #FF3300;
+  border-style: none;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+  transition: box-shadow 200ms linear;
+}
+.arq-navbar-btn-translate:hover{
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.35);
+}
+.arq-navbar-btn-translate:active{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
+  background-color: #FF6633;
+}
+.arq-navbar-btn-translate > svg{
+  margin-top: 3px;
+  width: 30px;
+  height: 30px;
+  fill: rgba(255, 255, 255, 0.75);
+}
+
+/*@media screen and (max-width: 1200px){ }*/
+
+/* @media screen and (max-width: 960px){ } */
+
+@media screen and (max-width: 768px){
+  .arq-navbar{
+    width: 100%;
+    height: 60px;
+    flex-direction: row;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  }
+  .arq-navbar-header{
+    width: 100%;
+    height: 60px;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .arq-navbar-header-icon{
+    width: 60px;
+    height: 60px;
+    padding: 12px;
+  }
+  .arq-navbar-header-title{
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  .arq-navbar-item{
+    display: none;
+  }
+  .arq-navbar-btn-translate{
+    right: 10px;
+    bottom: 10px;
+  }
+} 
+
+@media screen and (max-width: 480px){
+  .arq-navbar{
+    height: 90px;
+  }
+  .arq-navbar-header{
+    height: 90px;
+  }
+  .arq-navbar-header-icon{
+    width: 90px;
+    height: 90px;
+    padding: 20px;
+  }
 }

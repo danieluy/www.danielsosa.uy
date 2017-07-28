@@ -1,6 +1,6 @@
 .arq-title{
   font-size: 1.3rem;
-  font-weight: 100;
+  font-weight: 300;
   color: #333333;
   padding: 10px 0;
 }
@@ -15,4 +15,29 @@
   font-weight: 100;
   color: #555555;
   padding: 2px 0;
+}
+
+/*@media screen and (max-width: 1200px){ }*/
+
+/* @media screen and (max-width: 960px){ } */
+
+/* @media screen and (max-width: 768px){ } */
+
+@media screen and (max-width: 480px){
+  .arq-title{
+    font-size: 1.1rem;
+    font-weight: 300;
+  }
+  .arq-subtitle{
+    font-size: 1rem;
+    font-weight: 500;
+    color: #888888;
+    padding: 5px 0;
+  }
+  .arq-paragraph{
+    font-size: 1rem;
+    font-weight: 100;
+    color: #555555;
+    padding: 2px 0;
+  }
 }

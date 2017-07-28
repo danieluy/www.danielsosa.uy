@@ -14,15 +14,15 @@
   align-items: center;
 }
 .arq-content-title-icon{
-  width:40px;
-  height:40px;
-  fill:#666666;
-  margin: 0 10px 0 0;
+  width:35px;
+  height:35px;
+  fill:#888888;
+  margin: 0 15px 0 0;
 }
 .arq-content-title-text{
   color: #666666;
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 300;
 }
 .arq-work-history-item, .arq-content-achievement{
   margin: 0 0 20px 0;
@@ -32,8 +32,60 @@
   flex-wrap: wrap;
 }
 .arq-content-footer, .arq-content-header{
-  height: 60px;
+  height: 500px;
 }
 .color-red{
   color: #FF3300;
+}
+
+/*@media screen and (max-width: 1200px){ }*/
+
+/* @media screen and (max-width: 960px){ } */
+
+@media screen and (max-width: 768px){
+  .arq-content{
+    width: 100%;
+    padding: 60px 60px 0  60px;
+    margin: 0;
+  }
+  .arq-content-title{
+    height: 100px;
+    padding: 0;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .arq-content-title-icon{
+    width: 50px;
+    height: 50px;
+    margin: 0 15px 0 0;
+  }
+  .arq-content-title-text{
+    font-size: 1.2rem;
+  }
+  .arq-content-section{
+    padding: 0;
+  }
+  .arq-content-proficiency{
+    justify-content: space-around;
+  }
+  .arq-content-footer, .arq-content-header{
+    height: 60px;
+  }
+} 
+
+@media screen and (max-width: 480px){
+  .arq-content{
+    padding: 90px 15px 0  15px;
+  }
+  .arq-content-title{
+    height: 200px;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .arq-content-title-icon{
+    margin: 0 0 10px 0;
+  }
+  .arq-content-footer, .arq-content-header{
+    height: 120px;
+  }
 }

@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import './ArqNavbar.css';
 
+require('smoothscroll-polyfill').polyfill();
+
 import { Link } from 'react-router'
 
-import { TriangleIcon, CalendarIcon, LaptopIcon, AcademicIcon, StarIcon, LanguageIcon } from '../../../assets/icons';
+import { TriangleIcon, CalendarIcon, LaptopIcon, AcademicIcon, StarIcon, LanguageIcon, TranslateIcon } from '../../../assets/icons';
 
 class ArqNavbar extends Component {
   render() {
@@ -19,15 +21,44 @@ class ArqNavbar extends Component {
           </div>
         </div>
 
-        <ArqNavbarLink icon={AcademicIcon}>{this.props.lang.education.header_title}</ArqNavbarLink>
+        <ArqNavbarLink
+          icon={AcademicIcon}
+          anchor={this.props.lang.education.anchor}
+        >
+          {this.props.lang.education.header_title}
+        </ArqNavbarLink>
 
-        <ArqNavbarLink icon={CalendarIcon}>{this.props.lang.work_history.title}</ArqNavbarLink>
+        <ArqNavbarLink
+          icon={CalendarIcon}
+          anchor={this.props.lang.work_history.anchor}
+        >
+          {this.props.lang.work_history.title}
+        </ArqNavbarLink>
 
-        <ArqNavbarLink icon={LaptopIcon}>{this.props.lang.proficiency.title}</ArqNavbarLink>
+        <ArqNavbarLink
+          icon={LaptopIcon}
+          anchor={this.props.lang.proficiency.anchor}
+        >
+          {this.props.lang.proficiency.title}
+        </ArqNavbarLink>
 
-        <ArqNavbarLink icon={LanguageIcon}>{this.props.lang.languages.title}</ArqNavbarLink>
+        <ArqNavbarLink
+          icon={LanguageIcon}
+          anchor={this.props.lang.languages.anchor}
+        >
+          {this.props.lang.languages.title}
+        </ArqNavbarLink>
 
-        <ArqNavbarLink icon={StarIcon}>{this.props.lang.achievements.title}</ArqNavbarLink>
+        <ArqNavbarLink
+          icon={StarIcon}
+          anchor={this.props.lang.achievements.anchor}
+        >
+          {this.props.lang.achievements.title}
+        </ArqNavbarLink>
+
+        <button onClick={this.props.toggleLang} className="arq-navbar-btn-translate">
+          <TranslateIcon />
+        </button>
 
       </div>
     );
@@ -37,18 +68,31 @@ class ArqNavbar extends Component {
 export default ArqNavbar;
 
 class ArqNavbarLink extends Component {
-  setActive() {
-    return window.location.hash === `#${this.removeSpaces(this.props.children)}` ? 'arq-navbar-item-active' : ''
+  constructor(props) {
+    super();
+    this.state = {
+      windowHash: window.location.hash,
+      hash: `#${props.anchor}`
+    }
   }
-  removeSpaces(str) {
-    return str.replace(' ', '_')
+  componentDidMount() {
+    window.addEventListener('scroll', this.updateHash.bind(this))
+  }
+  updateHash() {
+    if (window.location.hash !== this.state.windowHash)
+      this.setState({
+        windowHash: window.location.hash
+      })
+  }
+  setActive() {
+    return this.state.windowHash === this.state.hash ? 'arq-navbar-item-active' : ''
   }
   render() {
     const Icon = this.props.icon
     return (
       <div className={'arq-navbar-item ' + this.setActive()}>
         <Icon className="arq-navbar-item-icon" />
-        <Link className="arq-navbar-item-link" href={`#${this.removeSpaces(this.props.children)}`}>
+        <Link className="arq-navbar-item-link" href={this.state.hash}>
           {this.props.children}
         </Link>
       </div>

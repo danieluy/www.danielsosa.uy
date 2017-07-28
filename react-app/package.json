@@ -3,7 +3,8 @@
   "private": true,
   "devDependencies": {
     "prop-types": "^15.5.10",
-    "react-scripts": "0.9.5"
+    "react-scripts": "0.9.5",
+    "smoothscroll-polyfill": "^0.3.5"
   },
   "dependencies": {
     "chart.js": "^2.6.0",

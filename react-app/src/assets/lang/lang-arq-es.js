@@ -4,14 +4,16 @@ export default {
   nav: {
     title: 'Arquitectura'
   },
-  education:{
+  education: {
     header_title: 'Educación',
+    anchor: 'education',
     title: 'Facultad de Arquitectura (FARQ, UDELAR), G’04.',
     subtitle: 'Anteproyecto 5 aprobado.',
-    status: 'Interrumpida en 2014'
+    status: 'En curso desde 2014, actualmente puesta en espera.'
   },
   achievements: {
     title: 'Logros',
+    anchor: 'achievements',
     items: [
       {
         title: 'Concurso de Vivienda',
@@ -21,7 +23,7 @@ export default {
       },
       {
         title: 'Concurso de una Obra Escultórica en Homenaje a los Detenidos Desaparecidos de América Latina.',
-        subtitle: 'Primera mención',
+        subtitle: 'Primera Mención',
         institution: 'Intendencia Municipal de Montevideo y Asociación de Madres y Familiares de Detenidos Desaparecidos. Con los arquitectos Esteban Varela y Martín Delgado.',
         date: '2009'
       },
@@ -34,7 +36,8 @@ export default {
     ]
   },
   work_history: {
-    title: 'Historia laboral',
+    title: 'Historia Laboral',
+    anchor: 'work_history',
     items: [
       {
         title: 'LAND Estudio de Arquitectura, del Arq. Andrés Nogués.',
@@ -84,11 +87,13 @@ export default {
     ]
   },
   proficiency: {
-    title: 'Competencia en programas',
+    title: 'Competencia en Software',
+    anchor: 'proficiency_software',
     items: proficiency_items
   },
   languages: {
-    title: 'Competencia en idiomas',
+    title: 'Competencia en Ldiomas',
+    anchor: 'proficiency_languages',
     items: language_items
   }
 }
