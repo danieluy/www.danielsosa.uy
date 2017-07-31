@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './ArqNavbar.css';
 
-require('smoothscroll-polyfill').polyfill();
+const _ = require('lodash');
 
 import { Link } from 'react-router'
 
@@ -76,13 +76,13 @@ class ArqNavbarLink extends Component {
     }
   }
   componentDidMount() {
-    window.addEventListener('scroll', this.updateHash.bind(this))
+    // debounces 50ms more than the hash setting
+    window.addEventListener('scroll', _.debounce(this.updateHash.bind(this), 300))
   }
   updateHash() {
-    if (window.location.hash !== this.state.windowHash)
-      this.setState({
-        windowHash: window.location.hash
-      })
+    this.setState({
+      windowHash: window.location.hash
+    }, this.render.bind(this))
   }
   setActive() {
     return this.state.windowHash === this.state.hash ? 'arq-navbar-item-active' : ''

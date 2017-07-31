@@ -13,6 +13,9 @@
 	00000000 | T | Lang toggle button on Home ???
 	00000000 | T | Check problems on one small device screen, sample screenshot on danielsosa.uy's Google Keep
 	00000000 | T | HTTP status codes handler
+v2.8.0
+	20170731 | P | Added debounce to scroll listener functions
+	20170731 | P | Added lodash dependency
 v2.7.0
 	20170728 | P | Started translation ES to EN of Arq info
 	20170728 | P | Added FAV button to toggle languages

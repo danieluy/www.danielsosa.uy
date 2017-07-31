@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react';
 import './Arq.css';
 
+import _ from 'lodash'
+
 import { es as ES } from '../../assets/lang/lang-arq';
 import { en as EN } from '../../assets/lang/lang-arq';
 
@@ -26,7 +28,7 @@ class Arq extends PureComponent {
   }
   componentDidMount() {
     this.props.setStatusBarThemeColor('#FF3300');
-    window.addEventListener('scroll', this.handleScroll.bind(this))
+    window.addEventListener('scroll', _.debounce(this.handleScroll.bind(this), 250))
   }
   handleScroll(evt) {
     for (let i = 0; i < this.state.anchors.length; i++)
@@ -35,18 +37,16 @@ class Arq extends PureComponent {
         break
       }
   }
+  setHash(anchor) {
+    history.pushState(null, null, `#${anchor.id}`);
+  }
   setAchors(anchors) {
     this.setState({
       anchors: anchors.sort((nodeA, nodeB) => nodeB.offsetTop - nodeA.offsetTop)
     })
   }
-  setHash(anchor) {
-    history.pushState(null, null, `#${anchor.id}`);
-  }
   render() {
-
     const lang = this.state.lang === 'es' ? ES : EN;
-    
     return (
       <div className="arq-root" style={{ width: '100%', height: `${this.props.window_height}px` }}>
         <ArqNavbar
