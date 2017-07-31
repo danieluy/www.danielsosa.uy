@@ -37,7 +37,7 @@
   height: 40px;
   fill: #666666;
   padding: 10px;
-  transition: fill 300ms linear;
+  transition: fill 200ms linear;
 }
 .arq-navbar-item-link{
   text-decoration: none;
@@ -45,7 +45,7 @@
   font-weight: 500;
   color: #666666;
   text-transform: uppercase;
-  transition: color 300ms linear;
+  transition: color 200ms linear;
 }
 button.arq-navbar-item-link{
   background-color: transparent;

@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react';
 import './Arq.css';
 
+import { getSystemLanguage } from '../../utils'
+
 import _ from 'lodash'
 
 import { es as ES } from '../../assets/lang/lang-arq';
@@ -13,14 +15,9 @@ class Arq extends PureComponent {
   constructor() {
     super();
     this.state = {
-      lang: this.getSystemLanguage(),
+      lang: getSystemLanguage(),
       anchors: []
     }
-  }
-  getSystemLanguage() {
-    if (navigator)
-      return ((navigator.language || navigator.userLanguage) || 'es').slice(0, 2);
-    return 'es';
   }
   toggleLang() {
     const aux = this.state.lang === 'es' ? 'en' : 'es';
@@ -28,19 +25,22 @@ class Arq extends PureComponent {
   }
   componentDidMount() {
     this.props.setStatusBarThemeColor('#FF3300');
-    window.addEventListener('scroll', _.debounce(this.handleScroll.bind(this), 250))
+    window.addEventListener('scroll', _.debounce(this.handleScroll.bind(this), 100))
   }
   handleScroll(evt) {
+    console.log(this.state.anchors)
     for (let i = 0; i < this.state.anchors.length; i++)
       if (evt.srcElement.activeElement.scrollTop >= this.state.anchors[i].offsetTop) {
+        console.log(evt.srcElement.activeElement.scrollTop, '>=', this.state.anchors[i].offsetTop)
         this.setHash(this.state.anchors[i])
+        console.log('hash setted to', `#${this.state.anchors[i].id}`)
         break
       }
   }
   setHash(anchor) {
     history.pushState(null, null, `#${anchor.id}`);
   }
-  setAchors(anchors) {
+  setAchorsFromChild(anchors) {
     this.setState({
       anchors: anchors.sort((nodeA, nodeB) => nodeB.offsetTop - nodeA.offsetTop)
     })
@@ -49,16 +49,16 @@ class Arq extends PureComponent {
     const lang = this.state.lang === 'es' ? ES : EN;
     return (
       <div className="arq-root" style={{ width: '100%', height: `${this.props.window_height}px` }}>
-        <ArqNavbar
+         <ArqNavbar
           lang={lang}
           anchors={this.state.anchors}
           toggleLang={this.toggleLang.bind(this)}
-        />
-        <ArqContent
+        /> 
+         <ArqContent
           lang={lang}
-          setAchors={this.setAchors.bind(this)}
+          setAchors={this.setAchorsFromChild.bind(this)}
           windowWidth={this.props.window_width}
-        />
+        /> 
       </div>
     );
   }

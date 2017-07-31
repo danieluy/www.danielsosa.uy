@@ -1,4 +1,4 @@
-import { proficiency_items, language_items } from './lang-arq-common';
+import { proficiency_items, language_items, anchors } from './lang-arq-common';
 
 export default {
   nav: {
@@ -6,14 +6,14 @@ export default {
   },
   education: {
     header_title: 'Education',
-    anchor: 'education',
+    anchor: anchors.education,
     title: 'Architecture University (FARQ, UDELAR), G’04.',
-    subtitle: '6th grade Workshop approved.',
+    subtitle: 'All Workshop Courses Approved.',
     status: 'Ongoing since 2014, currently on hold.'
   },
   achievements: {
     title: 'Achievements',
-    anchor: 'achievements',
+    anchor: anchors.achievements,
     items: [
       {
         title: 'Housing Competition',
@@ -37,13 +37,13 @@ export default {
   },
   work_history: {
     title: 'Work history',
-    anchor: 'work_history',
+    anchor: anchors.workHistory,
     items: [
       {
         title: 'LAND Architectural Office, of architect Andrés Nogués.',
         subtitle: 'Third-Year Intern',
         paragraphs: [
-          'Elaboración de proyecto ejecutivo para vivienda unifamiliar perteneciente a la familia Queirolo Bonner en Barra de Carrasco, Montevideo.'
+          'Executive project for a single-family house for the Queirolo Bonner family in Barra de Carrasco, Montevideo.'
         ],
         year: 2013,
         to: null
@@ -52,18 +52,18 @@ export default {
         title: 'ACM Architectural Office, of architect José Manggiarotti and Partners.',
         subtitle: 'Third-Year Intern',
         paragraphs: [
-          'Elaboración de relevamiento, diagnóstico de patologías, proyectos ejecutivos y permisos de habilitación de bomberos para el "Plan de Apoyo al Mantenimiento Correctivo de Edificios Educativos, Fideicomiso de Infraestructura Educativa Pública. ANEP – CND".',
-          'Apoyo en visualización y diseño para un proyecto de vivienda de interés social en Las Piedras, Canelones.'
+          'Survey, pathologies diagnosis, executive projects and building permissions for the  Fire Departament permission for the "Support Plan for Corrective Maintenance of Educational Buildings, Public Educational Infrastructure Trust." ANEP - CND ".',
+          'Support in visualization and design for a social interest housing project in Las Piedras, Canelones.'
         ],
         year: 2012,
         to: 2013
       },
       {
         title: '[re] Architectural Office, of architects Esteban Varela and Martín Delgado.',
-        subtitle: 'Third-Year Intern',
+        subtitle: 'Second-Year Intern',
         paragraphs: [
-          'Desarrollo de conjunto de vivienda de veraneo "Paracas Shamrok Lagoon" en Paracas, Ica, Perú. Desarrollo de tipologías, estudios morfológicos, diseño de parques y zonas recreativas, realización de modelos tridimensionales y renderizados para estudios de conjunto y tipologías.',
-          'Viaje a Lima, Perú como coordinador en 51-1 Architectural Office (Feb. 2012 a Abr. 2012). Apoyo en visualización del proyecto de remodelación para un colegio Distrito  de Callao, y para concurso de vivienda en altura en el Distrito de Ancón, Lima.'
+          'Development of holiday home complex "Paracas Shamrok Lagoon" in Paracas, Ica, Peru. Design of typologies, morphological studies, design of parks and recreational areas, confection of 3D models and rendering for studies of the whole complex and single typologies.',
+          'Trip to Lima, Peru as coordinator at 51-1 Architecture Office (Feb. 2012 to Apr. 2012). Support in visualization of the remodeling project for a school district of Callao, and a contest for a housing building in the District of Ancón, Lima.'
         ],
         year: 2011,
         to: 2012
@@ -72,7 +72,7 @@ export default {
         title: 'eDL s.a. Architectural Office.',
         subtitle: 'Second-Year Intern',
         paragraphs: [
-          'Desarrollo de anteproyectos, proyectos ejecutivos y permisos de construcción. Encargado de oficina de Gráficos, realización de modelos tridimensionales y renderizados para estudios morfológicos y de inserción urbana, apoyo en el diseño de interiores.'
+          'Preliminary projects development, executive projects and construction permissions. Head of graphics office, confection of 3D models and rendering for morphological and of urban insertion studies, support in interior design.'
         ],
         year: 2010,
         to: 2011
@@ -88,12 +88,12 @@ export default {
   },
   proficiency: {
     title: 'Software proficiency',
-    anchor: 'proficiency_software',
+    anchor: anchors.softwareProficiency,
     items: proficiency_items
   },
   languages: {
     title: 'Languages proficiency',
-    anchor: 'proficiency_languages',
+    anchor: anchors.proficiencyLanguages,
     items: language_items
   }
 }

@@ -1,5 +1,7 @@
 import React, { PureComponent } from 'react';
 
+import { getSystemLanguage } from '../../utils'
+
 import { es as ES } from '../../assets/lang/lang-home';
 import { en as EN } from '../../assets/lang/lang-home';
 
@@ -10,14 +12,8 @@ class Home extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      lang: this.getSystemLanguage()
+      lang: getSystemLanguage()
     }
-  }
-
-  getSystemLanguage() {
-    if (navigator)
-      return ((navigator.language || navigator.userLanguage) || 'es').slice(0, 2);
-    return 'es';
   }
 
   componentDidMount() {

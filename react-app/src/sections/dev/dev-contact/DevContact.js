@@ -65,7 +65,6 @@ class DevContact extends PureComponent {
         disableSubmitButton: false
       })
     this.captcha = response;
-    console.log('this.captcha', this.captcha)
   }
   captchaOnloadCallback() {
     console.log('reCAPTCHA widget loaded');

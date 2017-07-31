@@ -13,9 +13,9 @@ class ArqNavbar extends Component {
       <div className="arq-navbar">
 
         <div className="arq-navbar-header">
-          <a href="/" title="Home">
+          <Link href="/" title="Home">
             <TriangleIcon className="arq-navbar-header-icon" />
-          </a>
+          </Link>
           <div className="arq-navbar-header-title">
             {this.props.lang.nav.title}
           </div>
@@ -77,7 +77,7 @@ class ArqNavbarLink extends Component {
   }
   componentDidMount() {
     // debounces 50ms more than the hash setting
-    window.addEventListener('scroll', _.debounce(this.updateHash.bind(this), 300))
+    window.addEventListener('scroll', _.debounce(this.updateHash.bind(this), 150))
   }
   updateHash() {
     this.setState({

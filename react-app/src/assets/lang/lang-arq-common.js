@@ -34,3 +34,10 @@ export const language_items = [
     proficiency: 75
   }
 ]
+export const anchors = {
+  education: 'education',
+  achievements: 'achievements',
+  workHistory: 'work_history',
+  softwareProficiency: 'proficiency_software',
+  proficiencyLanguages: 'proficiency_languages'
+}

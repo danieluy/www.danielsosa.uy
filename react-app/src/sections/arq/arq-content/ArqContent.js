@@ -74,7 +74,7 @@ class ArqContent extends PureComponent {
           icon={CalendarIcon}
           addAchor={this.addAchor.bind(this)}
         />
-        <div className="arq-content-section">
+         <div className="arq-content-section">
           {this.props.lang.work_history.items.map((work, i) => {
             return (
               <div key={i} className="arq-work-history-item">
@@ -85,7 +85,7 @@ class ArqContent extends PureComponent {
               </div>
             )
           })}
-        </div>
+        </div> 
 
         <ArqContentTitle
           title={this.props.lang.proficiency.title}
@@ -138,7 +138,7 @@ class ArqContent extends PureComponent {
           icon={StarIcon}
           addAchor={this.addAchor.bind(this)}
         />
-        <div className="arq-content-section">
+         <div className="arq-content-section">
           {this.props.lang.achievements.items.map((item, i) => {
             return (
               <div key={i} className="arq-content-achievement">
@@ -149,7 +149,7 @@ class ArqContent extends PureComponent {
               </div>
             )
           })}
-        </div>
+        </div> 
 
         <div className="arq-content-footer"></div>
       </div>

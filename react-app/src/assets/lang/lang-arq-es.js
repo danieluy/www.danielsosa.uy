@@ -1,4 +1,4 @@
-import { proficiency_items, language_items } from './lang-arq-common';
+import { proficiency_items, language_items, anchors } from './lang-arq-common';
 
 export default {
   nav: {
@@ -6,14 +6,14 @@ export default {
   },
   education: {
     header_title: 'Educación',
-    anchor: 'education',
+    anchor: anchors.education,
     title: 'Facultad de Arquitectura (FARQ, UDELAR), G’04.',
     subtitle: 'Anteproyecto 5 aprobado.',
     status: 'En curso desde 2014, actualmente puesta en espera.'
   },
   achievements: {
     title: 'Logros',
-    anchor: 'achievements',
+    anchor: anchors.achievements,
     items: [
       {
         title: 'Concurso de Vivienda',
@@ -37,7 +37,7 @@ export default {
   },
   work_history: {
     title: 'Historia Laboral',
-    anchor: 'work_history',
+    anchor: anchors.workHistory,
     items: [
       {
         title: 'LAND Estudio de Arquitectura, del Arq. Andrés Nogués.',
@@ -88,12 +88,12 @@ export default {
   },
   proficiency: {
     title: 'Competencia en Software',
-    anchor: 'proficiency_software',
+    anchor: anchors.softwareProficiency,
     items: proficiency_items
   },
   languages: {
     title: 'Competencia en Ldiomas',
-    anchor: 'proficiency_languages',
+    anchor: anchors.proficiencyLanguages,
     items: language_items
   }
 }

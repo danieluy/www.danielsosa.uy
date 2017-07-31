@@ -1,26 +1,22 @@
 import React, { PureComponent } from 'react';
 import './Dev.css';
 
-import DevNavbar from './dev-navbar/DevNavbar';
-import DevContentWrapper from './dev-content-wrapper/DevContentWrapper';
+import { getSystemLanguage } from '../../utils'
 
 import { es as ES } from '../../assets/lang/lang-dev';
 import { en as EN } from '../../assets/lang/lang-dev';
+
+import DevNavbar from './dev-navbar/DevNavbar';
+import DevContentWrapper from './dev-content-wrapper/DevContentWrapper';
 
 class Dev extends PureComponent {
 
   constructor() {
     super();
     this.state = {
-      lang: this.getSystemLanguage(),
+      lang: getSystemLanguage(),
       navbar_shadow: false
     }
-  }
-
-  getSystemLanguage() {
-    if (navigator)
-      return ((navigator.language || navigator.userLanguage) || 'es').slice(0, 2);
-    return 'es';
   }
 
   componentDidMount() {
