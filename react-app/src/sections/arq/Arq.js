@@ -20,20 +20,17 @@ class Arq extends PureComponent {
     }
   }
   toggleLang() {
-    const aux = this.state.lang === 'es' ? 'en' : 'es';
-    this.setState({ lang: aux })
+    const lang = this.state.lang === 'es' ? 'en' : 'es';
+    this.setState({ lang })
   }
   componentDidMount() {
     this.props.setStatusBarThemeColor('#FF3300');
     window.addEventListener('scroll', _.debounce(this.handleScroll.bind(this), 100))
   }
   handleScroll(evt) {
-    console.log(this.state.anchors)
     for (let i = 0; i < this.state.anchors.length; i++)
-      if (evt.srcElement.activeElement.scrollTop >= this.state.anchors[i].offsetTop) {
-        console.log(evt.srcElement.activeElement.scrollTop, '>=', this.state.anchors[i].offsetTop)
+      if (document.body.scrollTop >= this.state.anchors[i].offsetTop) {
         this.setHash(this.state.anchors[i])
-        console.log('hash setted to', `#${this.state.anchors[i].id}`)
         break
       }
   }
@@ -49,16 +46,16 @@ class Arq extends PureComponent {
     const lang = this.state.lang === 'es' ? ES : EN;
     return (
       <div className="arq-root" style={{ width: '100%', height: `${this.props.window_height}px` }}>
-         <ArqNavbar
+        <ArqNavbar
           lang={lang}
           anchors={this.state.anchors}
           toggleLang={this.toggleLang.bind(this)}
-        /> 
-         <ArqContent
+        />
+        <ArqContent
           lang={lang}
           setAchors={this.setAchorsFromChild.bind(this)}
           windowWidth={this.props.window_width}
-        /> 
+        />
       </div>
     );
   }

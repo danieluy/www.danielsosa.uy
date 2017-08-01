@@ -31,7 +31,7 @@
   display: flex;
   flex-wrap: wrap;
 }
-.arq-content-footer, .arq-content-header{
+.arq-content-footer{
   height: 500px;
 }
 .color-red{
@@ -68,7 +68,7 @@
   .arq-content-proficiency{
     justify-content: space-around;
   }
-  .arq-content-footer, .arq-content-header{
+  .arq-content-footer{
     height: 60px;
   }
 } 
@@ -85,7 +85,7 @@
   .arq-content-title-icon{
     margin: 0 0 10px 0;
   }
-  .arq-content-footer, .arq-content-header{
+  .arq-content-footer{
     height: 120px;
   }
 }

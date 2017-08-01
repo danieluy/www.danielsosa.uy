@@ -10,7 +10,8 @@ class ArqContent extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      anchors: []
+      anchors: [],
+      renderCharts: false
     }
   }
 
@@ -20,6 +21,12 @@ class ArqContent extends PureComponent {
 
   componentDidMount() {
     this.setAndResetAnchors();
+    // FIX - Delay charts render to have instant load on Arq
+    setTimeout(() => {
+      this.setState({
+        renderCharts: true
+      })
+    }, 0);
   }
 
   setAndResetAnchors() {
@@ -34,6 +41,8 @@ class ArqContent extends PureComponent {
       return true; //accounts for window width changes
     if (nextProps.lang.achievements.title !== this.props.lang.achievements.title)
       return true; //accounts for language changes
+    if (nextState.renderCharts !== this.state.renderCharts)
+      return true;
     return false;
   }
 
@@ -51,8 +60,6 @@ class ArqContent extends PureComponent {
     return (
 
       <div className="arq-content">
-
-        {/* <div className="arq-content-header"></div> */}
 
         <ArqContentTitle
           title={this.props.lang.education.header_title}
@@ -74,18 +81,18 @@ class ArqContent extends PureComponent {
           icon={CalendarIcon}
           addAchor={this.addAchor.bind(this)}
         />
-         <div className="arq-content-section">
+        <div className="arq-content-section">
           {this.props.lang.work_history.items.map((work, i) => {
             return (
               <div key={i} className="arq-work-history-item">
                 <h1 className="arq-title color-red">{work.title}</h1>
                 <h2 className="arq-subtitle">{work.subtitle}</h2>
                 <p className="arq-paragraph">{work.year}{work.to ? ` - ${work.to}` : ''}</p>
-                {work.paragraphs.map((paragraph, i) => <p key={i} className="arq-paragraph">{paragraph}</p>)}
+                {work.paragraphs.map((paragraph, j) => <p key={j} className="arq-paragraph">{paragraph}</p>)}
               </div>
             )
           })}
-        </div> 
+        </div>
 
         <ArqContentTitle
           title={this.props.lang.proficiency.title}
@@ -94,20 +101,23 @@ class ArqContent extends PureComponent {
           icon={LaptopIcon}
           addAchor={this.addAchor.bind(this)}
         />
-        <div className="arq-content-section">
-          <div className="arq-content-proficiency">
-            {this.props.lang.proficiency.items.map((item, i) => {
-              return (
-                <ArqGraph
-                  key={i}
-                  title={item.title}
-                  proficiency={item.proficiency}
-                  width="100px"
-                />
-              )
-            })}
+        {this.state.renderCharts ?
+          <div className="arq-content-section">
+            <div className="arq-content-proficiency">
+              {this.props.lang.proficiency.items.map((item, i) => {
+                return (
+                  <ArqGraph
+                    key={i}
+                    title={item.title}
+                    proficiency={item.proficiency}
+                    width="100px"
+                  />
+                )
+              })}
+            </div>
           </div>
-        </div>
+          : null
+        }
 
         <ArqContentTitle
           title={this.props.lang.languages.title}
@@ -116,20 +126,23 @@ class ArqContent extends PureComponent {
           icon={LanguageIcon}
           addAchor={this.addAchor.bind(this)}
         />
-        <div className="arq-content-section">
-          <div className="arq-content-proficiency">
-            {this.props.lang.languages.items.map((item, i) => {
-              return (
-                <ArqGraph
-                  key={i}
-                  title={item.title}
-                  proficiency={item.proficiency}
-                  width="100px"
-                />
-              )
-            })}
+        {this.state.renderCharts ?
+          <div className="arq-content-section">
+            <div className="arq-content-proficiency">
+              {this.props.lang.languages.items.map((item, i) => {
+                return (
+                  <ArqGraph
+                    key={i}
+                    title={item.title}
+                    proficiency={item.proficiency}
+                    width="100px"
+                  />
+                )
+              })}
+            </div>
           </div>
-        </div>
+          : null
+        }
 
         <ArqContentTitle
           title={this.props.lang.achievements.title}
@@ -138,7 +151,7 @@ class ArqContent extends PureComponent {
           icon={StarIcon}
           addAchor={this.addAchor.bind(this)}
         />
-         <div className="arq-content-section">
+        <div className="arq-content-section">
           {this.props.lang.achievements.items.map((item, i) => {
             return (
               <div key={i} className="arq-content-achievement">
@@ -149,7 +162,7 @@ class ArqContent extends PureComponent {
               </div>
             )
           })}
-        </div> 
+        </div>
 
         <div className="arq-content-footer"></div>
       </div>

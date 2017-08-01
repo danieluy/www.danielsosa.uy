@@ -31,6 +31,7 @@ ReactDOM.render(
       </Route>
       <Route path="/arq" component={Arq} />
       <Route path="/img" component={Img} />
+      {/* <Route path="/*" component={Error404} /> */}
     </Route>
   </Router>
   , document.getElementById('root')

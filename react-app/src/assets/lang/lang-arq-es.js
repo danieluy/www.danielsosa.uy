@@ -92,7 +92,7 @@ export default {
     items: proficiency_items
   },
   languages: {
-    title: 'Competencia en Ldiomas',
+    title: 'Competencia en Idiomas',
     anchor: anchors.proficiencyLanguages,
     items: language_items
   }
