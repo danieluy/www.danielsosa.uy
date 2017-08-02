@@ -4,10 +4,10 @@ export const ds_new_tab = {
   license: 'MIT',
   current_version: '0.6.3',
   gallery: [
-    'img/stuff/dsNewTab/ds_new_tab.png',
-    'img/stuff/dsNewTab/ds_new_tab_bookmarks_open.png',
-    'img/stuff/dsNewTab/ds_new_tab_drawer_open.png',
-    'img/stuff/dsNewTab/ds_new_tab_wallpaper_settings.png'
+    '/img/stuff/dsNewTab/ds_new_tab.png',
+    '/img/stuff/dsNewTab/ds_new_tab_bookmarks_open.png',
+    '/img/stuff/dsNewTab/ds_new_tab_drawer_open.png',
+    '/img/stuff/dsNewTab/ds_new_tab_wallpaper_settings.png'
   ],
   refs: [
     { text: 'Github', href: 'https://github.com/danieluy/ds-new-tab' }
