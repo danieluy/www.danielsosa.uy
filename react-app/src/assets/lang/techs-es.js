@@ -134,12 +134,23 @@ export default [
   {
     icon: {
       src: "hammerjs_icon.png",
-      alt: "Hammer.js icon"
+      alt: "Icono Hammer.js"
     },
     title: {
       href: "http://hammerjs.github.io/",
       text: "Hammer.js"
     },
     p: "Hammer te ayuda a añadir soporte para gestos táctiles a tu página, y a remover la demora de 300ms en los clicks."
+  },
+  {
+    icon: {
+      src: "genexus.png",
+      alt: "Icono GeneXus"
+    },
+    title: {
+      href: "https://www.genexus.com/",
+      text: "GeneXus"
+    },
+    p: "Generación automática de aplicaciones multiplataforma y bases de datos."
   }
 ]

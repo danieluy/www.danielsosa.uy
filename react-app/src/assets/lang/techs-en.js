@@ -141,5 +141,16 @@ export default [
       text: "Hammer.js"
     },
     p: "Hammer helps you add support for touch gestures to your page, and remove the 300ms delay from clicks."
+  },
+  {
+    icon: {
+      src: "genexus.png",
+      alt: "GeneXus icon"
+    },
+    title: {
+      href: "https://www.genexus.com/",
+      text: "GeneXus"
+    },
+    p: "Automatic building of multi platform applications and databases."
   }
 ]

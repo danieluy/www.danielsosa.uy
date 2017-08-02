@@ -20,7 +20,8 @@ export default {
         }
       },
       subjects: [
-        { score: "??", name: "Diseño y Desarrollo de Aplicaciones", techs: "POO | Java | UML" },
+        { score: "??", name: "Taller de GeneXus", techs: "GeneXus" },
+        { score: 90, name: "Diseño y Desarrollo de Aplicaciones", techs: "Patrones de Diseño | Arquitectura | POO | Java | UML" },
         { score: 99, name: "Algoritmos y Estructuras de Datos 2", techs: "POO | Java | Arboles | Grafos | Multiestructuras" },
         { score: 93, name: "Ingeniría de software", techs: "Gestión de proyectos de software" }
       ],
