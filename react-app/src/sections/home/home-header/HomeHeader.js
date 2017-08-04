@@ -26,7 +26,7 @@ class HomeHeader extends PureComponent {
                 </Link>
               </li>
               <li className="img">
-                <Link className="nav-link" to="/img">
+                <Link className="nav-link" to="/renders">
                   <RectangleIcon className="nav-icon" height="24" width="24" />
                   <span>img</span>
                 </Link>

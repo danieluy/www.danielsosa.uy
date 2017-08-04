@@ -30,7 +30,7 @@ ReactDOM.render(
         <Route path="/dev/stuff" component={DevStuff}></Route>
       </Route>
       <Route path="/arq" component={Arq} />
-      <Route path="/img" component={Img} />
+      <Route path="/renders" component={Img} />
       {/* <Route path="/*" component={Error404} /> */}
     </Route>
   </Router>
