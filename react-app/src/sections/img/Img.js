@@ -1,18 +1,20 @@
 import React, { PureComponent } from 'react';
 import './Img.css';
 
-import { es as ES, en as EN } from '../../assets/lang/lang-img';
+import ImgNavbar from './img-navbar/ImgNavbar'
 
-import { RectangleIcon, ArrowBackIcon } from '../../assets/icons'
+import { getSystemLanguage } from '../../utils'
+
+import { es as ES, en as EN } from '../../assets/lang/lang-img';
 
 class Img extends PureComponent {
 
   constructor() {
     super();
     this.state = {
-      lang: this.getSystemLanguage(),
+      lang: getSystemLanguage(),
       renders: [],
-      sort: 'title'
+      sort: null
     }
   }
 
@@ -24,6 +26,10 @@ class Img extends PureComponent {
   }
 
   componentWillMount() {
+    this.sortRenders()
+  }
+
+  sortRenders() {
     const lang = this.state.lang === 'es' ? ES : EN;
     const renders = []
     lang.projects
@@ -40,8 +46,8 @@ class Img extends PureComponent {
             })
           })
       });
-    renders
-      .sort(this.sortF[this.state.sort])
+    if (this.state.sort)
+      renders.sort(this.sortF)
     this.setState({
       renders: renders
     })
@@ -49,12 +55,6 @@ class Img extends PureComponent {
 
   shouldComponentUpdate() {
     return false;
-  }
-
-  getSystemLanguage() {
-    if (navigator)
-      return ((navigator.language || navigator.userLanguage) || 'es').slice(0, 2);
-    return 'es';
   }
 
   componentDidMount() {
@@ -74,8 +74,6 @@ class Img extends PureComponent {
         {this.state.renders.map((render, i) => {
           return (
             <div key={i} style={{ width: '100%', height: `${this.props.window_height}px` }}>
-
-
               <ImgContent
                 title={render.title}
                 subtitle={render.year}
@@ -97,55 +95,6 @@ class Img extends PureComponent {
 }
 
 export default Img;
-
-class ImgNavbar extends PureComponent {
-
-  constructor() {
-    super();
-    this.state = {
-      openMenu: false
-    }
-  }
-
-  openMenu() {
-    this.setState({
-      openMenu: !this.state.openMenu
-    })
-  }
-
-  render() {
-    return (
-      <nav className="img-navbar">
-        <RectangleIcon
-          className="img-navbar-icon"
-          onClick={this.openMenu.bind(this)}
-        />
-        {
-          this.state.openMenu ?
-            <ul onClick={this.openMenu.bind(this)} className="img-navbar-menu">
-              <li className="img-navbar-menu-item">
-                <ArrowBackIcon className="img-navbar-menu-item-icon"/>
-                Home
-              </li>
-              <li className="img-navbar-menu-item">
-                <ArrowBackIcon className="img-navbar-menu-item-icon"/>
-                Option 2
-              </li>
-              <li className="img-navbar-menu-item">
-                <ArrowBackIcon className="img-navbar-menu-item-icon"/>
-                Option 3
-              </li>
-              <li className="img-navbar-menu-item">
-                <ArrowBackIcon className="img-navbar-menu-item-icon"/>
-                Option 4
-              </li>
-            </ul>
-            : null
-        }
-      </nav>
-    )
-  }
-}
 
 class ImgContent extends PureComponent {
   render() {
