@@ -34,7 +34,7 @@ export const proyectoET = {
       labels: ['day', 'exterior', 'aerial']
     },
     {
-      url: 'http://4.bp.blogspot.com/-4_D8jcqHUWc/UbkxWE_i36I/AAAAAAAABlA/bDiLxhyA1fU/s1600/Encargo+proyecto+(Per%C3%BA)_web.jpg',
+      url: 'http://4.bp.blogspot.com/-4_D8jcqHUWc/UbkxWE_i36I/AAAAAAAABlA/bDiLxhyA1fU/s1600/Encargo+proyecto_web.jpg',
       labels: ['day', 'exterior', 'aerial']
     }
   ]

@@ -21,14 +21,14 @@ class ImgNavbar extends PureComponent {
     this.state = {
       menuOpen: false,
       sortMenuOpen: false,
-      currentSortMethod: null
+      currentSortMethod: '_default'
     }
   }
 
   toggleMenu() {
     this.setState({
       menuOpen: !this.state.menuOpen
-    }, () => { console.log(this.state.menuOpen) })
+    })
   }
 
   toggleSortMenu() {
@@ -38,8 +38,6 @@ class ImgNavbar extends PureComponent {
   }
 
   sort(method) {
-    console.log(method)
-    console.log(this.props.sort)
     if (method.name === this.state.currentSortMethod)
       method = this.props.sort[`${method.name}Inv`]
     this.setState({
@@ -71,12 +69,12 @@ class ImgNavbar extends PureComponent {
 
         {this.state.sortMenuOpen ?
           <div className="img-sort-menu">
-            <div onClick={this.sort.bind(this, this.props.sort.default)} className="img-navbar-menu-item">
+            <div onClick={this.sort.bind(this, this.props.sort._default)} className="img-navbar-menu-item">
               <SortIcon className="img-navbar-menu-item-icon" />
               Default
               <ImgSortedTelltale
-                up={'default'}
-                down={'defaultInv'}
+                up={'_default'}
+                down={'_defaultInv'}
                 current={this.state.currentSortMethod}
               />
             </div>

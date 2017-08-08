@@ -14,7 +14,10 @@
 	00000000 | T | Check problems on one small device screen, sample screenshot on danielsosa.uy's Google Keep
 	00000000 | T | HTTP status codes handler
 v2.10.0
-	20170804 | P | Added Img section (Work in progress)
+	20170808 | B | Img default sorting is not working properly
+	20170808 | P | Added Img sorting
+v2.10.0
+	20170804 | P | Added Img section
 	20170804 | M | Remover the entire Placeholder folder
 v2.9.0
 	20170802 | P | Updated DsGallery dependency

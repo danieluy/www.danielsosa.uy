@@ -58,7 +58,9 @@ class Img extends PureComponent {
             })
           })
       });
-    renders.sort(sortMethod)
+    if (sortMethod)
+      renders.sort(sortMethod)
+    console.log(renders)
     this.setState({
       updated: true,
       renders: renders
@@ -72,7 +74,6 @@ class Img extends PureComponent {
   render() {
 
     const lang = this.state.lang === 'es' ? ES : EN;
-    console.log(this.state.renders)
 
     return (
       <div className="img-root">
