@@ -14,13 +14,25 @@ class Img extends PureComponent {
     this.state = {
       lang: getSystemLanguage(),
       renders: [],
-      sort: null
+      updated: false
     }
   }
 
-  sortF = {
-    title: (a, b) => a.title > b.title,
-    titleInv: (a, b) => a.title < b.title,
+  shouldComponentUpdate() {
+    if (this.state.updated) {
+      this.setState({
+        updated: false
+      })
+      return true
+    }
+    return false
+  }
+
+  sortMethods = {
+    _default: () => 1,
+    _defaultInv: () => -1,
+    title: (a, b) => a.title.localeCompare(b.title),
+    titleInv: (a, b) => b.title.localeCompare(a.title),
     year: (a, b) => a.year - b.year,
     yearInv: (a, b) => b.year - a.year
   }
@@ -29,7 +41,7 @@ class Img extends PureComponent {
     this.sortRenders()
   }
 
-  sortRenders() {
+  sortRenders(sortMethod) {
     const lang = this.state.lang === 'es' ? ES : EN;
     const renders = []
     lang.projects
@@ -46,15 +58,11 @@ class Img extends PureComponent {
             })
           })
       });
-    if (this.state.sort)
-      renders.sort(this.sortF)
+    renders.sort(sortMethod)
     this.setState({
+      updated: true,
       renders: renders
     })
-  }
-
-  shouldComponentUpdate() {
-    return false;
   }
 
   componentDidMount() {
@@ -69,7 +77,10 @@ class Img extends PureComponent {
     return (
       <div className="img-root">
 
-        <ImgNavbar />
+        <ImgNavbar
+          sort={this.sortMethods}
+          onSort={this.sortRenders.bind(this)}
+        />
 
         {this.state.renders.map((render, i) => {
           return (

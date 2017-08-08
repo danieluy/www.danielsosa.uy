@@ -1,11 +1,23 @@
 import {
+  emoticon,
   vivienda2013,
-  proyectoET
+  proyectoET,
+  CentroJusticiaMaldonado
 } from './lang-img-common';
 
 export default {
   title: "Renders by Daniel Sosa",
   projects: [
+    {
+      title: "Emoticon",
+      renders: emoticon.renders,
+      paragraphs: [
+        'Render: Daniel Sosa',
+        'Modelo de extractor de aire pintado como emoticon',
+        'Realizado como estudio de técnicas de modelado, iluminación, texturizado y posproducción.'
+      ],
+      year: 2013
+    },
     {
       title: "Vivienda 2013",
       renders: vivienda2013.renders,
@@ -24,6 +36,16 @@ export default {
         'Imagen encargada para el proyecto Escuela de Talentos en el distrito de Callao en Lima, Perú.'
       ],
       year: 2012
+    },
+    {
+      title: "Centro de Justicia de Maldonado",
+      renders: CentroJusticiaMaldonado.renders,
+      paragraphs: [
+        'Render: Daniel Sosa',
+        'Anteproyecto: Poder Judicial',
+        'Proyecto Ejecutivo: MARQ Rocca-Giménez-Antón.'
+      ],
+      year: 2013
     }
   ]
 }
