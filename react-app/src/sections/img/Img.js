@@ -29,8 +29,8 @@ class Img extends PureComponent {
   }
 
   sortMethods = {
-    _default: () => 1,
-    _defaultInv: () => -1,
+    _default: () => -1,
+    _defaultInv: () => 1,
     title: (a, b) => a.title.localeCompare(b.title),
     titleInv: (a, b) => b.title.localeCompare(a.title),
     year: (a, b) => a.year - b.year,

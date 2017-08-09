@@ -38,6 +38,7 @@ class ImgNavbar extends PureComponent {
   }
 
   sort(method) {
+    console.log(method.name, this.state.currentSortMethod)
     if (method.name === this.state.currentSortMethod)
       method = this.props.sort[`${method.name}Inv`]
     this.setState({
