@@ -13,6 +13,10 @@
 	00000000 | T | Lang toggle button on Home ???
 	00000000 | T | Check problems on one small device screen, sample screenshot on danielsosa.uy's Google Keep
 	00000000 | T | HTTP status codes handler
+v2.10.2
+	20170809 | P | Setted max-width: 1200 pixels for ArqContent
+v2.10.1
+	20170809 | F | Fixed default sorting
 v2.10.0
 	20170808 | B | Img default sorting is not working properly
 	20170808 | P | Added Img sorting
