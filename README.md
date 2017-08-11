@@ -1,4 +1,4 @@
-# www.danielsosa.uy v2.1.1
+# www.danielsosa.uy v2.10.3
 In this repository I'm developing my own website, making it open source in every aspect.
 ## config.json
 ```javascript
