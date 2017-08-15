@@ -1,25 +1,29 @@
 .img-navbar{
   position: fixed;
+  right: 10px;
+  bottom: 10px;
   height: 60px;
-  width: 100%;
+  /* width: 100%; */
   z-index: 5;
 }
 .img-navbar-icon{
   height: 60px;
   width: 60px;
+  border-radius: 30px;
   padding: 15px;
   cursor: pointer;
-  fill: #000000;
-  opacity: 0.5;
-  transition: opacity 150ms linear;
+  fill: #FFF;
+  background-color: #fb0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 150ms linear;
 }
 .img-navbar-icon:hover{
-  opacity: 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
 }
 .img-navbar-menu{
   position: absolute;
-  top: 5px;
-  left: 5px;
+  bottom: 5px;
+  right: 5px;
   background-color: #FFFFFF;
   border-radius: 3px;
   overflow: hidden;
@@ -52,8 +56,8 @@
 
 .img-sort-menu{
   position: fixed;
-  top: 5px;
-  left: 5px;
+  bottom: 15px;
+  right: 15px;
   height: 50px;
   background-color: #FFFFFF;
   border-radius: 3px;
@@ -62,7 +66,7 @@
   animation-duration: 250ms;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out; 
-  transform-origin: 30px 90px;
+  transform-origin: right -60px;
   display: flex;
 }
 
@@ -77,6 +81,22 @@
   fill: rgba(0, 0, 0, 0.25)
 }
 
+
+/*@media screen and (max-width: 1200px){ }*/
+
+/* @media screen and (max-width: 960px){} */
+
+/* @media screen and (max-width: 768px){} */
+
+@media screen and (max-width: 480px){
+  .img-navbar-menu-item{
+    font-size: 0;
+    padding-right: 0;
+  }
+  .img-sorted-telltale{
+    margin-left: 0;
+  }
+}
 
 
 @keyframes openMenu{

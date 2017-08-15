@@ -41,6 +41,10 @@ class Img extends PureComponent {
     this.sortRenders()
   }
 
+  componentDidMount() {
+    this.props.setStatusBarThemeColor('#ffbb00');
+  }
+
   sortRenders(sortMethod) {
     const lang = this.state.lang === 'es' ? ES : EN;
     const renders = []
@@ -67,10 +71,13 @@ class Img extends PureComponent {
     })
   }
 
-  componentDidMount() {
-    this.props.setStatusBarThemeColor('#ffbb00');
+  heightByWidth() {
+    const width = this.props.window_width
+    console.log('width', width)
+    if (width < 768)
+      return 'auto'
+    return `${this.props.window_height}px`
   }
-
   render() {
 
     const lang = this.state.lang === 'es' ? ES : EN;
@@ -85,7 +92,7 @@ class Img extends PureComponent {
 
         {this.state.renders.map((render, i) => {
           return (
-            <div key={i} style={{ width: '100%', height: `${this.props.window_height}px` }}>
+            <div key={i} style={{ width: '100%', height: (this.heightByWidth()) }}>
               <ImgContent
                 title={render.title}
                 subtitle={render.year}
@@ -96,6 +103,7 @@ class Img extends PureComponent {
               />
               <ImgBackgroundFixed
                 url={render.url}
+                window_width={this.props.window_width}
               />
             </div>
           )
@@ -129,17 +137,19 @@ class ImgContent extends PureComponent {
 
 class ImgBackgroundFixed extends PureComponent {
   render() {
-    return (
-      <div className="img-background-fixed">
-        <div className="img-background-fixed-lines" />
-        <div
-          className="img-background-fixed-img"
-          style={{
-            backgroundImage: `url(${this.props.url})`
-          }}
-        />
-      </div>
-    )
+    if (this.props.window_width > 767)
+      return (
+        <div className="img-background-fixed">
+          <div className="img-background-fixed-lines" />
+          <div
+            className="img-background-fixed-img"
+            style={{
+              backgroundImage: `url(${this.props.url})`
+            }}
+          />
+        </div>
+      )
+    return null
   }
 }
 

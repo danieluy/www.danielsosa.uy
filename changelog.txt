@@ -13,6 +13,8 @@
 	00000000 | T | Lang toggle button on Home ???
 	00000000 | T | Check problems on one small device screen, sample screenshot on danielsosa.uy's Google Keep
 	00000000 | T | HTTP status codes handler
+v2.11.0
+	20170815 | P | Added responsive design to Img
 v2.10.3
 	20170811 | P | Added the remaining projects to Img content
 v2.10.2

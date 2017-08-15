@@ -65,6 +65,10 @@ class ImgNavbar extends PureComponent {
               <SortIcon className="img-navbar-menu-item-icon" />
               Sort
             </div>
+            <div onClick={this.toggleMenu.bind(this)} className="img-navbar-menu-item">
+              <CloseIcon className="img-navbar-menu-item-icon" />
+              Cancel
+            </div>
           </div>
           : null}
 

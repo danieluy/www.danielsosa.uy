@@ -1,6 +1,6 @@
 {
   "name": "www.danielsosa.uy",
-  "version": "2.10.3",
+  "version": "2.11.0",
   "description": "Daniel Sosa's Website",
   "main": "server.js",
   "scripts": {
