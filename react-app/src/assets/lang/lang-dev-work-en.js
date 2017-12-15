@@ -63,6 +63,32 @@ export default {
     header_title: "Hired Work",
     header_subtitle: "I'm still searching for a job to list here ;-)",
     theme_color: "#a553bf",
-    works: []
+    works: {
+      labels: {
+        title: "Title",
+        description: "Description",
+        client_name: "Client",
+        status: "Status",
+        technologies: "Technologies",
+        modality: "Modality"
+      },
+      suitedb: {
+        title: "SuiteDB",
+        year: {
+          from: 2017,
+          to: '...'
+        },
+        status: 'Current Hired Job',
+        modality: "Hired Job",
+        description: "Frontend & NetSuite developer",
+        client_name: 'SuiteDB',
+        client_href: "http://www.suitedb.com",
+        logo: { src: "work/suitedb.png", alt: "SuiteDB logo" },
+        images: [
+          { src: "/img/work/suitedb/suitedb_desktop.jpg", alt: "SuiteDB, desktop version" }
+        ],
+        techs: techs(["HTML5" , "JavaScript" , "CSS3" , "Node.js" , "Express" , "React" , "Angular" , "MongoDB"], 'EN')
+      }
+    }
   }
 }

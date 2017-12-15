@@ -34,7 +34,7 @@ export default {
           { src: "/img/work/radiocero/radiocero_premios_users_list.jpg", alt: "Radiocero, listado de usuarios" },
           { src: "/img/work/radiocero/radiocero_premios_users_new.jpg", alt: "Radiocero, formulario para nuevo usuario" }
         ],
-        techs: techs(["HTML5", "JavaScript" , "CSS3" , "Node.js" , "Express" , "Angular" , "MongoDB"], 'ES')
+        techs: techs(["HTML5", "JavaScript", "CSS3", "Node.js", "Express", "Angular", "MongoDB"], 'ES')
       },
       mtec: {
         title: "Mtec (placeholder)",
@@ -53,7 +53,7 @@ export default {
           { src: "/img/work/mtec/mtec_dev_hardware_desktop.jpg", alt: "Mtec, equipos versión de escritorio" },
           { src: "/img/work/mtec/mtec_dev_hardware_phone.jpg", alt: "Mtec, equipos versión de teléfonos" }
         ],
-        techs: techs(["HTML5" , "JavaScript" , "CSS3" , "Node.js" , "Express" , "React"], 'ES')
+        techs: techs(["HTML5", "JavaScript", "CSS3", "Node.js", "Express", "React"], 'ES')
       }
     }
   },
@@ -63,6 +63,32 @@ export default {
     header_title: "Trabajo Dependiente",
     header_subtitle: "Aún estoy en busca de un trabajo para listar aquí ;-)",
     theme_color: "#a553bf",
-    works: []
+    works: {
+      labels: {
+        title: "Título",
+        description: "Descripción",
+        client_name: "Cliente",
+        status: "Estado",
+        technologies: "Tecnologías",
+        modality: "Modalidad"
+      },
+      suitedb: {
+        title: "SuiteDB",
+        year: {
+          from: 2017,
+          to: '...'
+        },
+        status: 'Actualmente contratado',
+        modality: "Trabajo Dependiente",
+        description: "Desarrollador Frontend y NetSuite",
+        client_name: 'SuiteDB',
+        client_href: "http://www.suitedb.com",
+        logo: { src: "work/suitedb.png", alt: "Logo de SuiteDB" },
+        images: [
+          { src: "/img/work/suitedb/suitedb_desktop.jpg", alt: "SuiteDB, versión de escritorio" }
+        ],
+        techs: techs(["HTML5" , "JavaScript" , "CSS3" , "Node.js" , "Express" , "React" , "Angular" , "MongoDB"], 'EN')
+      }
+    }
   }
 }

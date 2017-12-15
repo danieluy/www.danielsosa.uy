@@ -20,16 +20,16 @@ class DevWork extends PureComponent {
           {/* <DevContentHeader title={LANG.freelance.header_title} subtitle={LANG.freelance.header_subtitle} avatar={LANG.freelance.logo_src} />  */}
 
           <DevWorkWrapper
+            lang={LANG.employed.works.suitedb}
+            theme_color={LANG.employed.theme_color}
+            labels={LANG.employed.works.labels}
+          />
+
+          <DevWorkWrapper
             lang={LANG.freelance.works.prizes_management}
             theme_color={LANG.freelance.theme_color}
             labels={LANG.freelance.works.labels}
           />
-
-          {/* <DevWorkWrapper
-            lang={LANG.freelance.works.mtec}
-            theme_color={LANG.freelance.theme_color}
-            labels={LANG.freelance.works.labels}
-          /> */}
         </div>
 
       </div>

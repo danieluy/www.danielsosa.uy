@@ -20,8 +20,9 @@ export default {
         }
       },
       subjects: [
-        { score: "??", name: "GeneXus Workshop", techs: "GeneXus" },
-        { score: 90, name: "Applications Design and Development", techs: "Design Patterns | Architecture | OOP | Java | UML" },
+        { score: "??", name: "Final Proyect (thesis)", techs: "Javascript | HTML | CSS | Non Relational Databases | Design Patterns | Architecture" },
+        { score: 98, name: "GeneXus Workshop", techs: "GeneXus" },
+        { score: 90, name: "Applications Design and Development", techs: " | OOP | Java | UML" },
         { score: 99, name: "Algorithms & Data Structures 2", techs: "OOP | Java | Trees | Graphs | Multi-structures" },
         { score: 93, name: "Software Engineering", techs: "Software project management" }
       ],

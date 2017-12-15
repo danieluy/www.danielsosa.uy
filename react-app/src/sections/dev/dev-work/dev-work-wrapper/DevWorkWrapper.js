@@ -14,16 +14,20 @@ class DevWorkWrapper extends PureComponent {
     return techs.map((tech, i) => <DevTechBadge key={i} lang={tech} />)
   }
 
+  setYear(){
+    if(typeof this.props.lang.year === 'object')
+      return `${this.props.lang.year.from} - ${this.props.lang.year.to}`
+    return this.props.lang.year
+  }
   render() {
 
     const LANG = this.props.lang;
-
     return (
       <div>
 
         <DevContentHeader
           title={LANG.title}
-          subtitle={`${LANG.modality} ${LANG.year}`}
+          subtitle={`${LANG.modality} ${this.setYear()}`}
           avatar={LANG.logo.src}
         />
 
